@@ -1,0 +1,74 @@
+/* ================================
+   VARIABLES
+   Define global colors, spacing, font sizes, etc.
+   ================================ */
+
+:root {
+  /* 🎨 Color Palette */
+  --rich-black: #00111cff;
+  --rich-black-2: #001523ff;
+  --rich-black-3: #001a2cff;
+  --prussian-blue: #002137ff;
+  --prussian-blue-2: #00253eff;
+  --prussian-blue-3: #002945ff;
+  --prussian-blue-4: #002e4eff;
+  --prussian-blue-5: #003356ff;
+  --indigo-dye: #003a61ff;
+  --indigo-dye-2: #005e9e;
+
+  /* 🔠 Typography */
+  --font-family-base: "IRANSans", "Segoe UI", sans-serif;
+
+  --font-size-xs: clamp(0.65rem, 0.6rem + 0.4vw, 0.75rem);
+  --font-size-sm: clamp(0.75rem, 0.7rem + 0.4vw, 0.875rem);
+  --font-size-base: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+  --font-size-lg: clamp(1rem, 0.9rem + 0.8vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.1rem + 1vw, 1.5rem);
+  --font-size-xxl: clamp(1.5rem, 1.3rem + 2vw, 2rem);
+
+  --line-height-base: 1.6;
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  /* 📏 Spacing Scale */
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 3rem;
+
+  /* 📐 Layout */
+  --max-width: 1200px;
+  --container-padding: 1rem;
+
+  /* 🔳 Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-circle: 50%;
+
+  /* 🌫 Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+  /* ⏱ Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* 📌 Z-Index Stack */
+  --z-header: 100;
+  --z-dropdown: 200;
+  --z-modal: 300;
+  --z-toast: 999;
+}

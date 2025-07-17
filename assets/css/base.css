@@ -1,0 +1,14 @@
+/* ================================
+   RESET / BASE STYLES
+   Normalize basic elements
+   ================================ */
+
+@import url();
+
+* {
+  font-family: primary-font;
+}
+
+body {
+  padding-inline: var(--spacing-md);
+}
