@@ -1,32 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>نام سایت</title>
     <!-- ! Core Styles -->
-    <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/libs/fontawesome/css/all.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="assets/website/libs/bootstrap/bootstrap.rtl.min.css"
+    />
+    <link rel="stylesheet" href="assets/website/libs/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="assets/website/css/main.css" />
 
     <!-- ! Page Styles -->
   </head>
-  <body>
+  <body class="body body--website">
+    <!-- * Particle Background Start -->
+    <div id="particles-js"></div>
+    <!-- * Particle Background End -->
+
+    <!-- * Navbar Start -->
+    <nav class="nav nav--website">
+      <div
+        class="nav__wrapper nav__wrapper--right flex-grow-1 flex-md-grow-0 justify-content-between justify-content-md-start"
+      >
+        <img class="nav__logo" src="logo-site.png" alt="Logo" />
+        <a
+          class="nav__hamburger-btn d-block d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#side-menu"
+          aria-controls="side-menu"
+        >
+          <i class="fa-solid fa-bars fa-lg me-2"></i>
+          منو
+        </a>
+        <ul class="nav__links d-none d-lg-flex">
+          <li class="nav__item nav__item--active">
+            <a class="nav__link" href="#">صفحه اصلی</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">سوالات متداول</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">درباره ما</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">تماس با ما</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__wrapper nav__wrapper--left d-none d-md-flex">
+        <button class="button button--hover-shine button--primary">
+          <i class="fa-solid fa-user"></i>
+          ثبت نام
+        </button>
+        <button class="button button--hover-shine button--secondary">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          ورود به پنل
+        </button>
+      </div>
+    </nav>
+    <div
+      class="nav__offcanvas glow-white-2 offcanvas offcanvas-start"
+      tabindex="-1"
+      id="side-menu"
+      aria-labelledby="staticBackdropLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title glow-white-text-4" id="staticBackdropLabel">
+          منو
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white fs-4"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav__offcanvas-links">
+          <li class="nav__offcanvas-item nav__offcanvas-item--active">
+            <a class="nav__offcanvas-link" href="#">صفحه اصلی</a>
+          </li>
+          <li class="nav__offcanvas-item">
+            <a class="nav__offcanvas-link" href="#">سوالات متداول</a>
+          </li>
+          <li class="nav__offcanvas-item">
+            <a class="nav__offcanvas-link" href="#">درباره ما</a>
+          </li>
+          <li class="nav__offcanvas-item">
+            <a class="nav__offcanvas-link" href="#">تماس با ما</a>
+          </li>
+          <div class="d-md-none d-flex flex-column mt-auto">
+            <button
+              class="button w-100 mb-3 button--hover-shine button--primary"
+            >
+              <i class="fa-solid fa-user"></i>
+              ثبت نام</button
+            ><button class="button w-100 button--hover-shine button--secondary">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+              ورود به پنل
+            </button>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <!-- * Navbar End -->
     <!-- * Header Start -->
-    <header></header>
+    <header class="header header--website">
+      <div
+        class="header__wrapper col-12 col-lg-6 order-lg-0 order-1 mt-5 mt-lg-0 text-lg-start text-center header__wrapper--right"
+      >
+        <h2 class="header__title display-5 glow-white-text-4">
+          سرمایه‌گذاری هوشمندانه <br />در عصر دیجیتال
+        </h2>
+        <p class="header__text">
+          با تولید سادگی نامفهوم از صنعت چاپ <br />
+          و با استفاده از طراحان گرافیک است.
+        </p>
+        <button
+          class="button button--shine button--hover-scale button--tertiary glow-green-5 fw-medium mx-auto mx-lg-0"
+        >
+          همین حالا شروع کنید!
+        </button>
+      </div>
+      <div
+        class="header__wrapper col-12 col-lg-6 order-lg-1 order-0 header__wrapper--left"
+      >
+        <div class="header__wrapper-image">
+          <img src="assets/website/imgs/treasure.png" alt="" />
+        </div>
+        <div class="header__wrapper-image">
+          <img src="assets/website/imgs/coins.png" alt="" />
+        </div>
+      </div>
+    </header>
     <!-- * Header End -->
-    <main>
-      <!-- * [Section name] Start -->
-      <section></section>
-      <!-- * [Section name] End -->
+    <main class="main main--website">
+      <!-- * [Why us] Start -->
+      <section class="section section--website">
+        <h3 class="section__title">چرا سرمایه‌گذاری آینده؟</h3>
+        <p class="section__text">
+          امکانات منحصر به فردی که سرمایه‌گذاری شما را متحول می‌کند!
+        </p>
+        <div class="section__cards flex-lg-nowrap flex-wrap">
+          <div class="card__item">
+            <i class="card__icon fa-light fa-sack-dollar"></i>
+            <h4 class="card__title">متن لورم ایپسوم</h4>
+            <p class="card__text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون
+            </p>
+          </div>
+          <div class="card__item">
+            <i class="card__icon fa-light fa-chart-waterfall"></i>
+            <h4 class="card__title">متن لورم ایپسوم</h4>
+            <p class="card__text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون
+            </p>
+          </div>
+          <div class="card__item">
+            <i class="card__icon fa-light fa-lightbulb-dollar"></i>
+            <h4 class="card__title">متن لورم ایپسوم</h4>
+            <p class="card__text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- * [Why us] End -->
+      <!-- * [How we work] Start -->
+      <section class="section section--website">
+        <h3 class="section__title">چگونه سرمایه‌گذاری کنیم؟</h3>
+        <p class="section__text">مراحل ساده سرمایه‌گذاری و کسب سود روزانه!</p>
+        <div class="section__steps flex-column-reverse flex-lg-row">
+          <div class="section__step section__step">
+            <div class="section__step-number section__step-number--three">
+              <span>3</span>
+            </div>
+            <div class="section__step-title glow-white-text-4">
+              سرمایه گذاری
+            </div>
+            <div class="section__step-text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون
+            </div>
+          </div>
+          <div class="section__step section__step">
+            <div class="section__step-number section__step-number--two">
+              <span>2</span>
+            </div>
+            <div class="section__step-title glow-white-text-4">ورود به پنل</div>
+            <div class="section__step-text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون
+            </div>
+          </div>
+          <div class="section__step section__step">
+            <div class="section__step-number section__step-number--one">
+              <span>1</span>
+            </div>
+            <div class="section__step-title glow-white-text-4">ثبت نام</div>
+            <div class="section__step-text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- * [How we work] End -->
+      <!-- * [Start now] Start -->
+      <section class="section section--website section--start-now">
+        <h3 class="section__title position-relative z-1">
+          همین حالا شروع کنید!
+        </h3>
+        <div class="section__images">
+          <div class="section__image-wrapper">
+            <img
+              class="section__image"
+              src="assets/website/imgs/wallet.png"
+              alt=""
+            />
+            <img
+              class="section__image section__image--one"
+              src="assets/website/imgs/coin.png"
+              alt=""
+            />
+            <img
+              class="section__image section__image--two"
+              src="assets/website/imgs/coin.png"
+              alt=""
+            />
+            <img
+              class="section__image section__image--three"
+              src="assets/website/imgs/coin.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <button
+          class="button button--shine button--hover-scale glow-green-5 fw-medium button--tertiary"
+        >
+          ثبت نام و شروع سرمایه گذاری!
+        </button>
+      </section>
+      <!-- * [Start now] End -->
     </main>
     <!-- * Footer Start -->
-    <footer></footer>
+    <footer class="footer footer--website">
+      <div class="footer__columns">
+        <div class="footer__column footer__column--right">
+          <h1 class="footer__title footer__title--right-column">
+            سرمایه گذاری
+          </h1>
+          <p class="footer__text">
+            پلتفرم پیشرو در سرمایه‌گذاری آنلاین با هدف ایجاد فرصت‌های
+            سرمایه‌گذاری امن و پرسود برای همه ایرانیان.
+          </p>
+          <ul class="footer__socials">
+            <li class="footer__social">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="footer__social">
+              <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </li>
+            <li class="footer__social">
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li class="footer__social">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--center">
+          <h4 class="footer__title"><span>لینک‌های سریع</span></h4>
+          <ul class="footer__links">
+            <li class="footer__link"><a href="#">صفحه اصلی</a></li>
+            <li class="footer__link"><a href="#">خدمات ما</a></li>
+            <li class="footer__link"><a href="#">طرح‌های سرمایه‌گذار</a></li>
+            <li class="footer__link"><a href="#">سوالات متداول</a></li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--left">
+          <h4 class="footer__title"><span>تماس با ما</span></h4>
+          <ul class="footer__contacts">
+            <li class="footer__contact">
+              <i class="footer__contact-icon fa-solid fa-location-dot"></i>
+              تهران، خیابان ولیعصر، پلاک ۱۲۳۴
+            </li>
+            <li class="footer__contact">
+              <i class="footer__contact-icon fa-solid fa-phone"></i>
+              <a href="#">021-12345678</a>
+            </li>
+            <li class="footer__contact">
+              <i class="footer__contact-icon fa-solid fa-envelope"></i>
+              <a href="#">info@investment.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <small class="footer__copyright">تمامی حقوق محفوظ است - 1404 ©</small>
+    </footer>
     <!-- * Footer End -->
     <!-- ! Core Scripts -->
-    <script src="assets/libs/jquery/jquery-3.7.1.min.js"></script>
-    <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/website/libs/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/website/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/website/libs/particles.js/particles.min.js"></script>
 
+    <script>
+      // Initialize particles background
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#0ea5e9" },
+          shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#3b82f6",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
     <!-- ! Page Scripts -->
   </body>
 </html>
