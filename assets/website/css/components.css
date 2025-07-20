@@ -108,6 +108,13 @@
   transition: var(--transition-fast);
 }
 
+@media screen and (max-width: 992px) {
+  .card__item{
+    max-width: 27rem;
+    margin: auto;
+  }
+}
+
 .card__item::before {
   content: "";
   position: absolute;
