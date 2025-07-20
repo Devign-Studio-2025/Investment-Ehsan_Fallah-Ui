@@ -510,11 +510,13 @@
   transition: var(--transition-fast);
 }
 
-.footer--website :where(.footer__contact, .footer__link) a {
+.footer--website :where(.footer__contact, .footer__link) a,
+.footer--website :where(.footer__contact, .footer__link)::marker {
   transition: var(--transition-fast);
 }
 
-.footer--website :where(.footer__contact, .footer__link) a:hover {
+.footer--website :where(.footer__contact, .footer__link) a:hover,
+.footer--website :where(.footer__contact, .footer__link):has(a:hover)::marker {
   filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.6));
   color: var(--lime-green);
 }
