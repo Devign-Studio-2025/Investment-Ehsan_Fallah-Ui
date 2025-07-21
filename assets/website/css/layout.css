@@ -172,7 +172,7 @@
   padding: 3rem 5rem;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   .header--website {
     padding: 2rem 1rem;
   }
@@ -226,7 +226,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   @keyframes light-breath {
     0% {
       filter: drop-shadow(0px 0px 2rem rgba(250, 241, 152, 0.3));
@@ -560,3 +560,142 @@
   }
 }
 /* * Footer End */
+
+/* * Reg/Login Form Start */
+
+.form--register-login {
+  background: linear-gradient(
+      205deg,
+      rgba(0, 255, 132, 0.2) 0%,
+      transparent 100%
+    ),
+    rgb(0, 94, 158, 0.4);
+  box-shadow: 0px 0px 1.875rem rgba(166, 187, 255, 0.43);
+  border-radius: var(--radius-xl);
+  position: relative;
+  padding: 3.125rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  min-width: fit-content;
+  max-width: 30rem;
+}
+
+.form--register-login::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 50%;
+  top: 50%;
+  translate: 50% -50%;
+  border: 0.125rem solid var(--border-color);
+  border-radius: var(--radius-xl);
+  z-index: -1;
+  mask-image: linear-gradient(-190deg, black 0%, transparent 30%),
+    linear-gradient(-10deg, black 0%, transparent 30%);
+}
+
+.form--register-login .form__head input[type="radio"] {
+  display: none;
+}
+
+.form--register-login .form__head {
+  display: flex;
+}
+
+.form--register-login .form__head-tab {
+  width: 50%;
+  position: relative;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.form--register-login a.form__head-tab {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.form--register-login .form__head-tab::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0.1rem;
+  bottom: 0;
+  /* right: 0; */
+  background-color: var(--white);
+  transition: var(--transition-fast);
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 1));
+}
+
+.form--register-login .form__head-tab:has(input[type="radio"]:checked)::before {
+  width: 100%;
+}
+
+.form__body-footer-wrapper {
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form--register-login .form__body input {
+  min-width: 16rem;
+}
+
+.form--register-login .form__body .input__with-error-wrapper {
+  margin-inline: auto;
+}
+
+.form--register-login .form__foot .button {
+  width: 100%;
+  max-width: 20rem;
+}
+
+.form--register-login .form__foot :where(label, a) {
+  cursor: pointer;
+  color: var(--lime-green);
+  text-decoration: underline;
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-fast);
+}
+
+.form--register-login .form__foot :where(label, a):hover {
+  color: var(--white);
+}
+
+.form--register-login:has(#form-register-tab:checked) #form-register {
+  display: flex;
+}
+
+.form--register-login:has(#form-login-tab:checked) #form-login {
+  display: flex;
+}
+
+@media screen and (max-width: 576px) {
+  .form--register-login {
+    background: unset;
+    box-shadow: unset;
+    padding: 0.5rem;
+  }
+
+  .form--register-login::before {
+    all: unset;
+  }
+  .form--register-login .form__head-tab {
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+  }
+
+  .h-captcha {
+    scale: 0.85;
+    padding: 0;
+  }
+}
+
+/* * Reg/Login Form End */
