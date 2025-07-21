@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نام سایت</title>
+    <!-- ! Core Styles -->
+    <link
+      rel="stylesheet"
+      href="assets/website/libs/bootstrap/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/website/libs/bootstrap/bootstrap.rtl.min.css"
+    />
+    <link rel="stylesheet" href="assets/website/libs/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="assets/website/css/main.css" />
+
+    <!-- ! Page Styles -->
+    <style>
+      body {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body class="body body--website">
+    <!-- * Particle Background Start -->
+    <div id="particles-js"></div>
+    <!-- * Particle Background End -->
+
+    <!-- * Reg/login Form Start -->
+    <div class="form form--register-login">
+      <div class="form__head">
+        <label
+          for="form-register-tab"
+          class="form__head-tab glow-white-text-7"
+          type="button"
+        >
+          <input type="radio" checked name="form-tab" id="form-register-tab" />
+          ثبت نام کاربر
+          <i class="fa-solid fa-user-plus"></i>
+        </label>
+        <label
+          for="form-login-tab"
+          class="form__head-tab glow-white-text-7"
+          type="button"
+        >
+          <input type="radio" name="form-tab" id="form-login-tab" />
+          ورود به حساب
+          <i class="fa-solid fa-right-to-bracket"></i>
+        </label>
+      </div>
+      <form
+        method="post"
+        action="otp.html"
+        class="form__body-footer-wrapper"
+        id="form-register"
+      >
+        <div class="form__body">
+          <div class="row flex-wrap">
+            <div class="col-md-6 col-12">
+              <div class="input__with-error-wrapper mb-4">
+                <div class="input__wrapper">
+                  <i class="input__icon fa-solid fa-user"></i>
+                  <input
+                    class="input__item"
+                    type="text"
+                    name="first_name"
+                    placeholder=" "
+                    id="first_name"
+                  />
+                  <label class="input__label-holder" for="">نام</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="input__with-error-wrapper mb-4">
+                <div class="input__wrapper">
+                  <i class="input__icon fa-solid fa-user-tie"></i>
+                  <input
+                    class="input__item"
+                    type="text"
+                    placeholder=" "
+                    name="last_name"
+                    id="last_name"
+                  />
+                  <label class="input__label-holder" for="">نام خانوادگی</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row flex-wrap">
+            <div class="col-md-6 col-12">
+              <div class="input__with-error-wrapper mb-4">
+                <div class="input__wrapper">
+                  <i class="input__icon fa-solid fa-phone"></i>
+                  <input
+                    class="input__item"
+                    placeholder=" "
+                    type="tel"
+                    maxlength="11"
+                    name="phone"
+                    id="phone"
+                  />
+                  <label class="input__label-holder" for="">شماره همراه</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="input__with-error-wrapper mb-4">
+                <div class="input__wrapper">
+                  <i class="input__icon fa-solid fa-envelope"></i>
+                  <input
+                    class="input__item"
+                    placeholder=" "
+                    type="email"
+                    name="email"
+                    id="email"
+                  />
+                  <label class="input__label-holder" for="">ایمیل</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row flex-wrap">
+            <div class="col-md-6 col-12">
+              <div class="input__with-error-wrapper mb-4">
+                <div class="input__wrapper">
+                  <i class="input__icon fa-solid fa-lock-keyhole"></i>
+                  <input
+                    class="input__item"
+                    placeholder=" "
+                    type="password"
+                    name="password"
+                    id="password"
+                  />
+                  <label class="input__label-holder" for="">رمز عبور</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="input__with-error-wrapper mb-4">
+                <div class="input__wrapper">
+                  <i class="input__icon fa-solid fa-lock-keyhole-open"></i>
+                  <input
+                    class="input__item"
+                    placeholder=" "
+                    type="password"
+                    name="confirm_password"
+                    id="confirm_password"
+                  />
+                  <label class="input__label-holder" for=""
+                    >تکرار رمز عبور</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div
+              class="h-captcha mx-auto"
+              style="width: fit-content"
+              data-sitekey="10000000-ffff-ffff-ffff-000000000001"
+            ></div>
+          </div>
+        </div>
+        <div class="form__foot">
+          <button
+            class="button button--tertiary button--hover-shine glow-green-5 mx-auto mb-3"
+          >
+            مرحله بعد
+          </button>
+          <p class="text-center m-0">
+            حساب کاربری دارید؟
+            <label class="ms-1" for="form-login-tab">ورود به حساب</label>
+          </p>
+        </div>
+      </form>
+      <form
+        method="post"
+        action=""
+        class="form__body-footer-wrapper"
+        id="form-login"
+      >
+        <div class="form__body">
+          <div class="row flex-wrap">
+            <div class="col-12">
+              <div class="input__with-error-wrapper mb-4">
+                <div class="input__wrapper">
+                  <i class="input__icon fa-solid fa-circle-user"></i>
+                  <input
+                    class="input__item"
+                    placeholder=" "
+                    name="login_identifier"
+                    id="login_identifier"
+                  />
+                  <label class="input__label-holder" for=""
+                    >ایمیل یا شماره همراه</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="input__with-error-wrapper">
+                <div class="input__wrapper">
+                  <i class="input__icon fa-solid fa-lock-keyhole"></i>
+                  <input
+                    class="input__item"
+                    placeholder=" "
+                    type="password"
+                    name="login_password"
+                    id="login_password"
+                  />
+                  <label class="input__label-holder" for="">رمز عبور</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__foot">
+          <button
+            class="button button--tertiary button--hover-shine glow-green-5 mx-auto mb-3"
+          >
+            ورود به حساب
+          </button>
+          <p class="text-center m-0">
+            ثبت نام نکرده‌اید؟
+            <label class="ms-1" for="form-register-tab">ساخت حساب</label>
+          </p>
+        </div>
+      </form>
+    </div>
+    <!-- * Reg/login Form End -->
+    <!-- ! Core Scripts -->
+    <script src="assets/website/libs/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/website/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/website/libs/particles.js/particles.min.js"></script>
+
+    <script>
+      // Initialize particles background
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#0ea5e9" },
+          shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#3b82f6",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+    <!-- ! Page Scripts -->
+    <script src="assets/website/libs/validate.min.js/just-validate.production.min.js"></script>
+    <script src="assets/website/libs/hcaptcha/api.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // ====== Validation Start ======
+
+        // Validation options
+        const validateOptions = {
+          errorFieldCssClass: "is-invalid",
+          errorLabelStyle: {
+            color: "#dc3545",
+            fontSize: ".8rem",
+            fontWeight: "bold",
+            marginTop: "5px",
+            display: "block",
+          },
+          successFieldCssClass: "is-valid",
+        };
+
+        // Validation for register
+        const registerValidator = new JustValidate(
+          "#form-register",
+          validateOptions
+        );
+
+        registerValidator
+          .addField(
+            "#first_name",
+            [
+              {
+                rule: "required",
+                errorMessage: "نام الزامی است",
+              },
+              {
+                rule: "minLength",
+                value: 2,
+                errorMessage: "حداقل ۲ کاراکتر وارد کنید",
+              },
+              {
+                rule: "maxLength",
+                value: 50,
+                errorMessage: "حداکثر ۵۰ کاراکتر مجاز است",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#first_name")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .addField(
+            "#last_name",
+            [
+              {
+                rule: "required",
+                errorMessage: "نام خانوادگی الزامی است",
+              },
+              {
+                rule: "minLength",
+                value: 2,
+                errorMessage: "حداقل ۲ کاراکتر وارد کنید",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#last_name")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .addField(
+            "#phone",
+            [
+              {
+                rule: "required",
+                errorMessage: "شماره همراه الزامی است",
+              },
+              {
+                rule: "number",
+                errorMessage: "فقط عدد مجاز است",
+              },
+              {
+                rule: "minLength",
+                value: 11,
+                errorMessage: "شماره باید ۱۱ رقمی باشد",
+              },
+              {
+                rule: "maxLength",
+                value: 11,
+                errorMessage: "شماره باید ۱۱ رقمی باشد",
+              },
+              {
+                rule: "customRegexp",
+                value: /^09[0-9]{9}$/,
+                errorMessage: "شماره موبایل معتبر وارد کنید ",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#phone")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .addField(
+            "#email",
+            [
+              {
+                rule: "required",
+                errorMessage: "ایمیل الزامی است",
+              },
+              {
+                rule: "email",
+                errorMessage: "ایمیل معتبر وارد کنید",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#email")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .addField(
+            "#password",
+            [
+              {
+                rule: "required",
+                errorMessage: "رمز عبور الزامی است",
+              },
+              {
+                rule: "minLength",
+                value: 6,
+                errorMessage: "حداقل ۶ کاراکتر وارد کنید",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#password")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .addField(
+            "#confirm_password",
+            [
+              {
+                rule: "required",
+                errorMessage: "تکرار رمز الزامی است",
+              },
+              {
+                rule: "function",
+                validator: function () {
+                  return (
+                    document.getElementById("password").value ===
+                    document.getElementById("confirm_password").value
+                  );
+                },
+                errorMessage: "رمزها مطابقت ندارند",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#confirm_password")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .addField(
+            "[name='h-captcha-response']",
+            [
+              {
+                rule: "function",
+                validator: () => {
+                  const captchaToken = document.querySelector(
+                    "[name='h-captcha-response']"
+                  ).value;
+                  return captchaToken.trim() !== "";
+                },
+                errorMessage: "لطفاً کپچا را کامل کنید",
+              },
+            ],
+            {
+              errorsContainer: document.querySelector(".h-captcha"),
+            }
+          )
+          .onSuccess(function () {
+            document.getElementById("form-register").submit();
+          });
+
+        // Validation for login
+        const loginValidator = new JustValidate("#form-login", validateOptions);
+
+        loginValidator
+          .addField(
+            "#login_identifier",
+            [
+              {
+                rule: "required",
+                errorMessage: "ایمیل یا شماره همراه الزامی است",
+              },
+              {
+                rule: "customRegexp",
+                value: /^(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}|09\d{9})$/,
+                errorMessage: "فرمت ایمیل یا شماره همراه نامعتبر است",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#login_identifier")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .addField(
+            "#login_password",
+            [
+              {
+                rule: "required",
+                errorMessage: "رمز عبور الزامی است",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#login_password")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .onSuccess(function () {
+            document.getElementById("form-login").submit();
+          });
+        // ====== Validation End ======
+      });
+    </script>
+  </body>
+</html>

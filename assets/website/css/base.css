@@ -11,6 +11,7 @@
 
 body {
   margin-inline: auto;
+  min-height: 100vh;
   max-width: var(--max-width);
   padding-inline: 3.125rem;
   background: linear-gradient(
@@ -23,12 +24,6 @@ body {
   font-size: var(--font-size-base);
 }
 
-@media screen and (max-width: 500px) {
-  body {
-    padding-inline: 1rem;
-  }
-}
-
 #particles-js {
   position: fixed;
   width: 100%;
@@ -36,4 +31,10 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    padding-inline: 1rem;
+  }
 }

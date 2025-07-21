@@ -7,12 +7,17 @@
     <!-- ! Core Styles -->
     <link
       rel="stylesheet"
+      href="assets/website/libs/bootstrap/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="assets/website/libs/bootstrap/bootstrap.rtl.min.css"
     />
     <link rel="stylesheet" href="assets/website/libs/fontawesome/css/all.css" />
     <link rel="stylesheet" href="assets/website/css/main.css" />
 
     <!-- ! Page Styles -->
+    <link rel="stylesheet" href="assets/website/libs/scrollcue/scrollCue.css" />
   </head>
   <body class="body body--website">
     <!-- * Particle Background Start -->
@@ -51,14 +56,20 @@
         </ul>
       </div>
       <div class="nav__wrapper nav__wrapper--left d-none d-md-flex">
-        <button class="button button--hover-shine button--primary">
+        <a
+          href="register-login.html"
+          class="button button--hover-shine button--primary"
+        >
           <i class="fa-solid fa-user"></i>
           ثبت نام
-        </button>
-        <button class="button button--hover-shine button--secondary">
+        </a>
+        <a
+          href="register-login.html?is_login=true"
+          class="button button--hover-shine button--secondary"
+        >
           <i class="fa-solid fa-arrow-right-to-bracket"></i>
           ورود به پنل
-        </button>
+        </a>
       </div>
     </nav>
     <div
@@ -93,23 +104,28 @@
             <a class="nav__offcanvas-link" href="#">تماس با ما</a>
           </li>
           <div class="d-md-none d-flex flex-column mt-auto">
-            <button
+            <a
+              href="register-login.html"
               class="button w-100 mb-3 button--hover-shine button--primary"
             >
               <i class="fa-solid fa-user"></i>
-              ثبت نام</button
-            ><button class="button w-100 button--hover-shine button--secondary">
+              ثبت نام</a
+            ><a
+              href="register-login.html?is_login=true"
+              class="button w-100 button--hover-shine button--secondary"
+            >
               <i class="fa-solid fa-arrow-right-to-bracket"></i>
               ورود به پنل
-            </button>
+            </a>
           </div>
         </ul>
       </div>
     </div>
     <!-- * Navbar End -->
     <!-- * Header Start -->
-    <header class="header header--website">
+    <header class="header header--website" data-cue="fadeIn">
       <div
+        data-cues="slideInRight"
         class="header__wrapper col-12 col-lg-6 order-lg-0 order-1 mt-5 mt-lg-0 text-lg-start text-center header__wrapper--right"
       >
         <h2 class="header__title display-5 glow-white-text-4">
@@ -126,6 +142,7 @@
         </button>
       </div>
       <div
+        data-cues="slideInLeft"
         class="header__wrapper col-12 col-lg-6 order-lg-1 order-0 header__wrapper--left"
       >
         <div class="header__wrapper-image">
@@ -139,12 +156,16 @@
     <!-- * Header End -->
     <main class="main main--website">
       <!-- * [Why us] Start -->
-      <section class="section section--website">
+      <section class="section section--website" data-cues="zoomIn">
         <h3 class="section__title">چرا سرمایه‌گذاری آینده؟</h3>
         <p class="section__text">
           امکانات منحصر به فردی که سرمایه‌گذاری شما را متحول می‌کند!
         </p>
-        <div class="section__cards flex-lg-row flex-column">
+        <div
+          class="section__cards flex-lg-row flex-column"
+          data-cues="slideInUp"
+          data-group="why-us-cards"
+        >
           <div class="card__item">
             <i class="card__icon fa-light fa-sack-dollar"></i>
             <h4 class="card__title">متن لورم ایپسوم</h4>
@@ -173,11 +194,31 @@
       </section>
       <!-- * [Why us] End -->
       <!-- * [How we work] Start -->
-      <section class="section section--website">
+      <section class="section section--website" data-cues="zoomIn">
         <h3 class="section__title">چگونه سرمایه‌گذاری کنیم؟</h3>
         <p class="section__text">مراحل ساده سرمایه‌گذاری و کسب سود روزانه!</p>
-        <div class="section__steps flex-column-reverse flex-lg-row">
-          <div class="section__step section__step">
+        <div class="section__steps flex-column flex-lg-row" data-cues="fadeIn">
+          <div class="section__step">
+            <div class="section__step-number section__step-number--one">
+              <span>1</span>
+            </div>
+            <div class="section__step-title glow-white-text-4">ثبت نام</div>
+            <div class="section__step-text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون
+            </div>
+          </div>
+          <div class="section__step">
+            <div class="section__step-number section__step-number--two">
+              <span>2</span>
+            </div>
+            <div class="section__step-title glow-white-text-4">ورود به پنل</div>
+            <div class="section__step-text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون
+            </div>
+          </div>
+          <div class="section__step">
             <div class="section__step-number section__step-number--three">
               <span>3</span>
             </div>
@@ -189,31 +230,14 @@
               استفاده از طراحان گرافیک است چاپگرها و متون
             </div>
           </div>
-          <div class="section__step section__step">
-            <div class="section__step-number section__step-number--two">
-              <span>2</span>
-            </div>
-            <div class="section__step-title glow-white-text-4">ورود به پنل</div>
-            <div class="section__step-text">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است چاپگرها و متون
-            </div>
-          </div>
-          <div class="section__step section__step">
-            <div class="section__step-number section__step-number--one">
-              <span>1</span>
-            </div>
-            <div class="section__step-title glow-white-text-4">ثبت نام</div>
-            <div class="section__step-text">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است چاپگرها و متون
-            </div>
-          </div>
         </div>
       </section>
       <!-- * [How we work] End -->
       <!-- * [Start now] Start -->
-      <section class="section section--website section--start-now">
+      <section
+        class="section section--website section--start-now"
+        data-cues="slideInUp"
+      >
         <h3 class="section__title position-relative z-1">
           همین حالا شروع کنید!
         </h3>
@@ -241,11 +265,12 @@
             />
           </div>
         </div>
-        <button
+        <a
+          href="register-login.html"
           class="button button--shine button--hover-scale glow-green-5 fw-medium button--tertiary"
         >
           ثبت نام و شروع سرمایه گذاری!
-        </button>
+        </a>
       </section>
       <!-- * [Start now] End -->
     </main>
@@ -278,7 +303,7 @@
         <div class="footer__column footer__column--center">
           <h4 class="footer__title"><span>لینک‌های سریع</span></h4>
           <ul class="footer__links">
-            <li class="footer__link"><a href="#">صفحه اصلی</a></li>
+            <li class="footer__link"><a href="index.html">صفحه اصلی</a></li>
             <li class="footer__link"><a href="#">خدمات ما</a></li>
             <li class="footer__link"><a href="#">طرح‌های سرمایه‌گذار</a></li>
             <li class="footer__link"><a href="#">سوالات متداول</a></li>
@@ -348,5 +373,9 @@
       });
     </script>
     <!-- ! Page Scripts -->
+    <script src="assets/website/libs/scrollcue/scrollCue.min.js"></script>
+    <script>
+      scrollCue.init();
+    </script>
   </body>
 </html>
