@@ -214,27 +214,7 @@
   width: 100%;
   max-width: 35rem;
   animation: smooth-float 3s ease-in-out infinite,
-    light-breath 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes light-breath {
-  0% {
-    filter: drop-shadow(0px 0px 8.75rem rgba(250, 241, 152, 0.3));
-  }
-  100% {
-    filter: drop-shadow(0px 0px 8.75rem rgba(250, 241, 152, 0.8));
-  }
-}
-
-@media screen and (max-width: 576px) {
-  @keyframes light-breath {
-    0% {
-      filter: drop-shadow(0px 0px 2rem rgba(250, 241, 152, 0.3));
-    }
-    100% {
-      filter: drop-shadow(0px 0px 2rem rgba(250, 241, 152, 0.8));
-    }
-  }
+    light-breath-yellow 1.5s ease-in-out infinite alternate;
 }
 
 .header--website .header__wrapper--left .header__wrapper-image:first-of-type {
@@ -248,7 +228,7 @@
   .header__wrapper-image:first-of-type
   img {
   animation: smooth-float 3s 1s ease-in-out infinite,
-    light-breath 1.5s ease-in-out infinite alternate;
+    light-breath-yellow 1.5s ease-in-out infinite alternate;
 }
 
 /* * Header End */
@@ -262,6 +242,10 @@
   gap: 12rem;
 }
 
+.main--website-page {
+  margin-top: 4rem;
+}
+
 /* * Main End */
 
 /* * Section Start */
@@ -272,6 +256,39 @@
   font-weight: bold;
   text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.4);
 }
+
+.section--website .section__head.section__head--glass {
+  width: 100%;
+  background: linear-gradient(
+    200deg,
+    rgba(23, 212, 255, 0.2) 18.86%,
+    rgba(255, 255, 255, 0.04) 57.6%
+  );
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  position: relative;
+}
+
+.section--website .section__head--glass::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 50%;
+  top: 50%;
+  translate: 50% -50%;
+  border: 0.125rem solid var(--lime-green);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+  mask-image: linear-gradient(190deg, black 0%, transparent 30%),
+    linear-gradient(10deg, black 0%, transparent 30%);
+}
+
+.section--website .section__head--glass .section__text {
+  max-width: unset;
+  margin-bottom: 0;
+}
+
 .section--website .section__text {
   max-width: 31.25rem;
   text-align: center;
@@ -699,3 +716,42 @@
 }
 
 /* * Reg/Login Form End */
+
+/* * Two cols Start */
+
+.two-col__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.two-col__head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.two-col__head .section__step-number span {
+  width: 4.5rem;
+}
+
+.two-col__head .section__step-number {
+  margin-bottom: 0;
+}
+
+.two-col__head .two-col__title {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.5));
+  margin: 0;
+}
+
+.two-col__text {
+  max-width: 90%;
+}
+
+.two-col__item--small img {
+  margin: auto;
+  width: 30rem;
+}
+
+/* * Two cols End */

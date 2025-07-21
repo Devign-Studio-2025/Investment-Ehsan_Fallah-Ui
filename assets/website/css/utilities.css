@@ -156,6 +156,20 @@
 /* * Glow green text End */
 
 /* * Float animation Start */
+.smooth-float {
+  animation: smooth-float 3s ease-in-out infinite;
+}
+
+.float-yellow {
+  animation: smooth-float 3s ease-in-out infinite,
+    light-breath-yellow 1.5s ease-in-out infinite alternate;
+}
+
+.float-green {
+  animation: smooth-float 3s ease-in-out infinite,
+    light-breath-green 1.5s ease-in-out infinite alternate;
+}
+
 @keyframes smooth-float {
   0%,
   100% {
@@ -168,4 +182,53 @@
     transform: translateY(0.3125rem);
   }
 }
+
 /* * Float animation End */
+
+/* * light breath animation Start */
+
+.light-breath-yellow {
+  animation: light-breath-yellow 1.5s ease-in-out infinite alternate;
+}
+.light-breath-green {
+  animation: light-breath-green 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes light-breath-yellow {
+  0% {
+    filter: drop-shadow(0px 0px 8.75rem rgba(250, 241, 152, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 8.75rem rgba(250, 241, 152, 0.8));
+  }
+}
+
+@keyframes light-breath-green {
+  0% {
+    filter: drop-shadow(0px 0px 8.75rem rgba(0, 183, 217, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 8.75rem rgba(0, 183, 217, 0.8));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  @keyframes light-breath-yellow {
+    0% {
+      filter: drop-shadow(0px 0px 2rem rgba(250, 241, 152, 0.3));
+    }
+    100% {
+      filter: drop-shadow(0px 0px 2rem rgba(250, 241, 152, 0.8));
+    }
+  }
+  @keyframes light-breath-green {
+    0% {
+      filter: drop-shadow(0px 0px 2rem rgba(0, 183, 217, 0.3));
+    }
+    100% {
+      filter: drop-shadow(0px 0px 2rem rgba(0, 183, 217, 0.8));
+    }
+  }
+}
+
+/* * light breath animation End */

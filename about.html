@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/website/css/main.css" />
 
     <!-- ! Page Styles -->
+    <link rel="stylesheet" href="assets/website/libs/scrollcue/scrollCue.css" />
   </head>
   <body class="body body--website">
     <!-- * Particle Background Start -->
@@ -40,14 +41,14 @@
           منو
         </a>
         <ul class="nav__links d-none d-lg-flex">
-          <li class="nav__item nav__item--active">
+          <li class="nav__item">
             <a class="nav__link" href="index.html">صفحه اصلی</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">سوالات متداول</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">درباره ما</a>
+          <li class="nav__item nav__item--active">
+            <a class="nav__link" href="about.html">درباره ما</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">تماس با ما</a>
@@ -90,13 +91,13 @@
       </div>
       <div class="offcanvas-body">
         <ul class="nav__offcanvas-links">
-          <li class="nav__offcanvas-item nav__offcanvas-item--active">
+          <li class="nav__offcanvas-item">
             <a class="nav__offcanvas-link" href="index.html">صفحه اصلی</a>
           </li>
           <li class="nav__offcanvas-item">
             <a class="nav__offcanvas-link" href="#">سوالات متداول</a>
           </li>
-          <li class="nav__offcanvas-item">
+          <li class="nav__offcanvas-item nav__offcanvas-item--active">
             <a class="nav__offcanvas-link" href="about.html">درباره ما</a>
           </li>
           <li class="nav__offcanvas-item">
@@ -122,13 +123,118 @@
     </div>
     <!-- * Navbar End -->
 
-    <main class="main main--website">
-      <!-- * [Section_name] Start -->
+    <main class="main main--website main--website-page">
+      <!-- * [About us] Start -->
       <section class="section section--website">
-        <h3 class="section__title"></h3>
-        <p class="section__text"></p>
+        <div class="section__head section__head--glass" data-cue="slideInUp">
+          <h3 class="section__title">درباره ما</h3>
+          <p class="section__text">
+            ما اینجا هستیم تا به سوالات شما پاسخ دهیم و پیشنهادات شما را بشنویم.
+            از طریق فرم زیر یا اطلاعات تماس می توانید با ما در ارتباط باشید.
+          </p>
+        </div>
+        <div class="section__foot">
+          <div class="two-cols" data-cues="fadeIn">
+            <div class="row two-col__wrapper flex-lg-row flex-column-reverse">
+              <div
+                class="col-12 col-lg-7 two-col__item two-col__item--big"
+                data-cue="slideInRight"
+              >
+                <div class="two-col__head">
+                  <div class="section__step-number section__step-number--one">
+                    <span>1</span>
+                  </div>
+                  <h4 class="two-col__title">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                  </h4>
+                </div>
+                <p class="two-col__text">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                  تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                  کاربردی می باشد.
+                </p>
+              </div>
+              <div
+                class="col-12 col-lg-5 two-col__item two-col__item--small"
+                data-cue="slideInLeft"
+              >
+                <img
+                  class="img-fluid float-green"
+                  src="assets/website/imgs/wallet-glowy.png"
+                  alt="wallet"
+                />
+              </div>
+            </div>
+            <div class="row two-col__wrapper">
+              <div
+                class="col-12 col-lg-5 two-col__item two-col__item--small"
+                data-cue="slideInRight"
+              >
+                <img
+                  class="img-fluid float-yellow"
+                  src="assets/website/imgs/treasure-small.png"
+                  alt="treasure"
+                />
+              </div>
+              <div
+                class="col-12 col-lg-7 two-col__item two-col__item--big"
+                data-cue="slideInLeft"
+              >
+                <div class="two-col__head">
+                  <div class="section__step-number section__step-number--two">
+                    <span>2</span>
+                  </div>
+                  <h4 class="two-col__title">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                  </h4>
+                </div>
+                <p class="two-col__text">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                  تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                  کاربردی می باشد.
+                </p>
+              </div>
+            </div>
+            <div class="row two-col__wrapper flex-lg-row flex-column-reverse">
+              <div
+                class="col-12 col-lg-7 two-col__item two-col__item--big"
+                data-cue="slideInRight"
+              >
+                <div class="two-col__head">
+                  <div class="section__step-number section__step-number--three">
+                    <span>3</span>
+                  </div>
+                  <h4 class="two-col__title">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                  </h4>
+                </div>
+                <p class="two-col__text">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                  تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                  کاربردی می باشد.
+                </p>
+              </div>
+              <div
+                class="col-12 col-lg-5 two-col__item two-col__item--small"
+                data-cue="slideInLeft"
+              >
+                <img
+                  class="img-fluid float-yellow"
+                  src="assets/website/imgs/coins-small.png"
+                  alt="coins"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- * [Section_name] End -->
+      <!-- * [About us] End -->
     </main>
 
     <!-- * Footer Start -->
@@ -230,5 +336,9 @@
       });
     </script>
     <!-- ! Page Scripts -->
+    <script src="assets/website/libs/scrollcue/scrollCue.min.js"></script>
+    <script>
+      scrollCue.init();
+    </script>
   </body>
 </html>
