@@ -5,21 +5,16 @@
 
 :root {
   /* 🎨 Color Palette */
-  --rich-black: #00111c;
-  --rich-black-2: #001523;
-  --rich-black-3: #001a2c;
-  --prussian-blue: #002137;
-  --prussian-blue-2: #00253e;
-  --prussian-blue-3: #002945;
-  --prussian-blue-4: #002e4e;
-  --prussian-blue-5: #003356;
-  --indigo-dye: #003a61;
+  --rich-black: #00111cff;
+  --rich-black-2: #001523ff;
+  --rich-black-3: #001a2cff;
+  --prussian-blue: #002137ff;
+  --prussian-blue-2: #00253eff;
+  --prussian-blue-3: #002945ff;
+  --prussian-blue-4: #002e4eff;
+  --prussian-blue-5: #003356ff;
+  --indigo-dye: #003a61ff;
   --indigo-dye-2: #005e9e;
-  --lime-green: #00b7a5;
-  --white: #f4f4f4;
-  --red: #ff5053;
-
-  --border-color: rgba(244, 244, 244, 0.5);
 
   /* 🔠 Typography */
   --font-family-base: "IRANSans", "Segoe UI", sans-serif;
@@ -52,14 +47,13 @@
   --space-xxl: 3rem;
 
   /* 📐 Layout */
-  --max-width: 1600px;
+  --max-width: 1200px;
   --container-padding: 1rem;
 
   /* 🔳 Border Radius */
-  --radius-sm: 0.3125rem;
-  --radius-md: 0.625rem;
-  --radius-lg: 1.25rem;
-  --radius-xl: 1.75rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
   --radius-circle: 50%;
 
   /* 🌫 Shadows */
@@ -71,12 +65,6 @@
   --transition-fast: 0.2s ease-in-out;
   --transition-base: 0.3s ease;
   --transition-slow: 0.5s ease;
-
-  /* Blur levels */
-  --blur-sm: 0.3125rem;
-  --blur-md: 0.625rem;
-  --blur-lg: 1.25rem;
-  --blur-xl: 1.875rem;
 
   /* 📌 Z-Index Stack */
   --z-header: 100;
