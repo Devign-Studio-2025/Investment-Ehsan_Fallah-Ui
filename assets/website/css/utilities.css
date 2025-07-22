@@ -1,0 +1,234 @@
+/* ================================
+   UTILITIES
+   Define helper & modifier classes.
+   ================================ */
+
+/* * Glow white Start */
+.glow-white-9 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.9));
+}
+
+.glow-white-8 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.8));
+}
+
+.glow-white-7 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.7));
+}
+
+.glow-white-6 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.6));
+}
+
+.glow-white-5 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.5));
+}
+
+.glow-white-4 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.4));
+}
+
+.glow-white-3 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.3));
+}
+
+.glow-white-2 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.2));
+}
+
+.glow-white-1 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.1));
+}
+/* * Glow white End */
+
+/* * Glow white text Start */
+.glow-white-text-9 {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.9);
+}
+
+.glow-white-text-8 {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.8);
+}
+
+.glow-white-text-7 {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.7);
+}
+
+.glow-white-text-6 {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.6);
+}
+
+.glow-white-text-5 {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.5);
+}
+
+.glow-white-text-4 {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.4);
+}
+
+.glow-white-text-3 {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.3);
+}
+
+.glow-white-text-2 {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.2);
+}
+
+.glow-white-text-1 {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.1);
+}
+/* * Glow white text End */
+
+/* * Glow green Start */
+.glow-green-9 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.9));
+}
+
+.glow-green-8 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.8));
+}
+
+.glow-green-7 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.7));
+}
+
+.glow-green-6 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.6));
+}
+
+.glow-green-5 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.5));
+}
+
+.glow-green-4 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.4));
+}
+
+.glow-green-3 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.3));
+}
+
+.glow-green-2 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.2));
+}
+
+.glow-green-1 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.1));
+}
+/* * Glow green End */
+
+/* * Glow green text Start */
+.glow-green-text-9 {
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.9);
+}
+
+.glow-green-text-8 {
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.8);
+}
+
+.glow-green-text-7 {
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.7);
+}
+
+.glow-green-text-6 {
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.6);
+}
+
+.glow-green-text-5 {
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.5);
+}
+
+.glow-green-text-4 {
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.4);
+}
+
+.glow-green-text-3 {
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.3);
+}
+
+.glow-green-text-2 {
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.2);
+}
+
+.glow-green-text-1 {
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.1);
+}
+/* * Glow green text End */
+
+/* * Float animation Start */
+.smooth-float {
+  animation: smooth-float 3s ease-in-out infinite;
+}
+
+.float-yellow {
+  animation: smooth-float 3s ease-in-out infinite,
+    light-breath-yellow 1.5s ease-in-out infinite alternate;
+}
+
+.float-green {
+  animation: smooth-float 3s ease-in-out infinite,
+    light-breath-green 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes smooth-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-0.3125rem);
+  }
+  75% {
+    transform: translateY(0.3125rem);
+  }
+}
+
+/* * Float animation End */
+
+/* * light breath animation Start */
+
+.light-breath-yellow {
+  animation: light-breath-yellow 1.5s ease-in-out infinite alternate;
+}
+.light-breath-green {
+  animation: light-breath-green 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes light-breath-yellow {
+  0% {
+    filter: drop-shadow(0px 0px 8.75rem rgba(250, 241, 152, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 8.75rem rgba(250, 241, 152, 0.8));
+  }
+}
+
+@keyframes light-breath-green {
+  0% {
+    filter: drop-shadow(0px 0px 8.75rem rgba(0, 183, 217, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 8.75rem rgba(0, 183, 217, 0.8));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  @keyframes light-breath-yellow {
+    0% {
+      filter: drop-shadow(0px 0px 2rem rgba(250, 241, 152, 0.3));
+    }
+    100% {
+      filter: drop-shadow(0px 0px 2rem rgba(250, 241, 152, 0.8));
+    }
+  }
+  @keyframes light-breath-green {
+    0% {
+      filter: drop-shadow(0px 0px 2rem rgba(0, 183, 217, 0.3));
+    }
+    100% {
+      filter: drop-shadow(0px 0px 2rem rgba(0, 183, 217, 0.8));
+    }
+  }
+}
+
+/* * light breath animation End */

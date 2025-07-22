@@ -1,0 +1,292 @@
+/* ================================
+   COMPONENTS
+   Buttons, cards, modals, etc.
+   ================================ */
+
+/* * Buttons Start */
+
+.button {
+  text-decoration: none;
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-md);
+  padding: 0.9375rem 1.875rem;
+  border: none;
+  font-weight: var(--font-weight-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.button--hover-shine:not(:disabled):hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shine var(--transition-slow);
+}
+
+.button.button--shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shine 3s linear infinite;
+}
+
+.button--hover-scale {
+  transition: scale var(--transition-fast);
+}
+
+.button--hover-scale:hover {
+  scale: 1.1;
+}
+
+@keyframes shine {
+  100% {
+    left: 100%;
+  }
+}
+
+.button.button--primary {
+  color: var(--white);
+  background-color: var(--indigo-dye-2);
+}
+
+.button.button--secondary {
+  color: var(--white);
+  background-color: var(--indigo-dye);
+}
+
+.button.button--tertiary {
+  color: var(--white);
+  background-color: var(--lime-green);
+}
+
+/* * Buttons End */
+
+/* * Cards Start */
+.card__item {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0px 0.625rem 2.1875rem #001a2d;
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 1.875rem;
+  background: radial-gradient(
+      69.88% 69.87% at 4.86% 111.37%,
+      rgba(0, 94, 158, 0.3) 0%,
+      rgba(244, 244, 244, 0) 50%
+    ),
+    radial-gradient(
+      118% 92.5% at 118% 1.25%,
+      rgba(244, 244, 244, 0.3) 0%,
+      rgba(244, 244, 244, 0) 50%
+    ),
+    #002945;
+  gap: 1.5625rem;
+  min-height: 18rem;
+  transition: var(--transition-fast);
+}
+
+.card__item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 50%;
+  top: 50%;
+  pointer-events: none;
+  translate: 50% -50%;
+  border: 0.125rem solid var(--border-color);
+  border-radius: var(--radius-xl);
+  z-index: 1;
+  mask-image: linear-gradient(190deg, black 0%, transparent 30%),
+    linear-gradient(10deg, black 0%, transparent 30%);
+  transition: var(--transition-slow);
+  opacity: 0;
+}
+
+div:has(.card__item:hover) .card__item:not(:hover) {
+  scale: 0.95;
+  opacity: 0.5;
+}
+
+.card__item:hover {
+  scale: 1.05;
+}
+
+.card__item:hover :where(.card__icon, .card__title) {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.9);
+}
+
+.card__item:hover::before {
+  opacity: 1;
+}
+
+.card__icon,
+.card__title {
+  transition: var(--transition-slow);
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.4);
+}
+
+.card__icon {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 992px) {
+  .card__item {
+    max-width: 27rem;
+    margin: auto;
+  }
+}
+/* * Cards End */
+
+/* * Input Start */
+
+.input__wrapper {
+  position: relative;
+}
+
+.input__with-error-wrapper {
+  max-width: 20rem;
+}
+
+.input__wrapper .input__item {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: var(--radius-md);
+  background-color: #000f2b;
+  color: var(--white);
+  border: 0.0625rem solid var(--white);
+  outline: none;
+  text-align: right;
+  padding-left: 2rem;
+  transition: var(--transition-fast);
+}
+
+.input__wrapper .input__item:focus {
+  border-color: var(--lime-green);
+}
+
+.input__wrapper.input__wrapper--otp {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+  max-width: unset;
+}
+
+.input__wrapper.input__wrapper--otp .input__item {
+  direction: ltr;
+  border-color: transparent;
+  text-align: center;
+  padding: 0.5rem;
+  min-width: unset;
+  width: 3.8rem;
+  aspect-ratio: 1 / 1;
+}
+
+.input__with-error-wrapper:has(.just-validate-error-label) .input__item {
+  border-color: var(--red);
+}
+
+.input__with-error-wrapper:has(.just-validate-error-label)
+  .input__item:focus
+  ~ .input__label-holder,
+.input__with-error-wrapper:has(.just-validate-error-label)
+  .input__item:not(:placeholder-shown)
+  ~ .input__label-holder {
+  color: var(--red);
+}
+
+.input__wrapper.input__wrapper--otp .input__item::placeholder {
+  text-align: center;
+}
+
+.input__wrapper.input__wrapper--otp .input__item:focus,
+.input__wrapper.input__wrapper--otp :not(.input__item:placeholder-shown) {
+  border-color: var(--lime-green);
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.5));
+}
+
+.input__wrapper .input__item::placeholder,
+.input__label-holder {
+  text-align: right;
+  font-weight: var(--font-weight-light);
+  color: rgba(234, 254, 252, 0.5);
+}
+
+.input__wrapper .input__icon,
+.input__wrapper .input__label-holder {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.input__with-error-wrapper--textarea .input__label-holder,
+.input__with-error-wrapper--textarea .input__icon {
+  top: 1.6rem;
+}
+
+.input__with-error-wrapper--textarea .input__item {
+  transition: border-color var(--transition-fast);
+}
+
+.input__with-error-wrapper--textarea,
+.input__with-error-wrapper--textarea .input__wrapper {
+  width: 100%;
+  max-width: unset;
+}
+
+.input__wrapper .input__label-holder {
+  pointer-events: none;
+  right: 0.8rem;
+  transition: var(--transition-fast);
+}
+
+.input__wrapper .input__icon {
+  left: 0.8rem;
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.5);
+  color: var(--lime-green);
+}
+
+.input__wrapper .input__item:focus ~ .input__label-holder,
+.input__wrapper .input__item:not(:placeholder-shown) ~ .input__label-holder {
+  font-size: var(--font-size-xs);
+  color: var(--lime-green);
+  top: -0.8rem;
+  background-color: #000f2b;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3125rem;
+  translate: 0;
+  /* text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.5); */
+}
+
+/* * Input End */

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تماس با ما</title>
+    <!-- ! Core Styles -->
+
+    <link
+      rel="stylesheet"
+      href="assets/website/libs/bootstrap/bootstrap.rtl.min.css"
+    />
+    <link rel="stylesheet" href="assets/website/libs/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="assets/website/css/main.css" />
+
+    <!-- ! Page Styles -->
+    <link rel="stylesheet" href="assets/website/libs/scrollcue/scrollCue.css" />
+    <style>
+      .form--contact .input__with-error-wrapper {
+        max-width: unset;
+      }
+
+      .form--contact {
+        position: relative;
+        box-shadow: 0px 0.625rem 2.1875rem #001a2d;
+        border-radius: var(--radius-xl);
+        height: 100%;
+        padding: 2.5rem 1.875rem;
+        background: radial-gradient(
+            69.88% 69.87% at 4.86% 111.37%,
+            rgba(0, 94, 158, 0.3) 0%,
+            rgba(244, 244, 244, 0) 50%
+          ),
+          radial-gradient(
+            118% 92.5% at 118% 1.25%,
+            rgba(244, 244, 244, 0.3) 0%,
+            rgba(244, 244, 244, 0) 50%
+          ),
+          #002945;
+        gap: 1.5625rem;
+      }
+
+      .form--contact::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 50%;
+        top: 50%;
+        translate: 50% -50%;
+        border: 0.125rem solid var(--border-color);
+        border-radius: var(--radius-xl);
+        z-index: 1;
+        pointer-events: none;
+        mask-image: linear-gradient(190deg, black 0%, transparent 30%),
+          linear-gradient(10deg, black 0%, transparent 30%);
+        transition: var(--transition-slow);
+      }
+
+      .form--contact .button {
+        min-width: 12.5rem;
+      }
+
+      .card__item {
+        padding: 1.5rem 1rem;
+        max-height: 100%;
+        justify-content: space-between;
+      }
+
+      .card__item .card__icon {
+        background-color: var(--indigo-dye-2);
+        border-radius: var(--radius-circle);
+        font-size: var(--font-size-xl);
+        width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+      }
+
+      .card__item .card__head {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .card__item .card__text {
+        text-align: right;
+      }
+
+      .card__item .card__title {
+        margin: 0;
+      }
+
+      .card__foot-item {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-bottom: 0.3rem;
+      }
+
+      .card__foot-item i {
+        text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.5);
+        font-size: var(--font-size-lg);
+        color: var(--lime-green);
+        margin-right: 0.5rem;
+      }
+
+      .card__foot-item a {
+        text-decoration: none;
+        color: var(--white);
+      }
+    </style>
+  </head>
+  <body class="body body--website">
+    <!-- * Particle Background Start -->
+    <div id="particles-js"></div>
+    <!-- * Particle Background End -->
+
+    <!-- * Navbar Start -->
+    <nav class="nav nav--website">
+      <div
+        class="nav__wrapper nav__wrapper--right flex-grow-1 flex-md-grow-0 justify-content-between justify-content-md-start"
+      >
+        <img class="nav__logo" src="logo-site.png" alt="Logo" />
+        <a
+          class="nav__hamburger-btn d-block d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#side-menu"
+          aria-controls="side-menu"
+        >
+          <i class="fa-solid fa-bars fa-lg me-2"></i>
+          منو
+        </a>
+        <ul class="nav__links d-none d-lg-flex">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">صفحه اصلی</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">سوالات متداول</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="about.html">درباره ما</a>
+          </li>
+          <li class="nav__item nav__item--active">
+            <a class="nav__link" href="contact.html">تماس با ما</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__wrapper nav__wrapper--left d-none d-md-flex">
+        <a
+          href="register-login.html"
+          class="button button--hover-shine button--primary"
+        >
+          <i class="fa-solid fa-user"></i>
+          ثبت نام
+        </a>
+        <a
+          href="register-login.html?is_login=true"
+          class="button button--hover-shine button--secondary"
+        >
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          ورود به پنل
+        </a>
+      </div>
+    </nav>
+    <div
+      class="nav__offcanvas glow-white-2 offcanvas offcanvas-start"
+      tabindex="-1"
+      id="side-menu"
+      aria-labelledby="staticBackdropLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title glow-white-text-4" id="staticBackdropLabel">
+          منو
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white fs-4"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav__offcanvas-links">
+          <li class="nav__offcanvas-item">
+            <a class="nav__offcanvas-link" href="index.html">صفحه اصلی</a>
+          </li>
+          <li class="nav__offcanvas-item">
+            <a class="nav__offcanvas-link" href="#">سوالات متداول</a>
+          </li>
+          <li class="nav__offcanvas-item">
+            <a class="nav__offcanvas-link" href="about.html">درباره ما</a>
+          </li>
+          <li class="nav__offcanvas-item nav__offcanvas-item--active">
+            <a class="nav__offcanvas-link" href="contact.html">تماس با ما</a>
+          </li>
+          <div class="d-md-none d-flex flex-column mt-auto">
+            <a
+              href="register-login.html"
+              class="button w-100 mb-3 button--hover-shine button--primary"
+            >
+              <i class="fa-solid fa-user"></i>
+              ثبت نام</a
+            ><a
+              href="register-login.html?is_login=true"
+              class="button w-100 button--hover-shine button--secondary"
+            >
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+              ورود به پنل
+            </a>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <!-- * Navbar End -->
+
+    <main class="main main--website main--website-page">
+      <!-- * [Contact] Start -->
+      <section class="section section--website">
+        <div class="section__head p-2 p-lg-5" data-cue="slideInUp">
+          <h3 class="section__title">تماس با ما</h3>
+          <p class="section__text">
+            ما اینجا هستیم تا به سوالات شما پاسخ دهیم و پیشنهادات شما را بشنویم.
+            از طریق فرم زیر یا اطلاعات تماس می توانید با ما در ارتباط باشید.
+          </p>
+        </div>
+        <div class="section__foot mt-5">
+          <div class="row flex-lg-row flex-column">
+            <div class="col-12 col-xl-7 mb-5 mb-xl-0" data-cue="slideInRight">
+              <form action="" class="form form--contact" id="form-contact">
+                <h4 class="form__title text-center mb-5">فرم تماس با ما</h4>
+                <div class="row form__body">
+                  <div class="col-md-6 col-12">
+                    <div class="input__with-error-wrapper mb-4">
+                      <div class="input__wrapper">
+                        <i class="input__icon fa-solid fa-user"></i>
+                        <input
+                          class="input__item"
+                          type="text"
+                          name="full_name"
+                          placeholder=" "
+                          id="full_name"
+                        />
+                        <label class="input__label-holder" for=""
+                          >* نام و نام خانوادگی</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="input__with-error-wrapper mb-4">
+                      <div class="input__wrapper">
+                        <i class="input__icon fa-solid fa-envelope"></i>
+                        <input
+                          class="input__item"
+                          placeholder=" "
+                          type="email"
+                          name="email"
+                          id="email"
+                        />
+                        <label class="input__label-holder" for=""
+                          >* ایمیل</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="input__with-error-wrapper mb-4">
+                      <div class="input__wrapper">
+                        <i class="input__icon fa-solid fa-phone"></i>
+                        <input
+                          class="input__item"
+                          placeholder=" "
+                          type="tel"
+                          maxlength="11"
+                          name="phone"
+                          id="phone"
+                        />
+                        <label class="input__label-holder" for=""
+                          >شماره همراه</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="input__with-error-wrapper mb-4">
+                      <div class="input__wrapper">
+                        <i class="input__icon fa-solid fa-pen-nib"></i>
+                        <input
+                          class="input__item"
+                          placeholder=" "
+                          type="text"
+                          name="subject"
+                          id="subject"
+                        />
+                        <label class="input__label-holder" for=""
+                          >* عنوان</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div
+                      class="input__with-error-wrapper input__with-error-wrapper--textarea mb-4"
+                    >
+                      <div class="input__wrapper">
+                        <i class="input__icon fa-solid fa-comments"></i>
+                        <textarea
+                          class="input__item"
+                          placeholder=" "
+                          name="message"
+                          id="message"
+                          rows="5"
+                        ></textarea>
+                        <label class="input__label-holder" for=""
+                          >* متن پیام...</label
+                        >
+                        <div class="text-start mt-1 small">
+                          <span>تعداد کاراکترها:</span>
+                          <small id="charCount">2000 / 0</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="button button--tertiary button--hover-shine w-50 mx-auto"
+                  >
+                    تایید و ارسال
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col-12 col-xl-5">
+              <div
+                class="cards row mb-4"
+                data-cues="slideInLeft"
+                data-group="card-contact"
+              >
+                <div
+                  class="card__wrapper col-12 col-lg-6 col-md-6 col-xl-6 mb-4 mb-md-0"
+                >
+                  <div class="card__item">
+                    <div class="card__head">
+                      <i class="card__icon fa-solid fa-envelope"></i>
+                      <h4 class="card__title">ایمیل</h4>
+                    </div>
+                    <p class="card__text">
+                      برای پیگیری های رسمی و ارسال مدارک از طریق ایمیل اقدام
+                      کنید.
+                    </p>
+                    <div class="card__foot">
+                      <div class="card__foot-item">
+                        <a href="#">info@investment.com </a>
+                        <i class="fa-solid fa-envelope"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__wrapper col-12 col-lg-6 col-md-6 col-xl-6">
+                  <div class="card__item">
+                    <div class="card__head">
+                      <i class="card__icon fa-solid fa-envelope"></i>
+                      <h4 class="card__title">ایمیل</h4>
+                    </div>
+                    <p class="card__text">
+                      برای پیگیری های رسمی و ارسال مدارک از طریق ایمیل اقدام
+                      کنید.
+                    </p>
+                    <div class="card__foot">
+                      <div class="card__foot-item">
+                        <a href="#">info@investment.com </a>
+                        <i class="fa-solid fa-envelope"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="cards row"
+                data-cues="slideInLeft"
+                data-group="card-contact"
+              >
+                <div
+                  class="card__wrapper col-12 col-lg-6 col-md-6 col-xl-6 mb-4 mb-md-0"
+                >
+                  <div class="card__item">
+                    <div class="card__head">
+                      <i class="card__icon fa-solid fa-envelope"></i>
+                      <h4 class="card__title">ایمیل</h4>
+                    </div>
+                    <p class="card__text">
+                      برای پیگیری های رسمی و ارسال مدارک از طریق ایمیل اقدام
+                      کنید.
+                    </p>
+                    <div class="card__foot">
+                      <div class="card__foot-item">
+                        <a href="#">info@investment.com </a>
+                        <i class="fa-solid fa-envelope"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__wrapper col-12 col-lg-6 col-md-6 col-xl-6">
+                  <div class="card__item">
+                    <div class="card__head">
+                      <i class="card__icon fa-solid fa-envelope"></i>
+                      <h4 class="card__title">ایمیل</h4>
+                    </div>
+                    <p class="card__text">
+                      برای پیگیری های رسمی و ارسال مدارک از طریق ایمیل اقدام
+                      کنید.
+                    </p>
+                    <div class="card__foot">
+                      <div class="card__foot-item">
+                        <a href="#">info@investment.com </a>
+                        <i class="fa-solid fa-envelope"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- * [Contact] End -->
+    </main>
+
+    <!-- * Footer Start -->
+    <footer class="footer footer--website">
+      <div class="footer__columns">
+        <div class="footer__column footer__column--right">
+          <h1 class="footer__title footer__title--right-column">
+            سرمایه گذاری
+          </h1>
+          <p class="footer__text">
+            پلتفرم پیشرو در سرمایه‌گذاری آنلاین با هدف ایجاد فرصت‌های
+            سرمایه‌گذاری امن و پرسود برای همه ایرانیان.
+          </p>
+          <ul class="footer__socials">
+            <li class="footer__social">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="footer__social">
+              <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </li>
+            <li class="footer__social">
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li class="footer__social">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--center">
+          <h4 class="footer__title"><span>لینک‌های سریع</span></h4>
+          <ul class="footer__links">
+            <li class="footer__link"><a href="index.html">صفحه اصلی</a></li>
+            <li class="footer__link"><a href="#">خدمات ما</a></li>
+            <li class="footer__link"><a href="#">طرح‌های سرمایه‌گذار</a></li>
+            <li class="footer__link"><a href="#">سوالات متداول</a></li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--left">
+          <h4 class="footer__title"><span>تماس با ما</span></h4>
+          <ul class="footer__contacts">
+            <li class="footer__contact">
+              <i class="footer__contact-icon fa-solid fa-location-dot"></i>
+              تهران، خیابان ولیعصر، پلاک ۱۲۳۴
+            </li>
+            <li class="footer__contact">
+              <i class="footer__contact-icon fa-solid fa-phone"></i>
+              <a href="#">021-12345678</a>
+            </li>
+            <li class="footer__contact">
+              <i class="footer__contact-icon fa-solid fa-envelope"></i>
+              <a href="#">info@investment.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <small class="footer__copyright">تمامی حقوق محفوظ است - 1404 ©</small>
+    </footer>
+    <!-- * Footer End -->
+    <!-- ! Core Scripts -->
+    <script src="assets/website/libs/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/website/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/website/libs/particles.js/particles.min.js"></script>
+
+    <script>
+      // Initialize particles background
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#0ea5e9" },
+          shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#3b82f6",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+    <!-- ! Page Scripts -->
+    <script src="assets/website/libs/validate.min.js/just-validate.production.min.js"></script>
+    <script src="assets/website/libs/scrollcue/scrollCue.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        scrollCue.init();
+
+        // ====== Character limiter Start ======
+        const textarea = document.getElementById("message");
+        const counter = document.getElementById("charCount");
+        const maxLength = 2000;
+        const warningThreshold = 2000;
+
+        textarea.addEventListener("input", () => {
+          let length = textarea.value.length;
+
+          if (length > maxLength) {
+            textarea.value = textarea.value.substring(0, maxLength);
+            length = maxLength;
+          }
+
+          counter.textContent = `${maxLength} / ${length}`;
+
+          if (length >= warningThreshold) {
+            counter.classList.add("text-danger");
+          } else {
+            counter.classList.remove("text-danger");
+          }
+        });
+        // ====== Character limiter End ======
+
+        // ====== Validation Start ======
+
+        // Validation options
+        const validateOptions = {
+          errorFieldCssClass: "is-invalid",
+          errorLabelStyle: {
+            color: "var(--red)",
+            fontSize: ".8rem",
+            fontWeight: "bold",
+            marginTop: "5px",
+            display: "block",
+          },
+          successFieldCssClass: "is-valid",
+        };
+
+        // Validation for contact
+        const contactValidator = new JustValidate(
+          "#form-contact",
+          validateOptions
+        );
+
+        contactValidator
+          .addField(
+            "#full_name",
+            [
+              {
+                rule: "required",
+                errorMessage: "نام و نام خانوادگی الزامی است",
+              },
+              {
+                rule: "minLength",
+                value: 4,
+                errorMessage: "حداقل 4 کاراکتر وارد کنید",
+              },
+              {
+                rule: "maxLength",
+                value: 50,
+                errorMessage: "حداکثر ۵۰ کاراکتر مجاز است",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#full_name")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .addField(
+            "#subject",
+            [
+              {
+                rule: "required",
+                errorMessage: "عنوان الزامی است",
+              },
+              {
+                rule: "minLength",
+                value: 4,
+                errorMessage: "حداقل 4 کاراکتر وارد کنید",
+              },
+              {
+                rule: "maxLength",
+                value: 50,
+                errorMessage: "حداکثر ۵۰ کاراکتر مجاز است",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#subject")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .addField(
+            "#email",
+            [
+              {
+                rule: "required",
+                errorMessage: "ایمیل الزامی است",
+              },
+              {
+                rule: "email",
+                errorMessage: "ایمیل معتبر وارد کنید",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#email")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .addField(
+            "#message",
+            [
+              {
+                rule: "required",
+                errorMessage: "متن پیام الزامی است",
+              },
+              {
+                rule: "minLength",
+                value: 4,
+                errorMessage: "حداقل 4 کاراکتر وارد کنید",
+              },
+              {
+                rule: "maxLength",
+                value: 2000,
+                errorMessage: "حداکثر 2000 کاراکتر مجاز است",
+              },
+            ],
+            {
+              errorsContainer: document
+                .querySelector("#message")
+                .closest(".input__with-error-wrapper"),
+            }
+          )
+          .onSuccess(function () {
+            document.getElementById("form-contact").submit();
+          });
+
+        // ====== Validation End ======
+      });
+    </script>
+  </body>
+</html>
