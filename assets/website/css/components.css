@@ -122,6 +122,7 @@
   height: 100%;
   right: 50%;
   top: 50%;
+  pointer-events: none;
   translate: 50% -50%;
   border: 0.125rem solid var(--border-color);
   border-radius: var(--radius-xl);
@@ -171,7 +172,6 @@ div:has(.card__item:hover) .card__item:not(:hover) {
 
 .input__wrapper {
   position: relative;
-  max-width: 20rem;
 }
 
 .input__with-error-wrapper {
@@ -188,6 +188,11 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   outline: none;
   text-align: right;
   padding-left: 2rem;
+  transition: var(--transition-fast);
+}
+
+.input__wrapper .input__item:focus {
+  border-color: var(--lime-green);
 }
 
 .input__wrapper.input__wrapper--otp {
@@ -199,13 +204,26 @@ div:has(.card__item:hover) .card__item:not(:hover) {
 }
 
 .input__wrapper.input__wrapper--otp .input__item {
+  direction: ltr;
   border-color: transparent;
   text-align: center;
   padding: 0.5rem;
   min-width: unset;
   width: 3.8rem;
   aspect-ratio: 1 / 1;
-  transition: var(--transition-fast);
+}
+
+.input__with-error-wrapper:has(.just-validate-error-label) .input__item {
+  border-color: var(--red);
+}
+
+.input__with-error-wrapper:has(.just-validate-error-label)
+  .input__item:focus
+  ~ .input__label-holder,
+.input__with-error-wrapper:has(.just-validate-error-label)
+  .input__item:not(:placeholder-shown)
+  ~ .input__label-holder {
+  color: var(--red);
 }
 
 .input__wrapper.input__wrapper--otp .input__item::placeholder {
@@ -232,14 +250,29 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   translate: 0 -50%;
 }
 
+.input__with-error-wrapper--textarea .input__label-holder,
+.input__with-error-wrapper--textarea .input__icon {
+  top: 1.6rem;
+}
+
+.input__with-error-wrapper--textarea .input__item {
+  transition: border-color var(--transition-fast);
+}
+
+.input__with-error-wrapper--textarea,
+.input__with-error-wrapper--textarea .input__wrapper {
+  width: 100%;
+  max-width: unset;
+}
+
 .input__wrapper .input__label-holder {
   pointer-events: none;
-  right: 5%;
+  right: 0.8rem;
   transition: var(--transition-fast);
 }
 
 .input__wrapper .input__icon {
-  left: 5%;
+  left: 0.8rem;
   text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.5);
   color: var(--lime-green);
 }
@@ -247,13 +280,13 @@ div:has(.card__item:hover) .card__item:not(:hover) {
 .input__wrapper .input__item:focus ~ .input__label-holder,
 .input__wrapper .input__item:not(:placeholder-shown) ~ .input__label-holder {
   font-size: var(--font-size-xs);
-  color: var(--white);
-  top: -30%;
+  color: var(--lime-green);
+  top: -0.8rem;
   background-color: #000f2b;
   padding: 0.2rem 0.5rem;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   translate: 0;
-  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.5);
+  /* text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.5); */
 }
 
 /* * Input End */
