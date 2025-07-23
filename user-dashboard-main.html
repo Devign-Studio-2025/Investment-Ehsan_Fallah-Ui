@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نام سایت</title>
+    <!-- ! Core Styles -->
+
+    <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="assets/libs/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- ! Page Styles -->
+  </head>
+  <body class="body body--website">
+    <!-- * Particle Background Start -->
+    <div id="particles-js"></div>
+    <!-- * Particle Background End -->
+
+    <!-- * Navbar Start -->
+    <nav class="nav nav--dashboard">
+      <ul class="nav__links">
+        <li class="nav__item nav__item--active">
+          <a class="nav__link" href="index.html">
+            .nav__link-icon
+            
+            صفحه اصلی
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">سوالات متداول</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="about.html">درباره ما</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="contact.html">تماس با ما</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- * Navbar End -->
+
+    <main class="main main--website">
+      <!-- * [Section_name] Start -->
+      <section class="section section--website">
+        <h3 class="section__title"></h3>
+        <p class="section__text"></p>
+      </section>
+      <!-- * [Section_name] End -->
+    </main>
+
+    <!-- ! Core Scripts -->
+    <script src="assets/libs/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/particles.js/particles.min.js"></script>
+
+    <script>
+      // Initialize particles background
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#0ea5e9" },
+          shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#3b82f6",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+    <!-- ! Page Scripts -->
+  </body>
+</html>
