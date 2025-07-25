@@ -19,36 +19,1124 @@
 
     <!-- * Navbar Start -->
     <nav class="nav nav--dashboard">
-      <ul class="nav__links">
+      <ul class="nav__links d-none d-lg-flex">
         <li class="nav__item nav__item--active">
-          <a class="nav__link" href="index.html">
-            .nav__link-icon
-            
+          <a class="nav__link" href="">
+            <i class="nav__link-icon fa-solid fa-house"></i>
             صفحه اصلی
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">سوالات متداول</a>
+          <a class="nav__link" href="#">
+            <i class="nav__link-icon fa-solid fa-money-simple-from-bracket"></i>
+            واریز به حساب</a
+          >
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="about.html">درباره ما</a>
+          <a class="nav__link" href="">
+            <i class="nav__link-icon fa-solid fa-money-from-bracket"></i>
+            برداشت از حساب</a
+          >
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="contact.html">تماس با ما</a>
+          <a class="nav__link" href="">
+            <i class="nav__link-icon fa-solid fa-users"></i>
+            زیرمجموعه</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">
+            <i class="fa-solid fa-up-right-from-square"></i>
+            ورود به سایت</a
+          >
         </li>
       </ul>
     </nav>
     <!-- * Navbar End -->
 
-    <main class="main main--website">
+    <!-- * Top nav btns Start -->
+    <div class="nav__action-btns nav__action-btns--top d-flex d-lg-none">
+      <button
+        data-bs-toggle="offcanvas"
+        data-bs-target="#notif-offcanvas"
+        class="nav__action-btn nav__action-btn--notif"
+        data-tooltip="اعلان‌ها"
+      >
+        <i class="fa-solid fa-bell"></i>
+        <span>اعلان‌ها</span>
+        <div class="nav__action-btn__notif-count">3</div>
+      </button>
+      <button
+        class="nav__action-btn nav__action-btn--logout"
+        data-tooltip="خروج از حساب"
+      >
+        <span>خروج</span>
+        <i class="fa-solid fa-arrow-up-left-from-circle"></i>
+      </button>
+    </div>
+    <!-- * Top nav btns End -->
+
+    <main class="main main--dashboard p-2 p-sm-5">
       <!-- * [Section_name] Start -->
-      <section class="section section--website">
-        <h3 class="section__title"></h3>
-        <p class="section__text"></p>
-      </section>
+      <div
+        class="sections flex-column flex-lg-row align-items-center align-items-lg-start"
+      >
+        <div class="section__col-wrapper">
+          <section class="section section--dashboard">
+            <div class="credit-card">
+              <div class="credit__svg-wrapper">
+                <svg
+                  width="560"
+                  height="397"
+                  viewBox="0 0 560 397"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_396_240)">
+                    <ellipse
+                      cx="185.979"
+                      cy="102.642"
+                      rx="185.979"
+                      ry="102.642"
+                      transform="matrix(-0.993609 -0.112877 -0.112877 0.993609 476.559 117.477)"
+                      fill="#005E9E"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_396_240"
+                      x="0.856537"
+                      y="0.158905"
+                      width="558.653"
+                      height="396.622"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="47.0833"
+                        result="effect1_foregroundBlur_396_240"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+
+                <svg
+                  width="404"
+                  height="509"
+                  viewBox="0 0 404 509"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_403_376)">
+                    <path
+                      d="M189.487 314.288C172.543 290.282 171.575 271.96 163.12 243.82C146.799 189.5 158.82 153.827 139.421 100.529C99.8406 -8.22231 31.3956 334.107 128.749 396.683C189.949 436.021 369.028 445.452 315.042 396.683C293.482 377.207 272.847 379.263 248.498 363.411C223.369 347.051 206.777 338.785 189.487 314.288Z"
+                      fill="#EAFEFC"
+                      fill-opacity="0.7"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_403_376"
+                      x="0.433784"
+                      y="0.877205"
+                      width="403.092"
+                      height="507.412"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="39.2361"
+                        result="effect1_foregroundBlur_403_376"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+
+                <svg
+                  width="327"
+                  height="233"
+                  viewBox="0 0 327 233"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_396_243)">
+                    <path
+                      d="M173.596 63.2228C210.606 65.6578 234.762 79.3193 258.257 111.104C305.853 175.495 27.7649 195.95 66.4934 125.21C90.9126 80.6063 126.322 60.1126 173.596 63.2228Z"
+                      fill="#00FFFF"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_396_243"
+                      x="0.00249863"
+                      y="0.137814"
+                      width="326.531"
+                      height="232.288"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="31.3889"
+                        result="effect1_foregroundBlur_396_243"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+              <img src="assets/imgs/credit-bg.jpg" alt="" />
+              <div class="credit__content">
+                <div class="credit__right-side">
+                  <div class="credit__top">
+                    <div class="">زیرمجموعه:</div>
+                    <div class="fw-medium">102</div>
+                    <div>نفر</div>
+                  </div>
+                  <div class="credit__middle">
+                    <svg
+                      width="59"
+                      height="43"
+                      viewBox="0 0 59 43"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <foreignObject x="0" y="0" width="0" height="0"
+                        ><div
+                          xmlns="http://www.w3.org/1999/xhtml"
+                          style="
+                            backdrop-filter: blur(6.57px);
+                            clip-path: url(#bgblur_0_409_386_clip_path);
+                            height: 100%;
+                            width: 100%;
+                          "
+                        ></div
+                      ></foreignObject>
+                      <g data-figma-bg-blur-radius="13.1395">
+                        <path
+                          d="M-0.000976562 8.40938C-0.000976562 3.76505 3.764 7.62939e-05 8.40833 7.62939e-05H50.4548C55.0992 7.62939e-05 58.8641 3.76505 58.8641 8.40938V33.6373C58.8641 38.2816 55.0992 42.0466 50.4548 42.0466H8.40832C3.764 42.0466 -0.000976562 38.2816 -0.000976562 33.6373V8.40938Z"
+                          fill="#4D5863"
+                        />
+                        <path
+                          d="M8.4082 0.525467H50.4551C54.809 0.525596 58.3388 4.05533 58.3389 8.40926V33.6378C58.3386 37.9915 54.8089 41.5205 50.4551 41.5206H8.4082C4.05436 41.5205 0.524676 37.9916 0.524414 33.6378V8.40926C0.52448 4.05529 4.05424 0.525533 8.4082 0.525467Z"
+                          stroke="white"
+                          stroke-opacity="0.3"
+                          stroke-width="1.05116"
+                        />
+                      </g>
+                      <path
+                        d="M44.6742 1.05118H43.623V40.9954H44.6742V28.3814H57.8137V27.3302H44.6742V14.7163H57.8137V13.6651H44.6742V1.05118Z"
+                        fill="white"
+                        fill-opacity="0.3"
+                      />
+                      <path
+                        d="M14.716 27.3302H1.05093V28.3814H14.716V40.9954H15.7672V19.9721C15.7672 16.4889 12.9435 13.6651 9.46023 13.6651H1.05093V14.7163H9.46023C12.3629 14.7163 14.716 17.0694 14.716 19.9721V27.3302Z"
+                        fill="white"
+                        fill-opacity="0.3"
+                      />
+                      <path
+                        d="M14.716 1.05118H15.7672V9.46048H14.716V1.05118Z"
+                        fill="white"
+                        fill-opacity="0.3"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M22.0742 21.0233C22.0742 25.0871 25.3685 28.3814 29.4323 28.3814C33.4961 28.3814 36.7905 25.0871 36.7905 21.0233C36.7905 16.9595 33.4961 13.6651 29.4323 13.6651C25.3685 13.6651 22.0742 16.9595 22.0742 21.0233ZM23.1253 21.0233C23.1253 24.5065 25.9491 27.3302 29.4323 27.3302C32.9156 27.3302 35.7393 24.5065 35.7393 21.0233C35.7393 17.54 32.9156 14.7163 29.4323 14.7163C25.9491 14.7163 23.1253 17.54 23.1253 21.0233Z"
+                        fill="white"
+                        fill-opacity="0.3"
+                      />
+                      <defs>
+                        <clipPath
+                          id="bgblur_0_409_386_clip_path"
+                          transform="translate(0 0)"
+                        >
+                          <path
+                            d="M-0.000976562 8.40938C-0.000976562 3.76505 3.764 7.62939e-05 8.40833 7.62939e-05H50.4548C55.0992 7.62939e-05 58.8641 3.76505 58.8641 8.40938V33.6373C58.8641 38.2816 55.0992 42.0466 50.4548 42.0466H8.40832C3.764 42.0466 -0.000976562 38.2816 -0.000976562 33.6373V8.40938Z"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div class="fw-normal fs-5 me-1">موجودی:</div>
+                      <div class="fw-bold fs-4">9,000,000</div>
+                      <div class="small">تومان</div>
+                    </div>
+                    <div
+                      class="d-flex gap-2 align-items-center flex-wrap"
+                      style="max-width: 15.625rem"
+                    >
+                      <div class="fw-bold fs-5 me-1">احسان فلاح</div>
+                      <div class="d-flex gap-2">
+                        <div class="small">عضویت:</div>
+                        <div class="small fw-medium">1401/02/10</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="credit__left-side d-none d-sm-flex">
+                  <div class="credit__top">
+                    <svg
+                      width="46"
+                      height="52"
+                      viewBox="0 0 46 52"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g filter="url(#filter0_d_100_388)">
+                        <path
+                          d="M10.608 21.9757C11.0285 22.5013 11.3438 23.132 11.5541 23.7627C11.7643 24.3934 11.8694 25.1292 11.8694 25.865C11.8694 26.6009 11.7643 27.3367 11.5541 27.9674C11.3438 28.5981 11.0285 29.2288 10.608 29.7543C10.0824 30.4902 10.1876 31.5413 10.9234 32.0669C11.6592 32.5925 12.7104 32.4874 13.2359 31.7516C13.8666 30.9106 14.2871 30.0697 14.7076 29.0185C15.128 27.9674 15.2331 26.9162 15.2331 25.865C15.2331 24.8139 15.0229 23.7627 14.7076 22.7116C14.3922 21.7655 13.8666 20.8195 13.2359 19.9785C12.7104 19.2427 11.6592 19.1376 10.9234 19.6632C10.1876 20.1888 10.0824 21.2399 10.608 21.9757Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M16.3894 18.9274C17.6508 20.9246 18.3866 23.3422 18.3866 25.865C18.3866 28.3878 17.6508 30.8055 16.3894 32.8027C15.8638 33.5385 16.1792 34.5897 16.915 35.1153C17.7559 35.6409 18.702 35.3255 19.2276 34.5897C20.8043 32.0669 21.7504 29.1236 21.7504 25.865C21.7504 22.7115 20.8043 19.6632 19.2276 17.1404C18.702 16.4046 17.6508 16.0892 16.915 16.6148C16.1792 17.1404 15.8638 18.0864 16.3894 18.9274Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M22.4862 15.7739C24.2731 18.7171 25.2192 22.186 25.2192 25.865C25.2192 29.5441 24.168 33.0129 22.4862 35.9562C22.0657 36.7971 22.2759 37.7432 23.1169 38.2688C23.9578 38.6892 24.9038 38.479 25.4294 37.6381C27.5317 34.1692 28.688 30.1748 28.688 25.865C28.688 21.5553 27.5317 17.5609 25.4294 14.092C25.0089 13.2511 23.9578 13.0409 23.1169 13.4613C22.2759 13.9869 22.0657 14.9329 22.4862 15.7739Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M28.5829 12.6204C30.7903 16.5097 32.1568 21.0297 32.1568 25.865C32.1568 30.7004 30.8954 35.2204 28.5829 39.1097C28.1624 39.9506 28.3726 40.8967 29.2136 41.4222C30.0545 41.8427 31.0005 41.6325 31.5261 40.7916C34.0489 36.3767 35.5205 31.3311 35.5205 25.865C35.5205 20.399 34.0489 15.3534 31.5261 10.9385C31.1057 10.0976 30.0545 9.88736 29.2136 10.3078C28.3726 10.7283 28.1624 11.7795 28.5829 12.6204Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <filter
+                          id="filter0_d_100_388"
+                          x="0.279541"
+                          y="0.0975952"
+                          width="45.241"
+                          height="51.5349"
+                          filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feColorMatrix
+                            in="SourceAlpha"
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"
+                          />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix
+                            type="matrix"
+                            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in2="BackgroundImageFix"
+                            result="effect1_dropShadow_100_388"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="effect1_dropShadow_100_388"
+                            result="shape"
+                          />
+                        </filter>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="credit__middle">
+                    <svg
+                      width="84"
+                      height="60"
+                      viewBox="0 0 84 60"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g filter="url(#filter0_d_100_390)">
+                        <foreignObject
+                          x="-16.2603"
+                          y="-16.0266"
+                          width="91.7805"
+                          height="91.7806"
+                          ><div
+                            xmlns="http://www.w3.org/1999/xhtml"
+                            style="
+                              backdrop-filter: blur(13.14px);
+                              clip-path: url(#bgblur_0_100_390_clip_path);
+                              height: 100%;
+                              width: 100%;
+                            "
+                          ></div
+                        ></foreignObject>
+                        <ellipse
+                          data-figma-bg-blur-radius="26.2791"
+                          cx="29.63"
+                          cy="29.8637"
+                          rx="19.6112"
+                          ry="19.6112"
+                          fill="white"
+                          fill-opacity="0.3"
+                        />
+                        <foreignObject
+                          x="8.05785"
+                          y="-16.0266"
+                          width="91.7805"
+                          height="91.7806"
+                          ><div
+                            xmlns="http://www.w3.org/1999/xhtml"
+                            style="
+                              backdrop-filter: blur(13.14px);
+                              clip-path: url(#bgblur_1_100_390_clip_path);
+                              height: 100%;
+                              width: 100%;
+                            "
+                          ></div
+                        ></foreignObject>
+                        <path
+                          data-figma-bg-blur-radius="26.2791"
+                          d="M73.5594 29.8637C73.5594 40.6947 64.7792 49.475 53.9482 49.475C43.1172 49.475 34.3369 40.6947 34.3369 29.8637C34.3369 19.0327 43.1172 10.2525 53.9482 10.2525C64.7792 10.2525 73.5594 19.0327 73.5594 29.8637Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                        <foreignObject
+                          x="8.05785"
+                          y="-11.8034"
+                          width="67.4627"
+                          height="83.3342"
+                          ><div
+                            xmlns="http://www.w3.org/1999/xhtml"
+                            style="
+                              backdrop-filter: blur(13.14px);
+                              clip-path: url(#bgblur_2_100_390_clip_path);
+                              height: 100%;
+                              width: 100%;
+                            "
+                          ></div
+                        ></foreignObject>
+                        <path
+                          data-figma-bg-blur-radius="26.2791"
+                          d="M41.7892 14.4756C37.2496 18.0675 34.3369 23.6255 34.3369 29.8637C34.3369 36.1019 37.2496 41.6598 41.7892 45.2517C46.3288 41.6598 49.2415 36.1019 49.2415 29.8637C49.2415 23.6255 46.3288 18.0675 41.7892 14.4756Z"
+                          fill="white"
+                          fill-opacity="0.6"
+                        />
+                      </g>
+                      <defs>
+                        <filter
+                          id="filter0_d_100_390"
+                          x="-7.82544"
+                          y="-6.02328"
+                          width="98.4451"
+                          height="72.5581"
+                          filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feColorMatrix
+                            in="SourceAlpha"
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"
+                          />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix
+                            type="matrix"
+                            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in2="BackgroundImageFix"
+                            result="effect1_dropShadow_100_390"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="effect1_dropShadow_100_390"
+                            result="shape"
+                          />
+                        </filter>
+                        <clipPath
+                          id="bgblur_0_100_390_clip_path"
+                          transform="translate(16.2603 16.0266)"
+                        >
+                          <ellipse
+                            cx="29.63"
+                            cy="29.8637"
+                            rx="19.6112"
+                            ry="19.6112"
+                          />
+                        </clipPath>
+                        <clipPath
+                          id="bgblur_1_100_390_clip_path"
+                          transform="translate(-8.05785 16.0266)"
+                        >
+                          <path
+                            d="M73.5594 29.8637C73.5594 40.6947 64.7792 49.475 53.9482 49.475C43.1172 49.475 34.3369 40.6947 34.3369 29.8637C34.3369 19.0327 43.1172 10.2525 53.9482 10.2525C64.7792 10.2525 73.5594 19.0327 73.5594 29.8637Z"
+                          />
+                        </clipPath>
+                        <clipPath
+                          id="bgblur_2_100_390_clip_path"
+                          transform="translate(-8.05785 11.8034)"
+                        >
+                          <path
+                            d="M41.7892 14.4756C37.2496 18.0675 34.3369 23.6255 34.3369 29.8637C34.3369 36.1019 37.2496 41.6598 41.7892 45.2517C46.3288 41.6598 49.2415 36.1019 49.2415 29.8637C49.2415 23.6255 46.3288 18.0675 41.7892 14.4756Z"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section--dashboard d-flex gap-4">
+            <button class="button w-50 button--hover-shine button--primary">
+              <i class="fa-solid fa-money-simple-from-bracket"></i>
+              واریز
+            </button>
+            <button class="button w-50 button--hover-shine button--tertiary">
+              <i class="fa-solid fa-money-simple-from-bracket"></i>
+              برداشت
+            </button>
+          </section>
+          <section
+            class="section section--dashboard section--dashboard-wrapper d-block"
+          >
+            <div
+              class="d-flex align-items-center justify-content-between mx-auto mb-1"
+              style="max-width: 18.75rem"
+            >
+              <div class="glow-white-text-4 d-flex align-items-center gap-2">
+                <i class="fa-solid fa-coin"></i>
+                <div class="fw-medium">سود امروز:</div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="fw-medium fs-4 clr-green glow-green-text-4"
+                  dir="ltr"
+                >
+                  +100,000
+                </div>
+                <div class="small glow-white-text-4">تومان</div>
+              </div>
+            </div>
+            <div
+              class="d-flex align-items-center mx-auto justify-content-between"
+              style="max-width: 18.75rem"
+            >
+              <div class="glow-white-text-4 d-flex align-items-center gap-2">
+                <i class="fa-solid fa-timer"></i>
+                <div class="fw-medium">تا واریز بعدی:</div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  id="count-down"
+                  class="fw-medium fs-4 clr-green glow-green-text-4"
+                >
+                  12:04:21
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="section section--dashboard section--dashboard-wrapper"
+          >
+            <div class="section__title section__title--orange">
+              در انتظار تایید
+            </div>
+            <div class="tables-wrapper">
+              <div class="table-item flex-wrap">
+                <button class="right-icon right-icon--btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <div class="left-row-content">
+                  <div class="right-content">
+                    <div>1401/11/05 12:01</div>
+                  </div>
+                  <div class="left-content">
+                    <div class="clr-orange glow-orange-text-4 fs-5 fw-medium">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-item flex-wrap">
+                <button class="right-icon right-icon--btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <div class="left-row-content">
+                  <div class="right-content">
+                    <div>1401/11/05 12:01</div>
+                  </div>
+                  <div class="left-content">
+                    <div class="clr-orange glow-orange-text-4 fs-5 fw-medium">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-item flex-wrap">
+                <button class="right-icon right-icon--btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <div class="left-row-content">
+                  <div class="right-content">
+                    <div>1401/11/05 12:01</div>
+                  </div>
+                  <div class="left-content">
+                    <div class="clr-orange glow-orange-text-4 fs-5 fw-medium">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section__footer">
+              <a class="button button--tertiary-outline" href="#">مشاهده همه</a>
+            </div>
+          </section>
+        </div>
+        <div class="section__col-wrapper">
+          <section
+            class="section section--dashboard section--dashboard-wrapper"
+          >
+            <div class="section__title section__title--green">
+              تراکنش‌های اخیر
+            </div>
+            <div class="tables-wrapper">
+              <div class="table-item">
+                <div class="right-icon">
+                  <i class="fa-solid fa-money-simple-from-bracket"></i>
+                </div>
+                <div class="left-row-content ps-0">
+                  <div
+                    class="right-content d-flex flex-column gap-0 text-start"
+                  >
+                    <div>واریز</div>
+                    <div class="small clr-green glow-green-text-4">
+                      5.95 تتر
+                    </div>
+                  </div>
+                  <div class="left-content flex-column gap-0">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                        200,000
+                      </div>
+                      <div class="small glow-white-text-4">تومان</div>
+                    </div>
+                    <div class="small ms-auto glow-white-text-4" dir="ltr">
+                      1401/11/05 12:01
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-item">
+                <div class="right-icon">
+                  <i class="fa-solid fa-money-from-bracket"></i>
+                </div>
+                <div class="left-row-content ps-0">
+                  <div
+                    class="right-content d-flex flex-column gap-0 text-start"
+                  >
+                    <div>واریز</div>
+                    <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                  </div>
+                  <div class="left-content flex-column gap-0">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="clr-red glow-red-text-4 fs-5 fw-medium">
+                        200,000
+                      </div>
+                      <div class="small glow-white-text-4">تومان</div>
+                    </div>
+                    <div class="small ms-auto glow-white-text-4" dir="ltr">
+                      1401/11/05 12:01
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section__footer">
+              <a class="button button--tertiary-outline" href="#">مشاهده همه</a>
+            </div>
+          </section>
+          <section
+            class="section section--dashboard section--dashboard-wrapper"
+          >
+            <div class="section__title section__title--white">موجودی ارزی</div>
+            <div class="tables-wrapper">
+              <div class="table-item">
+                <div class="right-icon">
+                  <img src="assets/imgs/crypto/tether.png" alt="" />
+                </div>
+                <div class="left-row-content ps-0">
+                  <div
+                    class="right-content d-flex flex-column gap-0 text-start"
+                  >
+                    <div>تتر</div>
+                    <div class="small clr-green glow-green-text-4">5.95</div>
+                  </div>
+                  <div class="left-content flex-column gap-0">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                        200,000
+                      </div>
+                      <div class="small glow-white-text-4">تومان</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-item">
+                <div class="right-icon">
+                  <img src="assets/imgs/crypto/dogecoin.png" alt="" />
+                </div>
+                <div class="left-row-content ps-0">
+                  <div
+                    class="right-content d-flex flex-column gap-0 text-start"
+                  >
+                    <div>دوج‌کوین</div>
+                    <div class="small clr-green glow-green-text-4">10.20</div>
+                  </div>
+                  <div class="left-content flex-column gap-0">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                        500,000
+                      </div>
+                      <div class="small glow-white-text-4">تومان</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-item">
+                <div class="right-icon">
+                  <img src="assets/imgs/crypto/bitcoin.png" alt="" />
+                </div>
+                <div class="left-row-content ps-0">
+                  <div
+                    class="right-content d-flex flex-column gap-0 text-start"
+                  >
+                    <div>بیت کوین</div>
+                    <div class="small clr-green glow-green-text-4">
+                      0.0000005
+                    </div>
+                  </div>
+                  <div class="left-content flex-column gap-0">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                        20,000,000
+                      </div>
+                      <div class="small glow-white-text-4">تومان</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section__footer">
+              <a class="button button--tertiary-outline" href="#">مشاهده همه</a>
+            </div>
+          </section>
+        </div>
+      </div>
       <!-- * [Section_name] End -->
+
+      <!-- * Notif offcanvas Start -->
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="notif-offcanvas"
+        aria-labelledby="notif-offcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="notif-offcanvasLabel">
+            اعلان‌های اخیر
+          </h5>
+        </div>
+        <div class="offcanvas-body small"></div>
+        <div class="offcanvas-footer">
+          <button
+            type="button"
+            class="button button--secondary w-100"
+            data-bs-dismiss="offcanvas"
+          >
+            بستن
+          </button>
+        </div>
+      </div>
+      <!-- * Notif offcanvas End -->
+
+      <!-- * Notif modal Start -->
+      <div class="modal fade" id="notif-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">اعلان‌های اخیر</h5>
+            </div>
+            <div class="modal-body">
+              <div class="tables-wrapper" id="notif-content">
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-simple-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-green glow-green-text-4">
+                        5.95 تتر
+                      </div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-simple-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-green glow-green-text-4">
+                        5.95 تتر
+                      </div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-simple-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-green glow-green-text-4">
+                        5.95 تتر
+                      </div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-simple-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-green glow-green-text-4">
+                        5.95 تتر
+                      </div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-simple-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-green glow-green-text-4">
+                        5.95 تتر
+                      </div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-simple-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-green glow-green-text-4">
+                        5.95 تتر
+                      </div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-item">
+                  <div class="right-icon">
+                    <i class="fa-solid fa-money-from-bracket"></i>
+                  </div>
+                  <div class="left-row-content ps-0">
+                    <div
+                      class="right-content d-flex flex-column gap-0 text-start"
+                    >
+                      <div>واریز</div>
+                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                    </div>
+                    <div class="left-content flex-column gap-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
+                          200,000
+                        </div>
+                        <div class="small glow-white-text-4">تومان</div>
+                      </div>
+                      <div class="small ms-auto glow-white-text-4" dir="ltr">
+                        1401/11/05 12:01
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="button button--secondary w-100"
+                data-bs-dismiss="modal"
+              >
+                بستن
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Notif modal End -->
+
+      <!-- * Bottom nav btns Start -->
+      <div class="nav__action-btns d-none d-lg-flex">
+        <button
+          data-bs-toggle="modal"
+          data-bs-target="#notif-modal"
+          class="nav__action-btn nav__action-btn--notif"
+          data-tooltip="اعلان‌ها"
+        >
+          <i class="fa-solid fa-bell"></i>
+          <div class="nav__action-btn__notif-count">3</div>
+        </button>
+        <button
+          class="nav__action-btn nav__action-btn--logout"
+          data-tooltip="خروج از حساب"
+        >
+          <i class="fa-solid fa-arrow-up-left-from-circle"></i>
+        </button>
+      </div>
+      <!-- * Bottom nav btns End -->
     </main>
 
+    <div class="d-flex p-2 opacity-50">
+      <small class="mx-auto">تمامی حقوق محفوظ است - 1404 ©</small>
+    </div>
     <!-- ! Core Scripts -->
     <script src="assets/libs/jquery/jquery-3.7.1.min.js"></script>
     <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
@@ -92,5 +1180,72 @@
       });
     </script>
     <!-- ! Page Scripts -->
+
+    <script>
+      // ====== Countdown Start ======
+
+      function startCountdown(hours, minutes, seconds, element) {
+        // (-1) is for when page loaded, it have 1s delay to update time
+        let totalSeconds = hours * 3600 + minutes * 60 + seconds - 1;
+
+        const countdownInterval = setInterval(() => {
+          if (totalSeconds <= 0) {
+            clearInterval(countdownInterval);
+            return;
+          }
+
+          const h = Math.floor(totalSeconds / 3600);
+          const m = Math.floor((totalSeconds % 3600) / 60);
+          const s = totalSeconds % 60;
+
+          const formattedTime = `${String(h).padStart(2, "0")}:${String(
+            m
+          ).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+
+          totalSeconds--;
+
+          element.textContent = formattedTime;
+        }, 1000);
+      }
+
+      const countDownElement = document.querySelector("#count-down");
+      const countDownArray = countDownElement.textContent.trim().split(":");
+
+      const hour = parseInt(countDownArray[0]);
+      const minute = parseInt(countDownArray[1]);
+      const second = parseInt(countDownArray[2]);
+
+      startCountdown(hour, minute, second, countDownElement);
+
+      // ====== Countdown End ======
+
+      // ====== Move content to Modal/Offcanvas Start ======
+
+      function moveResponsiveContent({
+        contentSelector,
+        modalSelector,
+        offcanvasSelector,
+      }) {
+        const content = document.querySelector(contentSelector);
+        const modal = document.querySelector(modalSelector);
+        const offcanvas = document.querySelector(offcanvasSelector);
+
+        if (offcanvas && !offcanvas.contains(content)) {
+          offcanvas.appendChild(content);
+        } else if (modal && !modal.contains(content)) {
+          modal.appendChild(content);
+        }
+      }
+
+      if (window.innerWidth < 768) {
+        moveResponsiveContent({
+          contentSelector: "#notif-content",
+          modalSelector: "#notif-modal .modal-body",
+          offcanvasSelector: "#notif-offcanvas .offcanvas-body",
+        });
+      }
+
+      // ====== Move content to Modal/Offcanvas End ======
+    </script>
   </body>
 </html>
