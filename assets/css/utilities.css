@@ -3,6 +3,26 @@
    Define helper & modifier classes.
    ================================ */
 
+/* * Colors text Start */
+
+.clr-white {
+  color: var(--white);
+}
+
+.clr-green {
+  color: var(--lime-green);
+}
+
+.clr-red {
+  color: var(--red);
+}
+
+.clr-orange {
+  color: var(--orange);
+}
+
+/* * Colors text End */
+
 /* * Glow white Start */
 .glow-white-9 {
   filter: drop-shadow(0rem 0rem 1.25rem rgba(244, 244, 244, 0.9));
@@ -78,6 +98,158 @@
   text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.1);
 }
 /* * Glow white text End */
+
+/* * Glow red Start */
+.glow-red-9 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 80, 83, 0.9));
+}
+
+.glow-red-8 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 80, 83, 0.8));
+}
+
+.glow-red-7 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 80, 83, 0.7));
+}
+
+.glow-red-6 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 80, 83, 0.6));
+}
+
+.glow-red-5 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 80, 83, 0.5));
+}
+
+.glow-red-4 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 80, 83, 0.4));
+}
+
+.glow-red-3 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 80, 83, 0.3));
+}
+
+.glow-red-2 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 80, 83, 0.2));
+}
+
+.glow-red-1 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 80, 83, 0.1));
+}
+/* * Glow red End */
+
+/* * Glow red text Start */
+.glow-red-text-9 {
+  text-shadow: 0rem 0rem 1.25rem rgba(55, 80, 83, 0.9);
+}
+
+.glow-red-text-8 {
+  text-shadow: 0rem 0rem 1.25rem rgba(55, 80, 83, 0.8);
+}
+
+.glow-red-text-7 {
+  text-shadow: 0rem 0rem 1.25rem rgba(55, 80, 83, 0.7);
+}
+
+.glow-red-text-6 {
+  text-shadow: 0rem 0rem 1.25rem rgba(55, 80, 83, 0.6);
+}
+
+.glow-red-text-5 {
+  text-shadow: 0rem 0rem 1.25rem rgba(55, 80, 83, 0.5);
+}
+
+.glow-red-text-4 {
+  text-shadow: 0rem 0rem 1.25rem rgba(55, 80, 83, 0.4);
+}
+
+.glow-red-text-3 {
+  text-shadow: 0rem 0rem 1.25rem rgba(55, 80, 83, 0.3);
+}
+
+.glow-red-text-2 {
+  text-shadow: 0rem 0rem 1.25rem rgba(55, 80, 83, 0.2);
+}
+
+.glow-red-text-1 {
+  text-shadow: 0rem 0rem 1.25rem rgba(55, 80, 83, 0.1);
+}
+/* * Glow red text End */
+
+/* * Glow orange Start */
+.glow-orange-9 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 174, 0, 0.9));
+}
+
+.glow-orange-8 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 174, 0, 0.8));
+}
+
+.glow-orange-7 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 174, 0, 0.7));
+}
+
+.glow-orange-6 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 174, 0, 0.6));
+}
+
+.glow-orange-5 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 174, 0, 0.5));
+}
+
+.glow-orange-4 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 174, 0, 0.4));
+}
+
+.glow-orange-3 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 174, 0, 0.3));
+}
+
+.glow-orange-2 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 174, 0, 0.2));
+}
+
+.glow-orange-1 {
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(255, 174, 0, 0.1));
+}
+/* * Glow orange End */
+
+/* * Glow orange text Start */
+.glow-orange-text-9 {
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.9);
+}
+
+.glow-orange-text-8 {
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.8);
+}
+
+.glow-orange-text-7 {
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.7);
+}
+
+.glow-orange-text-6 {
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.6);
+}
+
+.glow-orange-text-5 {
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.5);
+}
+
+.glow-orange-text-4 {
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.4);
+}
+
+.glow-orange-text-3 {
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.3);
+}
+
+.glow-orange-text-2 {
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.2);
+}
+
+.glow-orange-text-1 {
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.1);
+}
+/* * Glow orange text End */
 
 /* * Glow green Start */
 .glow-green-9 {

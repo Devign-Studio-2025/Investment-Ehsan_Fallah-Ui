@@ -9,6 +9,26 @@
   font-family: primary-font;
 }
 
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--rich-black);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lime-green);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--lime-green) var(--rich-black);
+  }
+}
+
 body {
   margin-inline: auto;
   min-height: 100vh;
