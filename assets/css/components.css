@@ -110,7 +110,7 @@
   background-color: var(--lime-green);
 }
 
-.button--tertiary-outline{
+.button--tertiary-outline {
   color: var(--lime-green);
   background-color: transparent;
   border: 1px solid var(--lime-green);
@@ -488,10 +488,7 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   padding: 1rem 0.8rem;
 }
 
-  .table-item
-  .left-row-content
-  .right-content
-  div:first-child {
+.table-item .left-row-content .right-content div:first-child {
   direction: ltr;
   text-shadow: 0rem 0rem 0.5rem rgba(244, 244, 244, 0.3);
   font-weight: var(--font-weight-medium);

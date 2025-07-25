@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <!-- ! Page Styles -->
+    <style></style>
   </head>
   <body class="body body--website">
     <!-- * Particle Background Start -->
@@ -1137,6 +1138,49 @@
     <div class="d-flex p-2 opacity-50">
       <small class="mx-auto">تمامی حقوق محفوظ است - 1404 ©</small>
     </div>
+
+    <!-- * Moblie nav Start -->
+    <nav class="nav nav--dashboard-bottom d-flex d-lg-none">
+      <a href="#" class="nav-item" onclick="activateNavItem(this)">
+        <span class="active-line"></span>
+        <div class="nav-icon">
+          <i class="fa-solid fa-money-simple-from-bracket"></i>
+        </div>
+        <span class="nav-label">واریز</span>
+      </a>
+      <a href="#" class="nav-item" onclick="activateNavItem(this)">
+        <span class="active-line"></span>
+        <div class="nav-icon">
+          <i class="fa-solid fa-money-from-bracket"></i>
+        </div>
+        <span class="nav-label">برداشت</span>
+      </a>
+      <a href="#" class="nav-item active" onclick="activateCenterButton(this)">
+        <div class="center-button">
+          <i class="fas fa-home text-xl"></i>
+        </div>
+        <span class="nav-label">خانه</span>
+      </a>
+      <a href="#" class="nav-item" onclick="activateNavItem(this)">
+        <span class="active-line"></span>
+        <div class="nav-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <span class="nav-label">زیرمجموعه</span>
+      </a>
+      <a
+        href="profile-setting.html"
+        class="nav-item"
+        onclick="activateNavItem(this)"
+      >
+        <span class="active-line"></span>
+        <div class="nav-icon">
+          <i class="fa-solid fa-up-right-from-square"></i>
+        </div>
+        <span class="nav-label">ورود به سایت</span>
+      </a>
+    </nav>
+    <!-- * Mobile nav End -->
     <!-- ! Core Scripts -->
     <script src="assets/libs/jquery/jquery-3.7.1.min.js"></script>
     <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
@@ -1178,6 +1222,97 @@
         },
         retina_detect: true,
       });
+
+      // ================== mobile menu starts =================== //
+
+      // Activate navigation item
+      function activateNavItem(element) {
+        createRipple(element.querySelector(".nav-icon"));
+
+        // Remove active class from all items
+        document.querySelectorAll(".nav-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Add active class to clicked item
+        element.classList.add("active");
+      }
+
+      // Special handler for center button
+      function activateCenterButton(element) {
+        createRipple(element.querySelector(".center-button"));
+
+        // Remove active class from all items
+        document.querySelectorAll(".nav-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Add active class to center button
+        element.classList.add("active");
+
+        console.log("Center button clicked - open creation dialog");
+      }
+
+      function createRipple(element) {
+        const ripple = document.createElement("span");
+        ripple.classList.add("ripple");
+
+        // Get click position relative to the element
+        const rect = element.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        // Position the ripple
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+
+        element.appendChild(ripple);
+
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      }
+
+      // Make the center button interactive
+      const centerButton = document.querySelector(".center-button");
+      centerButton.addEventListener("mouseenter", () => {
+        centerButton.style.transform = "translateY(-5px) scale(1.05)";
+        centerButton.style.boxShadow = "0 15px 30px rgba(0, 183, 165, 0.5)";
+      });
+
+      centerButton.addEventListener("mouseleave", () => {
+        centerButton.style.transform = "translateY(0) scale(1)";
+        centerButton.style.boxShadow = "0 10px 25px rgba(0, 183, 165, 0.4)";
+      });
+      // ================== mobile menu ends =================== //
+
+      // ====== Move content to Modal/Offcanvas Start ======
+
+      function moveResponsiveContent({
+        contentSelector,
+        modalSelector,
+        offcanvasSelector,
+      }) {
+        const content = document.querySelector(contentSelector);
+        const modal = document.querySelector(modalSelector);
+        const offcanvas = document.querySelector(offcanvasSelector);
+
+        if (offcanvas && !offcanvas.contains(content)) {
+          offcanvas.appendChild(content);
+        } else if (modal && !modal.contains(content)) {
+          modal.appendChild(content);
+        }
+      }
+
+      if (window.innerWidth < 768) {
+        moveResponsiveContent({
+          contentSelector: "#notif-content",
+          modalSelector: "#notif-modal .modal-body",
+          offcanvasSelector: "#notif-offcanvas .offcanvas-body",
+        });
+      }
+
+      // ====== Move content to Modal/Offcanvas End ======
     </script>
     <!-- ! Page Scripts -->
 
@@ -1218,34 +1353,6 @@
       startCountdown(hour, minute, second, countDownElement);
 
       // ====== Countdown End ======
-
-      // ====== Move content to Modal/Offcanvas Start ======
-
-      function moveResponsiveContent({
-        contentSelector,
-        modalSelector,
-        offcanvasSelector,
-      }) {
-        const content = document.querySelector(contentSelector);
-        const modal = document.querySelector(modalSelector);
-        const offcanvas = document.querySelector(offcanvasSelector);
-
-        if (offcanvas && !offcanvas.contains(content)) {
-          offcanvas.appendChild(content);
-        } else if (modal && !modal.contains(content)) {
-          modal.appendChild(content);
-        }
-      }
-
-      if (window.innerWidth < 768) {
-        moveResponsiveContent({
-          contentSelector: "#notif-content",
-          modalSelector: "#notif-modal .modal-body",
-          offcanvasSelector: "#notif-offcanvas .offcanvas-body",
-        });
-      }
-
-      // ====== Move content to Modal/Offcanvas End ======
     </script>
   </body>
 </html>
