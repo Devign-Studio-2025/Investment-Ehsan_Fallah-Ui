@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>نام سایت</title>
+    <title>صفحه اصلی</title>
     <!-- ! Core Styles -->
 
     <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.rtl.min.css" />
@@ -22,13 +22,13 @@
     <nav class="nav nav--dashboard">
       <ul class="nav__links d-none d-lg-flex">
         <li class="nav__item nav__item--active">
-          <a class="nav__link" href="">
+          <a class="nav__link" href="user-dashboard-main.html">
             <i class="nav__link-icon fa-solid fa-house"></i>
             صفحه اصلی
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">
+          <a class="nav__link" href="user-dashboard-deposite.html">
             <i class="nav__link-icon fa-solid fa-money-simple-from-bracket"></i>
             واریز به حساب</a
           >
@@ -630,7 +630,9 @@
               </div>
             </div>
             <div class="section__footer">
-              <a class="button button--tertiary-outline" href="#">مشاهده همه</a>
+              <a class="button button--tertiary-outline" href="#"
+                >مشاهده بیشتر</a
+              >
             </div>
           </section>
         </div>
@@ -694,7 +696,9 @@
               </div>
             </div>
             <div class="section__footer">
-              <a class="button button--tertiary-outline" href="#">مشاهده همه</a>
+              <a class="button button--tertiary-outline" href="#"
+                >مشاهده بیشتر</a
+              >
             </div>
           </section>
           <section
@@ -769,7 +773,9 @@
               </div>
             </div>
             <div class="section__footer">
-              <a class="button button--tertiary-outline" href="#">مشاهده همه</a>
+              <a class="button button--tertiary-outline" href="#"
+                >مشاهده بیشتر</a
+              >
             </div>
           </section>
         </div>
@@ -1188,7 +1194,11 @@
 
     <!-- * Moblie nav Start -->
     <nav class="nav nav--dashboard-bottom d-flex d-lg-none">
-      <a href="#" class="nav-item" onclick="activateNavItem(this)">
+      <a
+        href="user-dashboard-deposite.html"
+        class="nav-item"
+        onclick="activateNavItem(this)"
+      >
         <span class="active-line"></span>
         <div class="nav-icon">
           <i class="fa-solid fa-money-simple-from-bracket"></i>
@@ -1202,7 +1212,11 @@
         </div>
         <span class="nav-label">برداشت</span>
       </a>
-      <a href="#" class="nav-item active" onclick="activateCenterButton(this)">
+      <a
+        href="user-dashboard-main.html"
+        class="nav-item active"
+        onclick="activateCenterButton(this)"
+      >
         <div class="center-button">
           <i class="fas fa-home text-xl"></i>
         </div>

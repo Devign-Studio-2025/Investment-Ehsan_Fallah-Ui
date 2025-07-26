@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>واریز به حساب</title>
+    <!-- ! Core Styles -->
+
+    <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="assets/libs/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- ! Page Styles -->
+  </head>
+  <body class="body body--website">
+    <!-- * Particle Background Start -->
+    <div id="particles-js"></div>
+    <!-- * Particle Background End -->
+
+    <!-- * Navbar Start -->
+    <nav class="nav nav--dashboard">
+      <ul class="nav__links d-none d-lg-flex">
+        <li class="nav__item">
+          <a class="nav__link" href="user-dashboard-main.html">
+            <i class="nav__link-icon fa-solid fa-house"></i>
+            صفحه اصلی
+          </a>
+        </li>
+        <li class="nav__item nav__item--active">
+          <a class="nav__link" href="user-dashboard-deposite.html">
+            <i class="nav__link-icon fa-solid fa-money-simple-from-bracket"></i>
+            واریز به حساب</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="">
+            <i class="nav__link-icon fa-solid fa-money-from-bracket"></i>
+            برداشت از حساب</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="">
+            <i class="nav__link-icon fa-solid fa-users"></i>
+            زیرمجموعه</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">
+            <i class="fa-solid fa-up-right-from-square"></i>
+            ورود به سایت</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- * Navbar End -->
+
+    <!-- * Top nav btns Start -->
+    <div class="nav__action-btns nav__action-btns--top d-flex d-lg-none">
+      <button
+        data-bs-toggle="offcanvas"
+        data-bs-target="#notif-offcanvas"
+        class="nav__action-btn nav__action-btn--notif"
+        data-tooltip="اعلان‌ها"
+      >
+        <i class="fa-solid fa-bell"></i>
+        <span>اعلان‌ها</span>
+        <div class="nav__action-btn__notif-count">3</div>
+      </button>
+      <button
+        class="nav__action-btn nav__action-btn--logout"
+        data-tooltip="خروج از حساب"
+      >
+        <span>خروج</span>
+        <i class="fa-solid fa-arrow-up-left-from-circle"></i>
+      </button>
+    </div>
+    <!-- * Top nav btns End -->
+
+    <main class="main main--dashboard p-2 p-sm-5">
+      <!-- * [Section_name] Start -->
+      <div
+        class="sections flex-column flex-lg-row align-items-center align-items-lg-start"
+      >
+        <div class="section__col-wrapper">
+          <section class="section section--dashboard">
+            <div class="input__with-error-wrapper">
+              <button type="button" class="select__item">
+                <div class="select__item-title">نوع ارز</div>
+                <i class="select__item-icon fa-solid fa-coin"></i>
+                <ul class="select__item-dropdown">
+                  <li>
+                    <label for="t1">
+                      <div class="select__item-li-title">
+                        <img src="assets/imgs/crypto/bitcoin.png" alt="" />
+                        <span> بیت کوین </span>
+                      </div>
+                      <input type="radio" id="t1" name="type" value="" />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="t2">
+                      <div class="select__item-li-title">
+                        <img src="assets/imgs/crypto/ethereum.png" alt="" />
+                        <span> اتریوم </span>
+                      </div>
+                      <input type="radio" id="t2" name="type" value="" />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="t3">
+                      <div class="select__item-li-title">
+                        <img src="assets/imgs/crypto/dogecoin.png" alt="" />
+                        <span> دوج کوین </span>
+                      </div>
+                      <input type="radio" id="t3" name="type" value="" />
+                    </label>
+                  </li>
+                </ul>
+              </button>
+            </div>
+          </section>
+          <section class="section section--dashboard d-flex gap-4">
+            <button class="button w-100 button--hover-shine button--primary">
+              <i class="fa-solid fa-money-simple-from-bracket"></i>
+              واریز به حساب
+            </button>
+          </section>
+          <section
+            class="section section--dashboard section--dashboard-wrapper d-block"
+          >
+            <div
+              class="d-flex align-items-center justify-content-between mx-auto mb-1"
+              style="max-width: 18.75rem"
+            >
+              <div class="glow-white-text-4 d-flex align-items-center gap-2">
+                <i class="fa-solid fa-coin"></i>
+                <div class="fw-medium">سود امروز:</div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="fw-medium fs-4 clr-green glow-green-text-4"
+                  dir="ltr"
+                >
+                  +100,000
+                </div>
+                <div class="small glow-white-text-4">تومان</div>
+              </div>
+            </div>
+            <div
+              class="d-flex align-items-center mx-auto justify-content-between"
+              style="max-width: 18.75rem"
+            >
+              <div class="glow-white-text-4 d-flex align-items-center gap-2">
+                <i class="fa-solid fa-timer"></i>
+                <div class="fw-medium">تا واریز بعدی:</div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  id="count-down"
+                  class="fw-medium fs-4 clr-green glow-green-text-4"
+                >
+                  12:04:21
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="section__col-wrapper">
+          <section
+            class="section section--dashboard section--dashboard-wrapper"
+          >
+            <div class="section__title section__title--green">
+              واریزی‌های اخیر
+            </div>
+            <div class="tables-wrapper">
+              <div class="table-item">
+                <div class="right-icon">
+                  <i class="fa-solid fa-money-simple-from-bracket"></i>
+                </div>
+                <div class="left-row-content ps-0">
+                  <div
+                    class="right-content d-flex flex-column gap-0 text-start"
+                  >
+                    <div>واریز</div>
+                    <div class="small clr-green glow-green-text-4">
+                      5.95 تتر
+                    </div>
+                  </div>
+                  <div class="left-content flex-column gap-0">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="clr-green glow-green-text-4 left-price">
+                        +200,000
+                      </div>
+                      <div class="small glow-white-text-4">تومان</div>
+                    </div>
+                    <div class="small ms-auto glow-white-text-4" dir="ltr">
+                      1401/11/05 12:01
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section__footer">
+              <a class="button button--tertiary-outline" href="#"
+                >مشاهده بیشتر</a
+              >
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- * [Section_name] End -->
+
+      <!-- * Pending offcanvas Start -->
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="pending-offcanvas"
+        aria-labelledby="pending-offcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="pending-offcanvasLabel">
+            جزئیات تراکنش
+          </h5>
+        </div>
+        <div class="offcanvas-body small">
+          <div class="tables-wrapper">
+            <div class="table-item">
+              <div class="right-icon">
+                <img src="assets/imgs/crypto/dogecoin.png" alt="" />
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-orange glow-orange-text-4">
+                    5.35 دوج کوین
+                  </div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-orange glow-orange-text-4 left-price">
+                      +200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="d-flex flex-wrap gap-4 mt-4">
+            <li class="col">
+              <div class="fw-medium fs-6">هش تراکنش:</div>
+              <div class="mt-2 label-style label-style--green">
+                8a885e081a3eb6bce88548d6d0c8675f
+              </div>
+            </li>
+            <li class="col">
+              <div class="fw-medium fs-6">آدرس کیف پول:</div>
+              <div class="mt-2 label-style label-style--white">
+                8543bbc73e71d30ba9932ef9d4502d0e
+              </div>
+            </li>
+            <li class="col">
+              <div class="fw-medium fs-6">شبکه:</div>
+              <div class="mt-2 label-style label-style--white">Binance</div>
+            </li>
+            <li class="col">
+              <div class="fw-medium fs-6">وضعیت:</div>
+              <div class="mt-2 label-style label-style--orange">
+                در انتظار تایید
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="offcanvas-footer">
+          <button
+            type="button"
+            class="button button--secondary w-100"
+            data-bs-dismiss="offcanvas"
+          >
+            بستن
+          </button>
+        </div>
+      </div>
+      <!-- * Pending offcanvas End -->
+
+      <!-- * Notif offcanvas Start -->
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="notif-offcanvas"
+        aria-labelledby="notif-offcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="notif-offcanvasLabel">
+            اعلان‌های اخیر
+          </h5>
+        </div>
+        <div class="offcanvas-body small">
+          <div class="tables-wrapper">
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offcanvas-footer">
+          <button
+            type="button"
+            class="button button--secondary w-100"
+            data-bs-dismiss="offcanvas"
+          >
+            بستن
+          </button>
+        </div>
+      </div>
+      <!-- * Notif offcanvas End -->
+
+      <!-- * Bottom nav btns Start -->
+      <div class="nav__action-btns d-none d-lg-flex">
+        <button
+          data-bs-toggle="offcanvas"
+          data-bs-target="#notif-offcanvas"
+          class="nav__action-btn nav__action-btn--notif"
+          data-tooltip="اعلان‌ها"
+        >
+          <i class="fa-solid fa-bell"></i>
+          <div class="nav__action-btn__notif-count">3</div>
+        </button>
+        <button
+          class="nav__action-btn nav__action-btn--logout"
+          data-tooltip="خروج از حساب"
+        >
+          <i class="fa-solid fa-arrow-up-left-from-circle"></i>
+        </button>
+      </div>
+      <!-- * Bottom nav btns End -->
+    </main>
+
+    <div class="d-flex p-2 opacity-50">
+      <small class="mx-auto">تمامی حقوق محفوظ است - 1404 ©</small>
+    </div>
+
+    <!-- * Moblie nav Start -->
+    <nav class="nav nav--dashboard-bottom d-flex d-lg-none">
+      <a
+        href="user-dashboard-deposite.html"
+        class="nav-item active"
+        onclick="activateNavItem(this)"
+      >
+        <span class="active-line"></span>
+        <div class="nav-icon">
+          <i class="fa-solid fa-money-simple-from-bracket"></i>
+        </div>
+        <span class="nav-label">واریز</span>
+      </a>
+      <a href="#" class="nav-item" onclick="activateNavItem(this)">
+        <span class="active-line"></span>
+        <div class="nav-icon">
+          <i class="fa-solid fa-money-from-bracket"></i>
+        </div>
+        <span class="nav-label">برداشت</span>
+      </a>
+      <a
+        href="user-dashboard-main.html"
+        class="nav-item"
+        onclick="activateCenterButton(this)"
+      >
+        <div class="center-button">
+          <i class="fas fa-home text-xl"></i>
+        </div>
+        <span class="nav-label">خانه</span>
+      </a>
+      <a href="#" class="nav-item" onclick="activateNavItem(this)">
+        <span class="active-line"></span>
+        <div class="nav-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <span class="nav-label">زیرمجموعه</span>
+      </a>
+      <a
+        href="profile-setting.html"
+        class="nav-item"
+        onclick="activateNavItem(this)"
+      >
+        <span class="active-line"></span>
+        <div class="nav-icon">
+          <i class="fa-solid fa-up-right-from-square"></i>
+        </div>
+        <span class="nav-label">ورود به سایت</span>
+      </a>
+    </nav>
+    <!-- * Mobile nav End -->
+    <!-- ! Core Scripts -->
+    <script src="assets/libs/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/particles.js/particles.min.js"></script>
+
+    <script>
+      // Initialize particles background
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#0ea5e9" },
+          shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#3b82f6",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+        },
+        retina_detect: true,
+      });
+
+      // ================== mobile menu starts =================== //
+
+      // Activate navigation item
+      function activateNavItem(element) {
+        createRipple(element.querySelector(".nav-icon"));
+
+        // Remove active class from all items
+        document.querySelectorAll(".nav-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Add active class to clicked item
+        element.classList.add("active");
+      }
+
+      // Special handler for center button
+      function activateCenterButton(element) {
+        createRipple(element.querySelector(".center-button"));
+
+        // Remove active class from all items
+        document.querySelectorAll(".nav-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Add active class to center button
+        element.classList.add("active");
+
+        console.log("Center button clicked - open creation dialog");
+      }
+
+      function createRipple(element) {
+        const ripple = document.createElement("span");
+        ripple.classList.add("ripple");
+
+        // Get click position relative to the element
+        const rect = element.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        // Position the ripple
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+
+        element.appendChild(ripple);
+
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      }
+
+      // Make the center button interactive
+      const centerButton = document.querySelector(".center-button");
+      centerButton.addEventListener("mouseenter", () => {
+        centerButton.style.transform = "translateY(-5px) scale(1.05)";
+        centerButton.style.boxShadow = "0 15px 30px rgba(0, 183, 165, 0.5)";
+      });
+
+      centerButton.addEventListener("mouseleave", () => {
+        centerButton.style.transform = "translateY(0) scale(1)";
+        centerButton.style.boxShadow = "0 10px 25px rgba(0, 183, 165, 0.4)";
+      });
+      // ================== mobile menu ends =================== //
+    </script>
+    <!-- ! Page Scripts -->
+
+    <script>
+      // ====== Custom select Start ======
+
+      // Custom select
+      function customSelectInit() {
+        const dropdowns = document.querySelectorAll(
+          ".select__item > .select__item-dropdown"
+        );
+
+        dropdowns.forEach((dropdown) => {
+          const selectTitle = dropdown.parentElement.querySelector(
+            ".select__item-title"
+          );
+          const inputs = dropdown.querySelectorAll("input");
+          inputs.forEach((input) => {
+            input.addEventListener("change", (e) => {
+              if (e.currentTarget.checked) {
+                selectTitle.innerText =
+                  e.currentTarget.parentElement.querySelector(
+                    ".select__item-li-title span"
+                  ).innerText;
+
+                selectTitle.classList.add("select__item-title-selected");
+              }
+            });
+          });
+        });
+
+        document
+          .querySelectorAll(".m-select .m-dropdown li")
+          .forEach((item) => {
+            item.addEventListener("click", () => {
+              document.activeElement.blur();
+            });
+          });
+      }
+
+      customSelectInit();
+      // ====== Custom select End ======
+    </script>
+  </body>
+</html>

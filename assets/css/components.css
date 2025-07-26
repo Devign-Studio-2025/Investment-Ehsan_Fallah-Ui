@@ -208,6 +208,10 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   max-width: 20rem;
 }
 
+.main--dashboard .input__with-error-wrapper {
+  max-width: unset;
+}
+
 .input__wrapper .input__item {
   width: 100%;
   padding: 0.8rem;
@@ -219,6 +223,11 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   text-align: right;
   padding-left: 2rem;
   transition: var(--transition-fast);
+}
+
+.section--dashboard .input__wrapper .input__item {
+  padding: 1rem;
+  padding-left: 2rem;
 }
 
 .input__wrapper .input__item:focus {
@@ -320,6 +329,130 @@ div:has(.card__item:hover) .card__item:not(:hover) {
 }
 
 /* * Input End */
+
+/* * Select Start */
+
+.select__item {
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background-color: #000f2b;
+  color: var(--white);
+  border: 0.0625rem solid var(--white);
+  outline: none;
+  text-align: right;
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.select__item:focus {
+  border-color: var(--lime-green);
+  filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.4));
+}
+
+.select__item .select__item-icon {
+  color: var(--lime-green);
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.8);
+}
+
+.select__item-title {
+  color: var(--border-color);
+  font-weight: lighter;
+}
+
+.select__item-title-selected {
+  font-weight: var(--font-weight-medium);
+  color: var(--white);
+}
+
+.select__item .select__item-dropdown {
+  position: absolute;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition-fast);
+  border-radius: var(--radius-md);
+  background-color: #000f2b;
+  max-height: 12.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  list-style: none;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+}
+
+.select__item:focus .select__item-dropdown {
+  visibility: visible;
+  pointer-events: all;
+  top: 120%;
+  opacity: 1;
+  border: 0.0625rem solid var(--lime-green);
+}
+
+.select__item .select__item-li-title {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.select__item .select__item-li-title img {
+  height: auto;
+  width: 1.2rem;
+}
+
+.select__item .select__item-dropdown li {
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.select__item .select__item-dropdown li:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.select__item .select__item-dropdown li:hover {
+  background-color: rgba(0, 183, 165, 0.2);
+  filter: drop-shadow(0rem 0rem 0.5rem rgba(244, 244, 244, 0.3));
+}
+
+.select__item .select__item-dropdown li:has(input:checked) {
+  background-color: rgba(0, 183, 165, 0.2);
+  filter: drop-shadow(0rem 0rem 0.5rem rgba(244, 244, 244, 0.3));
+}
+
+.select__item .select__item-dropdown li::before {
+  position: absolute;
+  content: "\f104";
+  left: 1rem;
+  bottom: 50%;
+  transform: translateY(50%);
+  font-family: "Font Awesome 6 Pro";
+  font-size: 1rem;
+}
+
+.select__item .select__item-dropdown li label {
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--default-color-2);
+  transition: all 0.1s linear;
+}
+
+.select__item .select__item-dropdown li input {
+  display: none;
+}
+
+/* * Select End */
 
 /* * Credit-card Start */
 
@@ -501,11 +634,10 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   gap: 0.5rem;
 }
 
-.table-item .left-content .left-price{
+.table-item .left-content .left-price {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-medium);
   direction: ltr;
-
 }
 
 .table-item .right-icon {
