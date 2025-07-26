@@ -345,6 +345,9 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.select__wrapper {
   position: relative;
 }
 
@@ -368,9 +371,9 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   color: var(--white);
 }
 
-.select__item .select__item-dropdown {
+.select__wrapper .select__item-dropdown {
   position: absolute;
-  pointer-events: none;
+  /* pointer-events: none; */
   visibility: hidden;
   opacity: 0;
   transition: var(--transition-fast);
@@ -393,44 +396,44 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   flex-direction: column;
 }
 
-.select__item:focus .select__item-dropdown {
+.select__wrapper:has(.select__item:focus) .select__item-dropdown {
   visibility: visible;
-  pointer-events: all;
+  /* pointer-events: all; */
   top: 120%;
   opacity: 1;
   border: 0.0625rem solid var(--lime-green);
 }
 
-.select__item .select__item-li-title {
+.select__wrapper .select__item-li-title {
   display: flex;
   gap: 0.8rem;
 }
 
-.select__item .select__item-li-title img {
+.select__wrapper .select__item-li-title img {
   height: auto;
   width: 1.2rem;
 }
 
-.select__item .select__item-dropdown li {
+.select__wrapper .select__item-dropdown li {
   position: relative;
   transition: var(--transition-fast);
 }
 
-.select__item .select__item-dropdown li:not(:last-child) {
+.select__wrapper .select__item-dropdown li:not(:last-child) {
   border-bottom: 1px solid var(--border-color);
 }
 
-.select__item .select__item-dropdown li:hover {
+.select__wrapper .select__item-dropdown li:hover {
   background-color: rgba(0, 183, 165, 0.2);
   filter: drop-shadow(0rem 0rem 0.5rem rgba(244, 244, 244, 0.3));
 }
 
-.select__item .select__item-dropdown li:has(input:checked) {
+.select__wrapper .select__item-dropdown li:has(input:checked) {
   background-color: rgba(0, 183, 165, 0.2);
   filter: drop-shadow(0rem 0rem 0.5rem rgba(244, 244, 244, 0.3));
 }
 
-.select__item .select__item-dropdown li::before {
+.select__wrapper .select__item-dropdown li::before {
   position: absolute;
   content: "\f104";
   left: 1rem;
@@ -440,7 +443,7 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   font-size: 1rem;
 }
 
-.select__item .select__item-dropdown li label {
+.select__wrapper .select__item-dropdown li label {
   width: 100%;
   padding: 1rem;
   cursor: pointer;
@@ -448,7 +451,7 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   transition: all 0.1s linear;
 }
 
-.select__item .select__item-dropdown li input {
+.select__wrapper .select__item-dropdown li input {
   display: none;
 }
 

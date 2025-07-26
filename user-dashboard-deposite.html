@@ -84,9 +84,11 @@
         <div class="section__col-wrapper">
           <section class="section section--dashboard">
             <div class="input__with-error-wrapper">
-              <button type="button" class="select__item">
-                <div class="select__item-title">نوع ارز</div>
-                <i class="select__item-icon fa-solid fa-coin"></i>
+              <div class="select__wrapper">
+                <button type="button" class="select__item">
+                  <div class="select__item-title">نوع ارز</div>
+                  <i class="select__item-icon fa-solid fa-coin"></i>
+                </button>
                 <ul class="select__item-dropdown">
                   <li>
                     <label for="t1">
@@ -94,7 +96,7 @@
                         <img src="assets/imgs/crypto/bitcoin.png" alt="" />
                         <span> بیت کوین </span>
                       </div>
-                      <input type="radio" id="t1" name="type" value="" />
+                      <input type="radio" id="t1" name="type" value="" " />
                     </label>
                   </li>
                   <li>
@@ -116,7 +118,7 @@
                     </label>
                   </li>
                 </ul>
-              </button>
+              </div>
             </div>
           </section>
           <section class="section section--dashboard d-flex gap-4">
@@ -763,10 +765,9 @@
     <script>
       // ====== Custom select Start ======
 
-      // Custom select
       function customSelectInit() {
         const dropdowns = document.querySelectorAll(
-          ".select__item > .select__item-dropdown"
+          ".select__wrapper > .select__item-dropdown"
         );
 
         dropdowns.forEach((dropdown) => {
