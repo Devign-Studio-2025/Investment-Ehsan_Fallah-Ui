@@ -501,6 +501,13 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   gap: 0.5rem;
 }
 
+.table-item .left-content .left-price{
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  direction: ltr;
+
+}
+
 .table-item .right-icon {
   color: var(--white);
   display: flex;

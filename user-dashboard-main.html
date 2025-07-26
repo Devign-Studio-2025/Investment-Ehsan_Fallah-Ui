@@ -569,7 +569,11 @@
             </div>
             <div class="tables-wrapper">
               <div class="table-item flex-wrap">
-                <button class="right-icon right-icon--btn">
+                <button
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#pending-offcanvas"
+                  class="right-icon right-icon--btn"
+                >
                   <i class="fa-solid fa-eye"></i>
                 </button>
                 <div class="left-row-content">
@@ -577,15 +581,19 @@
                     <div>1401/11/05 12:01</div>
                   </div>
                   <div class="left-content">
-                    <div class="clr-orange glow-orange-text-4 fs-5 fw-medium">
-                      200,000
+                    <div class="clr-orange glow-orange-text-4 left-price">
+                      +200,000
                     </div>
                     <div class="small glow-white-text-4">تومان</div>
                   </div>
                 </div>
               </div>
               <div class="table-item flex-wrap">
-                <button class="right-icon right-icon--btn">
+                <button
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#pending-offcanvas"
+                  class="right-icon right-icon--btn"
+                >
                   <i class="fa-solid fa-eye"></i>
                 </button>
                 <div class="left-row-content">
@@ -593,15 +601,19 @@
                     <div>1401/11/05 12:01</div>
                   </div>
                   <div class="left-content">
-                    <div class="clr-orange glow-orange-text-4 fs-5 fw-medium">
-                      200,000
+                    <div class="clr-orange glow-orange-text-4 left-price">
+                      -200,000
                     </div>
                     <div class="small glow-white-text-4">تومان</div>
                   </div>
                 </div>
               </div>
               <div class="table-item flex-wrap">
-                <button class="right-icon right-icon--btn">
+                <button
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#pending-offcanvas"
+                  class="right-icon right-icon--btn"
+                >
                   <i class="fa-solid fa-eye"></i>
                 </button>
                 <div class="left-row-content">
@@ -609,8 +621,8 @@
                     <div>1401/11/05 12:01</div>
                   </div>
                   <div class="left-content">
-                    <div class="clr-orange glow-orange-text-4 fs-5 fw-medium">
-                      200,000
+                    <div class="clr-orange glow-orange-text-4 left-price">
+                      +200,000
                     </div>
                     <div class="small glow-white-text-4">تومان</div>
                   </div>
@@ -645,8 +657,8 @@
                   </div>
                   <div class="left-content flex-column gap-0">
                     <div class="d-flex align-items-center gap-2">
-                      <div class="clr-green glow-green-text-4 fs-5 fw-medium">
-                        200,000
+                      <div class="clr-green glow-green-text-4 left-price">
+                        +200,000
                       </div>
                       <div class="small glow-white-text-4">تومان</div>
                     </div>
@@ -664,13 +676,13 @@
                   <div
                     class="right-content d-flex flex-column gap-0 text-start"
                   >
-                    <div>واریز</div>
+                    <div>برداشت</div>
                     <div class="small clr-red glow-red-text-4">5.95 تتر</div>
                   </div>
                   <div class="left-content flex-column gap-0">
                     <div class="d-flex align-items-center gap-2">
-                      <div class="clr-red glow-red-text-4 fs-5 fw-medium">
-                        200,000
+                      <div class="clr-red glow-red-text-4 left-price">
+                        -200,000
                       </div>
                       <div class="small glow-white-text-4">تومان</div>
                     </div>
@@ -703,7 +715,7 @@
                   </div>
                   <div class="left-content flex-column gap-0">
                     <div class="d-flex align-items-center gap-2">
-                      <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                      <div class="clr-green glow-green-text-4 left-price">
                         200,000
                       </div>
                       <div class="small glow-white-text-4">تومان</div>
@@ -724,7 +736,7 @@
                   </div>
                   <div class="left-content flex-column gap-0">
                     <div class="d-flex align-items-center gap-2">
-                      <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                      <div class="clr-green glow-green-text-4 left-price">
                         500,000
                       </div>
                       <div class="small glow-white-text-4">تومان</div>
@@ -747,7 +759,7 @@
                   </div>
                   <div class="left-content flex-column gap-0">
                     <div class="d-flex align-items-center gap-2">
-                      <div class="clr-green glow-green-text-4 fs-5 fw-medium">
+                      <div class="clr-green glow-green-text-4 left-price">
                         20,000,000
                       </div>
                       <div class="small glow-white-text-4">تومان</div>
@@ -764,6 +776,99 @@
       </div>
       <!-- * [Section_name] End -->
 
+      <!-- * Pending offcanvas Start -->
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="pending-offcanvas"
+        aria-labelledby="pending-offcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="pending-offcanvasLabel">
+            جزئیات تراکنش
+          </h5>
+        </div>
+        <div class="offcanvas-body small">
+          <div class="tables-wrapper">
+            <div class="table-item">
+              <div class="right-icon">
+                <img src="assets/imgs/crypto/dogecoin.png" alt="" />
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-orange glow-orange-text-4">
+                    5.35 دوج کوین
+                  </div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-orange glow-orange-text-4 left-price">
+                      +200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="d-flex flex-wrap gap-4 mt-4">
+            <!-- <li class="col">
+              <div class="fw-medium fs-6">نوع ارز:</div>
+              <div class="d-flex align-items-center gap-2">
+                <div class="mt-2">DogeCoin</div>
+                <div>
+                  <img
+                    src="assets/imgs/crypto/dogecoin.png"
+                    width="20"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="col">
+              <div class="fw-medium fs-6">مقدار:</div>
+              <div class="mt-2">5.98</div>
+            </li> -->
+            <li class="col">
+              <div class="fw-medium fs-6">هش تراکنش:</div>
+              <div class="mt-2 label-style label-style--green">
+                8a885e081a3eb6bce88548d6d0c8675f
+              </div>
+            </li>
+            <li class="col">
+              <div class="fw-medium fs-6">آدرس کیف پول:</div>
+              <div class="mt-2 label-style label-style--white">
+                8543bbc73e71d30ba9932ef9d4502d0e
+              </div>
+            </li>
+            <li class="col">
+              <div class="fw-medium fs-6">شبکه:</div>
+              <div class="mt-2 label-style label-style--white">Binance</div>
+            </li>
+            <li class="col">
+              <div class="fw-medium fs-6">وضعیت:</div>
+              <div class="mt-2 label-style label-style--orange">
+                در انتظار تایید
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="offcanvas-footer">
+          <button
+            type="button"
+            class="button button--secondary w-100"
+            data-bs-dismiss="offcanvas"
+          >
+            بستن
+          </button>
+        </div>
+      </div>
+      <!-- * Pending offcanvas End -->
+
       <!-- * Notif offcanvas Start -->
       <div
         class="offcanvas offcanvas-bottom"
@@ -776,7 +881,274 @@
             اعلان‌های اخیر
           </h5>
         </div>
-        <div class="offcanvas-body small"></div>
+        <div class="offcanvas-body small">
+          <div class="tables-wrapper">
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-simple-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-green glow-green-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-green glow-green-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="right-icon">
+                <i class="fa-solid fa-money-from-bracket"></i>
+              </div>
+              <div class="left-row-content ps-0">
+                <div class="right-content d-flex flex-column gap-0 text-start">
+                  <div>واریز</div>
+                  <div class="small clr-red glow-red-text-4">5.95 تتر</div>
+                </div>
+                <div class="left-content flex-column gap-0">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="clr-red glow-red-text-4 left-price">
+                      200,000
+                    </div>
+                    <div class="small glow-white-text-4">تومان</div>
+                  </div>
+                  <div class="small ms-auto glow-white-text-4" dir="ltr">
+                    1401/11/05 12:01
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="offcanvas-footer">
           <button
             type="button"
@@ -789,336 +1161,11 @@
       </div>
       <!-- * Notif offcanvas End -->
 
-      <!-- * Notif modal Start -->
-      <div class="modal fade" id="notif-modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">اعلان‌های اخیر</h5>
-            </div>
-            <div class="modal-body">
-              <div class="tables-wrapper" id="notif-content">
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-simple-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-green glow-green-text-4">
-                        5.95 تتر
-                      </div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-simple-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-green glow-green-text-4">
-                        5.95 تتر
-                      </div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-simple-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-green glow-green-text-4">
-                        5.95 تتر
-                      </div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-simple-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-green glow-green-text-4">
-                        5.95 تتر
-                      </div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-simple-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-green glow-green-text-4">
-                        5.95 تتر
-                      </div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-simple-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-green glow-green-text-4">
-                        5.95 تتر
-                      </div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-green glow-green-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-item">
-                  <div class="right-icon">
-                    <i class="fa-solid fa-money-from-bracket"></i>
-                  </div>
-                  <div class="left-row-content ps-0">
-                    <div
-                      class="right-content d-flex flex-column gap-0 text-start"
-                    >
-                      <div>واریز</div>
-                      <div class="small clr-red glow-red-text-4">5.95 تتر</div>
-                    </div>
-                    <div class="left-content flex-column gap-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <div class="clr-red glow-red-text-4 fs-5 fw-medium">
-                          200,000
-                        </div>
-                        <div class="small glow-white-text-4">تومان</div>
-                      </div>
-                      <div class="small ms-auto glow-white-text-4" dir="ltr">
-                        1401/11/05 12:01
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="button button--secondary w-100"
-                data-bs-dismiss="modal"
-              >
-                بستن
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- * Notif modal End -->
-
       <!-- * Bottom nav btns Start -->
       <div class="nav__action-btns d-none d-lg-flex">
         <button
-          data-bs-toggle="modal"
-          data-bs-target="#notif-modal"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#notif-offcanvas"
           class="nav__action-btn nav__action-btn--notif"
           data-tooltip="اعلان‌ها"
         >
@@ -1285,34 +1332,6 @@
         centerButton.style.boxShadow = "0 10px 25px rgba(0, 183, 165, 0.4)";
       });
       // ================== mobile menu ends =================== //
-
-      // ====== Move content to Modal/Offcanvas Start ======
-
-      function moveResponsiveContent({
-        contentSelector,
-        modalSelector,
-        offcanvasSelector,
-      }) {
-        const content = document.querySelector(contentSelector);
-        const modal = document.querySelector(modalSelector);
-        const offcanvas = document.querySelector(offcanvasSelector);
-
-        if (offcanvas && !offcanvas.contains(content)) {
-          offcanvas.appendChild(content);
-        } else if (modal && !modal.contains(content)) {
-          modal.appendChild(content);
-        }
-      }
-
-      if (window.innerWidth < 768) {
-        moveResponsiveContent({
-          contentSelector: "#notif-content",
-          modalSelector: "#notif-modal .modal-body",
-          offcanvasSelector: "#notif-offcanvas .offcanvas-body",
-        });
-      }
-
-      // ====== Move content to Modal/Offcanvas End ======
     </script>
     <!-- ! Page Scripts -->
 
