@@ -29,6 +29,18 @@
   }
 }
 
+/* Hide arrows for WebKit-based browsers */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide arrows for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 body {
   margin-inline: auto;
   min-height: 100vh;

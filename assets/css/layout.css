@@ -1222,7 +1222,7 @@
 
 /* * Offcanvas Start */
 
-.offcanvas {
+.offcanvas-bottom {
   color: var(--white);
   border-radius: var(--radius-lg);
   margin: auto;
@@ -1234,43 +1234,44 @@
 
 .offcanvas.offcanvas-bottom {
   background-color: var(--rich-black);
-  height: 80%;
+  max-height: 80%;
+  height: fit-content;
 }
 
-.offcanvas-body {
+.offcanvas-bottom .offcanvas-body {
   background-color: var(--rich-black-3);
   overflow: auto;
 }
 
-.offcanvas-title {
+.offcanvas-bottom .offcanvas-title {
   padding: 0.5rem;
   margin-inline: auto;
   text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.5);
 }
 
-.offcanvas-footer {
+.offcanvas-bottom .offcanvas-footer {
   padding: 1rem;
 }
 
-.offcanvas .label-style {
+.offcanvas-bottom .label-style {
   display: inline-block;
   padding: 0.75rem;
   border-radius: var(--radius-md);
 }
 
-.offcanvas .label-style--green {
+.offcanvas-bottom .label-style--green {
   color: var(--lime-green);
   background-color: rgba(0, 183, 165, 0.1);
   text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.4);
 }
 
-.offcanvas .label-style--white {
+.offcanvas-bottom .label-style--white {
   color: var(--white);
   background-color: rgba(244, 244, 244, 0.1);
   text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.4);
 }
 
-.offcanvas .label-style--orange {
+.offcanvas-bottom .label-style--orange {
   color: var(--orange);
   background-color: rgba(255, 174, 0, 0.1);
   text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.4);

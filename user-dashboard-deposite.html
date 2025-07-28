@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <!-- ! Page Styles -->
+    <link rel="stylesheet" href="assets/libs/toastr/toastr.min.css" />
   </head>
   <body class="body body--website">
     <!-- * Particle Background Start -->
@@ -77,11 +78,24 @@
     <!-- * Top nav btns End -->
 
     <main class="main main--dashboard p-2 p-sm-5">
-      <!-- * [Section_name] Start -->
+      <!-- * [Main section] Start -->
       <div
         class="sections flex-column flex-lg-row align-items-center align-items-lg-start"
       >
         <div class="section__col-wrapper">
+          <section
+            class="section section--dashboard section--dashboard-wrapper"
+          >
+            <div class="section__title section__title--orange">
+              نکات قبل از واریز
+            </div>
+            <ol>
+              <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</li>
+              <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</li>
+              <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</li>
+              <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</li>
+            </ol>
+          </section>
           <section class="section section--dashboard">
             <div class="input__with-error-wrapper">
               <div class="select__wrapper">
@@ -121,50 +135,34 @@
               </div>
             </div>
           </section>
+          <section class="section section--dashboard">
+            <div class="input__with-error-wrapper">
+              <div class="input__wrapper">
+                <i class="input__icon fa-solid fa-wallet"></i>
+                <input
+                  style="cursor: pointer"
+                  class="input__item"
+                  type="text"
+                  name=""
+                  readonly
+                  placeholder="ابتدا نوع ارز را انتخاب نمایید"
+                  id="wallet-address"
+                />
+              </div>
+              <div class="mt-2 glow-white-text-4">
+                <small>* برای کپی روی آدرس کلیک کنید.</small>
+              </div>
+            </div>
+          </section>
           <section class="section section--dashboard d-flex gap-4">
-            <button class="button w-100 button--hover-shine button--primary">
+            <button
+              class="button w-100 button--hover-shine button--primary"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#deposite-offcanvas"
+            >
               <i class="fa-solid fa-money-simple-from-bracket"></i>
               واریز به حساب
             </button>
-          </section>
-          <section
-            class="section section--dashboard section--dashboard-wrapper d-block"
-          >
-            <div
-              class="d-flex align-items-center justify-content-between mx-auto mb-1"
-              style="max-width: 18.75rem"
-            >
-              <div class="glow-white-text-4 d-flex align-items-center gap-2">
-                <i class="fa-solid fa-coin"></i>
-                <div class="fw-medium">سود امروز:</div>
-              </div>
-              <div class="d-flex align-items-center gap-2">
-                <div
-                  class="fw-medium fs-4 clr-green glow-green-text-4"
-                  dir="ltr"
-                >
-                  +100,000
-                </div>
-                <div class="small glow-white-text-4">تومان</div>
-              </div>
-            </div>
-            <div
-              class="d-flex align-items-center mx-auto justify-content-between"
-              style="max-width: 18.75rem"
-            >
-              <div class="glow-white-text-4 d-flex align-items-center gap-2">
-                <i class="fa-solid fa-timer"></i>
-                <div class="fw-medium">تا واریز بعدی:</div>
-              </div>
-              <div class="d-flex align-items-center gap-2">
-                <div
-                  id="count-down"
-                  class="fw-medium fs-4 clr-green glow-green-text-4"
-                >
-                  12:04:21
-                </div>
-              </div>
-            </div>
           </section>
         </div>
         <div class="section__col-wrapper">
@@ -210,83 +208,7 @@
           </section>
         </div>
       </div>
-      <!-- * [Section_name] End -->
-
-      <!-- * Pending offcanvas Start -->
-      <div
-        class="offcanvas offcanvas-bottom"
-        tabindex="-1"
-        id="pending-offcanvas"
-        aria-labelledby="pending-offcanvasLabel"
-      >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="pending-offcanvasLabel">
-            جزئیات تراکنش
-          </h5>
-        </div>
-        <div class="offcanvas-body small">
-          <div class="tables-wrapper">
-            <div class="table-item">
-              <div class="right-icon">
-                <img src="assets/imgs/crypto/dogecoin.png" alt="" />
-              </div>
-              <div class="left-row-content ps-0">
-                <div class="right-content d-flex flex-column gap-0 text-start">
-                  <div>واریز</div>
-                  <div class="small clr-orange glow-orange-text-4">
-                    5.35 دوج کوین
-                  </div>
-                </div>
-                <div class="left-content flex-column gap-0">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="clr-orange glow-orange-text-4 left-price">
-                      +200,000
-                    </div>
-                    <div class="small glow-white-text-4">تومان</div>
-                  </div>
-                  <div class="small ms-auto glow-white-text-4" dir="ltr">
-                    1401/11/05 12:01
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <ul class="d-flex flex-wrap gap-4 mt-4">
-            <li class="col">
-              <div class="fw-medium fs-6">هش تراکنش:</div>
-              <div class="mt-2 label-style label-style--green">
-                8a885e081a3eb6bce88548d6d0c8675f
-              </div>
-            </li>
-            <li class="col">
-              <div class="fw-medium fs-6">آدرس کیف پول:</div>
-              <div class="mt-2 label-style label-style--white">
-                8543bbc73e71d30ba9932ef9d4502d0e
-              </div>
-            </li>
-            <li class="col">
-              <div class="fw-medium fs-6">شبکه:</div>
-              <div class="mt-2 label-style label-style--white">Binance</div>
-            </li>
-            <li class="col">
-              <div class="fw-medium fs-6">وضعیت:</div>
-              <div class="mt-2 label-style label-style--orange">
-                در انتظار تایید
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="offcanvas-footer">
-          <button
-            type="button"
-            class="button button--secondary w-100"
-            data-bs-dismiss="offcanvas"
-          >
-            بستن
-          </button>
-        </div>
-      </div>
-      <!-- * Pending offcanvas End -->
+      <!-- * [Main section] End -->
 
       <!-- * Notif offcanvas Start -->
       <div
@@ -300,7 +222,7 @@
             اعلان‌های اخیر
           </h5>
         </div>
-        <div class="offcanvas-body small">
+        <div class="offcanvas-body">
           <div class="tables-wrapper">
             <div class="table-item">
               <div class="right-icon">
@@ -580,6 +502,76 @@
       </div>
       <!-- * Notif offcanvas End -->
 
+      <!-- * Deposite form offcanvas Start -->
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="deposite-offcanvas"
+        aria-labelledby="deposite-offcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="deposite-offcanvasLabel">
+            فرم واریز به حساب
+          </h5>
+        </div>
+        <div class="offcanvas-body">
+          <form action="" id="form-deposite" class="row">
+            <div class="col-12 col-md-6 input__with-error-wrapper mb-4">
+              <div class="input__wrapper">
+                <i class="input__icon fa-solid fa-coins"></i>
+                <input
+                  class="input__item"
+                  type="number"
+                  name="amount"
+                  placeholder=" "
+                  id="amount"
+                />
+                <label class="input__label-holder" for="">* مقدار ارز</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 input__with-error-wrapper mb-4">
+              <div class="input__wrapper">
+                <i class="input__icon fa-solid fa-hashtag"></i>
+                <input
+                  class="input__item"
+                  type="text"
+                  name="transaction_hash"
+                  placeholder=" "
+                  id="transaction_hash"
+                />
+                <label class="input__label-holder" for="">* هش تراکنش</label>
+              </div>
+            </div>
+            <div class="small">
+              <div class="fw-medium label-style label-style--orange">
+                توجه کنید که:
+              </div>
+              <ul class="mt-2 d-flex flex-column gap-1">
+                <li>درخواست واریزی شما به ادمین سامانه ارسال خواهد شد.</li>
+                <li>درصورت موافقت ادمین، حساب شما شارژ خواهد شد.</li>
+              </ul>
+            </div>
+            <div>
+              <button
+                class="w-100 mt-4 fw-medium button button--hover-shine button--tertiary"
+              >
+                تایید واریز
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="offcanvas-footer">
+          <button
+            type="button"
+            class="button button--secondary w-100"
+            data-bs-dismiss="offcanvas"
+          >
+            بستن
+          </button>
+        </div>
+      </div>
+      <!-- * Deposite form offcanvas End -->
+
       <!-- * Bottom nav btns Start -->
       <div class="nav__action-btns d-none d-lg-flex">
         <button
@@ -761,7 +753,8 @@
       // ================== mobile menu ends =================== //
     </script>
     <!-- ! Page Scripts -->
-
+    <script src="assets/libs/toastr/toastr.min.js"></script>
+    <script src="assets/libs/validate.min.js/just-validate.production.min.js"></script>
     <script>
       // ====== Custom select Start ======
 
@@ -778,6 +771,7 @@
           inputs.forEach((input) => {
             input.addEventListener("change", (e) => {
               if (e.currentTarget.checked) {
+                // AJAX FUNCTION PLACEMENT IS HERE =====
                 selectTitle.innerText =
                   e.currentTarget.parentElement.querySelector(
                     ".select__item-li-title span"
@@ -800,6 +794,119 @@
 
       customSelectInit();
       // ====== Custom select End ======
+
+      // ====== Toast notif Start ======
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "5000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "slideDown",
+        hideMethod: "slideUp",
+        rtl: "true",
+      };
+
+      const walletAddress = document.querySelector("#wallet-address");
+
+      walletAddress.onclick = () => {
+        if (walletAddress.value !== "") {
+          navigator.clipboard.writeText(walletAddress.value);
+          toastr.success("آدرس کیف پول کپی شد.", "کپی شد!");
+        } else {
+          toastr.warning("ابتدا نوع ارز را مشخص کنید.", "توجه!");
+        }
+      };
+
+      // ====== Toast notif End ======
+
+      // ====== Validation Start ======
+
+      // Validation options
+      const validateOptions = {
+        errorFieldCssClass: "is-invalid",
+        errorLabelStyle: {
+          color: "var(--red)",
+          fontSize: ".8rem",
+          fontWeight: "bold",
+          marginTop: "5px",
+          display: "block",
+        },
+        successFieldCssClass: "is-valid",
+      };
+
+      // Validation for deposite
+      const depositeValidator = new JustValidate(
+        "#form-deposite",
+        validateOptions
+      );
+
+      depositeValidator
+        .addField(
+          "#amount",
+          [
+            {
+              rule: "required",
+              errorMessage: "لطفاً مقدار ارز را وارد کنید",
+            },
+            {
+              rule: "number",
+              errorMessage: "مقدار باید عددی باشد",
+            },
+            {
+              rule: "minNumber",
+              value: 1,
+              errorMessage: "مقدار باید بیشتر از 0 باشد",
+            },
+          ],
+          {
+            errorsContainer: document
+              .querySelector("#amount")
+              .closest(".input__with-error-wrapper"),
+          }
+        )
+        .addField(
+          "#transaction_hash",
+          [
+            {
+              rule: "required",
+              errorMessage: "لطفاً هش تراکنش را وارد کنید",
+            },
+            {
+              rule: "minLength",
+              value: 10,
+              errorMessage: "هش تراکنش باید حداقل 10 کاراکتر باشد",
+            },
+            {
+              rule: "maxLength",
+              value: 100,
+              errorMessage: "هش تراکنش حداکثر می‌تواند 100 کاراکتر باشد",
+            },
+            {
+              rule: "customRegexp",
+              value: /^[a-zA-Z0-9]+$/,
+              errorMessage: "هش تراکنش باید شامل حروف و اعداد باشد",
+            },
+          ],
+          {
+            errorsContainer: document
+              .querySelector("#transaction_hash")
+              .closest(".input__with-error-wrapper"),
+          }
+        )
+        .onSuccess(function () {
+          document.getElementById("form-deposite").submit();
+        });
+
+      // ====== Validation End ======
     </script>
   </body>
 </html>

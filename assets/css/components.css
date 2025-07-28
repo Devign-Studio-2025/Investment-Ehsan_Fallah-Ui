@@ -225,7 +225,7 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   transition: var(--transition-fast);
 }
 
-.section--dashboard .input__wrapper .input__item {
+.main--dashboard .input__wrapper .input__item {
   padding: 1rem;
   padding-left: 2rem;
 }
@@ -316,6 +316,10 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   color: var(--lime-green);
 }
 
+.main--dashboard .input__wrapper .input__icon {
+  left: 1rem;
+}
+
 .input__wrapper .input__item:focus ~ .input__label-holder,
 .input__wrapper .input__item:not(:placeholder-shown) ~ .input__label-holder {
   font-size: var(--font-size-xs);
@@ -376,7 +380,7 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   /* pointer-events: none; */
   visibility: hidden;
   opacity: 0;
-  transition: var(--transition-fast);
+  transition: opacity var(--transition-fast);
   border-radius: var(--radius-md);
   background-color: #000f2b;
   max-height: 12.5rem;
@@ -673,3 +677,63 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   background-color: var(--indigo-dye-2);
 }
 /* * Table End */
+
+/* * ToastR notif Start */
+
+.toast {
+  background-color: var(--rich-black) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  border: 1px solid transparent;
+}
+
+.toast-success {
+  border-color: var(--lime-green);
+}
+
+.toast-error {
+  border-color: var(--red);
+}
+
+.toast-warning {
+  border-color: var(--orange);
+}
+
+.toast-success .toast-title {
+  color: var(--lime-green);
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.9);
+}
+
+.toast-warning .toast-title {
+  color: var(--orange);
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.4);
+}
+
+.toast-error .toast-title {
+  color: var(--red);
+  text-shadow: 0rem 0rem 1.25rem rgba(55, 80, 83, 0.4);
+}
+
+.toast-message {
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.9);
+}
+
+.toast-progress {
+  opacity: 1 !important;
+  background-color: var(--white) !important;
+  box-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.5);
+}
+
+.toast-bottom-right {
+  bottom: 1.5rem !important;
+}
+
+@media screen and (max-width: 768px) {
+  .toast-bottom-right {
+    top: 1.5rem !important;
+    bottom: 0;
+  }
+}
+
+/* * ToastR notif End */
