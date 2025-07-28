@@ -216,7 +216,7 @@
 }
 
 .nav__action-btns--top .nav__action-btn {
-  width: 6.875rem;
+  width: 7.8125rem;
   aspect-ratio: unset;
   border-radius: var(--radius-md);
   border: 1px solid;
@@ -316,7 +316,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 100000000;
   padding: 0 0.625rem;
   max-width: 28.125rem;
   width: 100%;
@@ -586,6 +585,10 @@
 
 .main--dashboard .section--dashboard {
   filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.25));
+}
+
+.main--dashboard .section--dashboard:has(.select__item) {
+  z-index: 998;
 }
 
 .section--dashboard-wrapper {
@@ -1219,28 +1222,59 @@
 
 /* * Offcanvas Start */
 
-.offcanvas {
+.offcanvas-bottom {
   color: var(--white);
+  border-radius: var(--radius-lg);
+  margin: auto;
+  max-width: 43.75rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  /* filter: drop-shadow(0rem 0rem 1.25rem rgba(0, 183, 165, 0.5)); */
 }
 
 .offcanvas.offcanvas-bottom {
   background-color: var(--rich-black);
-  height: 75%;
+  max-height: 80%;
+  height: fit-content;
 }
 
-.offcanvas-body {
+.offcanvas-bottom .offcanvas-body {
   background-color: var(--rich-black-3);
   overflow: auto;
 }
 
-.offcanvas-title {
+.offcanvas-bottom .offcanvas-title {
   padding: 0.5rem;
   margin-inline: auto;
   text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.5);
 }
 
-.offcanvas-footer {
+.offcanvas-bottom .offcanvas-footer {
   padding: 1rem;
+}
+
+.offcanvas-bottom .label-style {
+  display: inline-block;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+}
+
+.offcanvas-bottom .label-style--green {
+  color: var(--lime-green);
+  background-color: rgba(0, 183, 165, 0.1);
+  text-shadow: 0rem 0rem 1.25rem rgba(0, 183, 165, 0.4);
+}
+
+.offcanvas-bottom .label-style--white {
+  color: var(--white);
+  background-color: rgba(244, 244, 244, 0.1);
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.4);
+}
+
+.offcanvas-bottom .label-style--orange {
+  color: var(--orange);
+  background-color: rgba(255, 174, 0, 0.1);
+  text-shadow: 0rem 0rem 1.25rem rgba(255, 174, 0, 0.4);
 }
 
 /* * Offcanvas End */
