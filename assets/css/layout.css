@@ -81,6 +81,7 @@
   padding: 1.5rem;
   transition: var(--transition-fast);
   border-radius: var(--radius-md);
+  text-wrap: nowrap;
 }
 
 .nav--dashboard .nav__item a:hover {
@@ -89,6 +90,10 @@
 
 .nav--dashboard .nav__link-icon {
   font-size: var(--font-size-lg);
+}
+
+.nav--dashboard .nav__item {
+  width: 150px;
 }
 
 .nav--dashboard .nav__item--active a {
@@ -583,8 +588,9 @@
   max-width: 28.125rem;
 }
 
-.section--dashboard ol{
+.section--dashboard ol {
   padding-right: 1rem;
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.2);
   margin: 0;
 }
 

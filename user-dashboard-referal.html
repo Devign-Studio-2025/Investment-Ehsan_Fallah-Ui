@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>برداشت از حساب</title>
+    <title>واریز به حساب</title>
     <!-- ! Core Styles -->
 
     <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.rtl.min.css" />
@@ -33,13 +33,13 @@
             واریز به حساب</a
           >
         </li>
-        <li class="nav__item nav__item--active">
+        <li class="nav__item">
           <a class="nav__link" href="user-dashboard-withdraw.html">
             <i class="nav__link-icon fa-solid fa-money-from-bracket"></i>
             برداشت از حساب</a
           >
         </li>
-        <li class="nav__item">
+        <li class="nav__item nav__item--active">
           <a class="nav__link" href="user-dashboard-referal.html">
             <i class="nav__link-icon fa-solid fa-users"></i>
             زیرمجموعه</a
@@ -83,180 +83,191 @@
         class="sections flex-column flex-lg-row align-items-center align-items-lg-start"
       >
         <div class="section__col-wrapper">
-          <form
-            id="form-withdraw"
-            class="section section--dashboard section--dashboard-wrapper section--dashboard-wrapper-outline mt-3 mt-sm-0"
-          >
-            <div class="section__title section__title--white">فرم برداشت</div>
-            <div class="input__with-error-wrapper">
-              <div class="select__wrapper">
-                <button type="button" class="select__item">
-                  <div class="select__item-title">نوع ارز</div>
-                  <i class="select__item-icon fa-solid fa-coin"></i>
-                </button>
-                <ul class="select__item-dropdown" id="crypto-radioes">
-                  <li>
-                    <label for="t1">
-                      <div class="select__item-li-title">
-                        <img src="assets/imgs/crypto/bitcoin.png" alt="" />
-                        <span> بیت کوین </span>
-                      </div>
-                      <input type="radio" id="t1" name="crypto" value="" />
-                    </label>
-                  </li>
-                  <li>
-                    <label for="t2">
-                      <div class="select__item-li-title">
-                        <img src="assets/imgs/crypto/ethereum.png" alt="" />
-                        <span> اتریوم </span>
-                      </div>
-                      <input type="radio" id="t2" name="crypto" value="" />
-                    </label>
-                  </li>
-                  <li>
-                    <label for="t3">
-                      <div class="select__item-li-title">
-                        <img src="assets/imgs/crypto/dogecoin.png" alt="" />
-                        <span> دوج کوین </span>
-                      </div>
-                      <input type="radio" id="t3" name="crypto" value="" />
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="input__with-error-wrapper">
-              <div class="select__wrapper">
-                <button type="button" class="select__item">
-                  <div class="select__item-title">نوع شبکه</div>
-                  <i class="select__item-icon fa-solid fa-chart-network"></i>
-                </button>
-                <ul class="select__item-dropdown" id="network-radioes">
-                  <li>
-                    <label for="n1">
-                      <div class="select__item-li-title">
-                        <span> Lightning </span>
-                      </div>
-                      <input type="radio" id="n1" name="network" value="" " />
-                    </label>
-                  </li>
-                  <li>
-                    <label for="n2">
-                      <div class="select__item-li-title">
-                        <span> ERC-20 </span>
-                      </div>
-                      <input type="radio" id="n2" name="network" value="" />
-                    </label>
-                  </li>
-                  <li>
-                    <label for="n3">
-                      <div class="select__item-li-title">
-                        <span> TRC-20 </span>
-                      </div>
-                      <input type="radio" id="n3" name="network" value="" />
-                    </label>
-                  </li>
-                  <li>
-                    <label for="n4">
-                      <div class="select__item-li-title">
-                        <span> Solana </span>
-                      </div>
-                      <input type="radio" id="n4" name="network" value="" />
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="d-flex align-items-center gap-2 mt-2">
-                <small class="d-flex align-items-center gap-2">
-                  <i
-                    class="fa-solid fa-coin-front clr-green glow-green-text-9"
-                  ></i>
-                  <div class="glow-white-text-9">کارمزد شبکه:</div>
-                </small>
-                <div dir="ltr" class="glow-white-text-9">1 USDT</div>
-              </div>
-            </div>
+          <section class="section section--dashboard mt-3 mt-sm-0">
             <div class="input__with-error-wrapper">
               <div class="input__wrapper">
-                <i class="input__icon fa-solid fa-wallet"></i>
+                <i class="input__icon fa-solid fa-link"></i>
                 <input
+                  dir="ltr"
+                  style="cursor: pointer; padding-left: 2.5rem"
                   class="input__item"
                   type="text"
-                  name="wallet_address"
-                  placeholder=" "
-                  id="wallet_address"
+                  name=""
+                  readonly
+                  placeholder=""
+                  value="https://domain.net/signup?ref_user=14"
+                  id="ref-link"
                 />
-                <label class="input__label-holder" for="">آدرس کیف پول</label>
+              </div>
+              <div class="mt-2 glow-white-text-4">
+                <small>* برای کپی روی لینک کلیک کنید.</small>
               </div>
             </div>
-            <div class="input__with-error-wrapper">
-              <div class="input__wrapper">
-                <i class="input__icon fa-solid fa-coins"></i>
-                <input
-                  class="input__item"
-                  type="number"
-                  name="amount"
-                  data-max="66"
-                  placeholder=" "
-                  id="amount"
-                />
-                <label class="input__label-holder" for="">مبلغ</label>
+          </section>
+          <section
+            class="section section--dashboard section--dashboard-wrapper d-block"
+          >
+            <div
+              class="d-flex align-items-center justify-content-between mx-auto mb-1"
+              style="max-width: 18.75rem"
+            >
+              <div class="glow-white-text-4 d-flex align-items-center gap-2">
+                <i class="fa-solid fa-users"></i>
+                <div class="fw-medium">زیرمجموعه:</div>
               </div>
-              <div class="d-flex align-items-center gap-2 mt-2">
-                <small class="d-flex align-items-center gap-2">
-                  <i class="fa-solid fa-coins clr-green glow-green-text-9"></i>
-                  <div class="glow-white-text-9">موجودی شما:</div>
-                </small>
-                <div dir="ltr" class="glow-white-text-9">66 USDT</div>
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="fw-medium fs-4 clr-green glow-green-text-4"
+                  dir="ltr"
+                >
+                  12
+                </div>
+                <div class="small glow-white-text-4">نفر</div>
               </div>
             </div>
-            <button class="button w-100 button--hover-shine button--primary">
-              <i class="fa-solid fa-money-from-bracket"></i>
-              درخواست برداشت
-            </button>
-          </form>
+            <div
+              class="d-flex align-items-center mx-auto justify-content-between"
+              style="max-width: 18.75rem"
+            >
+              <div class="glow-white-text-4 d-flex align-items-center gap-2">
+                <i class="fa-solid fa-timer"></i>
+                <div class="fw-medium">نرخ سود:</div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="fw-medium fs-4 clr-green glow-green-text-4"
+                  dir="ltr"
+                >
+                  10.00
+                </div>
+                <div class="small glow-white-text-4">دلار/نفر</div>
+              </div>
+            </div>
+            <div
+              class="d-flex align-items-center mx-auto justify-content-between"
+              style="max-width: 18.75rem"
+            >
+              <div class="glow-white-text-4 d-flex align-items-center gap-2">
+                <i class="fa-solid fa-timer"></i>
+                <div class="fw-medium">سود روزانه:</div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="fw-medium fs-4 clr-green glow-green-text-4"
+                  dir="ltr"
+                >
+                  +51.00
+                </div>
+                <div class="small glow-white-text-4">دلار</div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="section section--dashboard section--dashboard-wrapper"
+          >
+            <div class="section__title section__title--orange">
+              زیرمجموعه‌گیری
+            </div>
+            <ol>
+              <li>
+                با دعوت از دوستان و ثبت نام از طریق لینک اختصاصی خودتان، سود
+                دریافت کنید!
+              </li>
+              <li>
+                هر چه تعداد افراد دعوتی از سوی شما بیشتر باشد، سودتان نیز بیشتر
+                خواهد شد.
+              </li>
+              <li>
+                سود زیرمجموعه‌ها هر روز رأس ساعت 00:00 بامداد واریز خواهد شد.
+              </li>
+            </ol>
+          </section>
         </div>
         <div class="section__col-wrapper">
           <section
             class="section section--dashboard section--dashboard-wrapper"
           >
-            <div class="section__title section__title--orange">
-              نکات قبل از برداشت
-            </div>
-            <ol>
-              <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</li>
-              <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</li>
-              <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</li>
-              <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</li>
-            </ol>
-          </section>
-          <section
-            class="section section--dashboard section--dashboard-wrapper"
-          >
-            <div class="section__title section__title--red">
-              برداشت‌های اخیر
+            <div class="section__title section__title--green">
+              زیرمجموعه‌های اخیر
             </div>
             <div class="tables-wrapper">
               <div class="table-item">
                 <div class="right-icon">
-                  <i class="fa-solid fa-money-simple-from-bracket"></i>
+                  <i class="fa-solid fa-user"></i>
                 </div>
                 <div class="left-row-content ps-0">
                   <div
                     class="right-content d-flex flex-column gap-0 text-start"
                   >
-                    <div>برداشت</div>
-                    <div class="small clr-red glow-red-text-4">5.95 تتر</div>
-                  </div>
-                  <div class="left-content flex-column gap-0">
-                    <div class="d-flex align-items-center gap-2">
-                      <div class="clr-red glow-red-text-4 left-price">
-                        -200,000
-                      </div>
-                      <div class="small glow-white-text-4">تومان</div>
-                    </div>
+                    <div>حمید فدایی</div>
+
                     <div class="small ms-auto glow-white-text-4" dir="ltr">
                       1401/11/05 12:01
+                    </div>
+                  </div>
+                  <div class="left-content flex-column gap-0">
+                    <div class="small me-auto glow-white-text-4">
+                      مجموع سود:
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="clr-green glow-green-text-4 left-price">
+                        +10.00
+                      </div>
+                      <div class="small glow-white-text-4">دلار</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-item">
+                <div class="right-icon">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="left-row-content ps-0">
+                  <div
+                    class="right-content d-flex flex-column gap-0 text-start"
+                  >
+                    <div>حمید فدایی</div>
+
+                    <div class="small ms-auto glow-white-text-4" dir="ltr">
+                      1401/11/05 12:01
+                    </div>
+                  </div>
+                  <div class="left-content flex-column gap-0">
+                    <div class="small me-auto glow-white-text-4">
+                      مجموع سود:
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="clr-green glow-green-text-4 left-price">
+                        +10.00
+                      </div>
+                      <div class="small glow-white-text-4">دلار</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-item">
+                <div class="right-icon">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="left-row-content ps-0">
+                  <div
+                    class="right-content d-flex flex-column gap-0 text-start"
+                  >
+                    <div>حمید فدایی</div>
+
+                    <div class="small ms-auto glow-white-text-4" dir="ltr">
+                      1401/11/05 12:01
+                    </div>
+                  </div>
+                  <div class="left-content flex-column gap-0">
+                    <div class="small me-auto glow-white-text-4">
+                      مجموع سود:
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="clr-green glow-green-text-4 left-price">
+                        +10.00
+                      </div>
+                      <div class="small glow-white-text-4">دلار</div>
                     </div>
                   </div>
                 </div>
@@ -564,6 +575,76 @@
       </div>
       <!-- * Notif offcanvas End -->
 
+      <!-- * Deposite form offcanvas Start -->
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="deposite-offcanvas"
+        aria-labelledby="deposite-offcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="deposite-offcanvasLabel">
+            فرم واریز به حساب
+          </h5>
+        </div>
+        <div class="offcanvas-body">
+          <form action="" id="form-deposite" class="row">
+            <div class="col-12 col-md-6 input__with-error-wrapper mb-4">
+              <div class="input__wrapper">
+                <i class="input__icon fa-solid fa-coins"></i>
+                <input
+                  class="input__item"
+                  type="number"
+                  name="amount"
+                  placeholder=" "
+                  id="amount"
+                />
+                <label class="input__label-holder" for="">* مقدار ارز</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 input__with-error-wrapper mb-4">
+              <div class="input__wrapper">
+                <i class="input__icon fa-solid fa-hashtag"></i>
+                <input
+                  class="input__item"
+                  type="text"
+                  name="transaction_hash"
+                  placeholder=" "
+                  id="transaction_hash"
+                />
+                <label class="input__label-holder" for="">* هش تراکنش</label>
+              </div>
+            </div>
+            <div class="small">
+              <div class="fw-medium label-style label-style--orange">
+                توجه کنید که:
+              </div>
+              <ul class="mt-2 d-flex flex-column gap-1">
+                <li>درخواست واریزی شما به ادمین سامانه ارسال خواهد شد.</li>
+                <li>درصورت موافقت ادمین، حساب شما شارژ خواهد شد.</li>
+              </ul>
+            </div>
+            <div>
+              <button
+                class="w-100 mt-4 fw-medium button button--hover-shine button--tertiary"
+              >
+                تایید واریز
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="offcanvas-footer">
+          <button
+            type="button"
+            class="button button--secondary w-100"
+            data-bs-dismiss="offcanvas"
+          >
+            بستن
+          </button>
+        </div>
+      </div>
+      <!-- * Deposite form offcanvas End -->
+
       <!-- * Bottom nav btns Start -->
       <div class="nav__action-btns d-none d-lg-flex">
         <button
@@ -604,7 +685,7 @@
       </a>
       <a
         href="user-dashboard-withdraw.html"
-        class="nav-item active"
+        class="nav-item"
         onclick="activateNavItem(this)"
       >
         <span class="active-line"></span>
@@ -625,7 +706,7 @@
       </a>
       <a
         href="user-dashboard-referal.html"
-        class="nav-item"
+        class="nav-item active"
         onclick="activateNavItem(this)"
       >
         <span class="active-line"></span>
@@ -756,35 +837,34 @@
     <script src="assets/libs/toastr/toastr.min.js"></script>
     <script src="assets/libs/validate.min.js/just-validate.production.min.js"></script>
     <script>
-      // ====== Custom select Start ======
-      function customSelectInit() {
-        const dropdowns = document.querySelectorAll(
-          ".select__wrapper > .select__item-dropdown"
-        );
+      // ====== Toast notif Start ======
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "5000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "slideDown",
+        hideMethod: "slideUp",
+        rtl: "true",
+      };
 
-        dropdowns.forEach((dropdown) => {
-          const selectTitle = dropdown.parentElement.querySelector(
-            ".select__item-title"
-          );
-          const inputs = dropdown.querySelectorAll("input");
-          inputs.forEach((input) => {
-            input.addEventListener("change", (e) => {
-              if (e.currentTarget.checked) {
-                // AJAX FUNCTION PLACEMENT IS HERE =====
-                selectTitle.innerText =
-                  e.currentTarget.parentElement.querySelector(
-                    ".select__item-li-title span"
-                  ).innerText;
+      const refLink = document.querySelector("#ref-link");
 
-                selectTitle.classList.add("select__item-title-selected");
-              }
-            });
-          });
-        });
-      }
+      refLink.onclick = () => {
+        navigator.clipboard.writeText(refLink.value);
+        toastr.success("لینک دعوت کپی شد.", "کپی شد!");
+      };
 
-      customSelectInit();
-      // ====== Custom select End ======
+      // ====== Toast notif End ======
 
       // ====== Validation Start ======
 
@@ -801,44 +881,28 @@
         successFieldCssClass: "is-valid",
       };
 
-      // Validation for withdraw
-      const withdrawValidator = new JustValidate(
-        "#form-withdraw",
+      // Validation for deposite
+      const depositeValidator = new JustValidate(
+        "#form-deposite",
         validateOptions
       );
 
-      withdrawValidator
-        .addRequiredGroup("#crypto-radioes", "لطفاً نوع ارز را انتخاب کنید", {
-          errorsContainer: document
-            .querySelector("#crypto-radioes")
-            .closest(".input__with-error-wrapper"),
-          successMessage: "Everything looks good",
-        })
-        .addRequiredGroup("#network-radioes", "لطفاً شبکه راانتخاب کنید", {
-          errorsContainer: document
-            .querySelector("#network-radioes")
-            .closest(".input__with-error-wrapper"),
-        })
+      depositeValidator
         .addField(
           "#amount",
           [
             {
               rule: "required",
-              errorMessage: "لطفاً مبلغ را وارد کنید",
+              errorMessage: "لطفاً مقدار ارز را وارد کنید",
             },
             {
               rule: "number",
-              errorMessage: "مبلغ باید عددی باشد",
+              errorMessage: "مقدار باید عددی باشد",
             },
             {
               rule: "minNumber",
               value: 1,
-              errorMessage: "مبلغ باید بیشتر از 0 باشد",
-            },
-            {
-              rule: "maxNumber",
-              value: parseInt(amount.dataset.max),
-              errorMessage: "مبلغ از موجودی شما بیشتر است",
+              errorMessage: "مقدار باید بیشتر از 0 باشد",
             },
           ],
           {
@@ -848,21 +912,21 @@
           }
         )
         .addField(
-          "#wallet_address",
+          "#transaction_hash",
           [
             {
               rule: "required",
-              errorMessage: "لطفاً آدرس کیف پول را وارد کنید",
+              errorMessage: "لطفاً هش تراکنش را وارد کنید",
             },
             {
               rule: "minLength",
               value: 10,
-              errorMessage: "حداقل 10 کاراکتر مجاز است",
+              errorMessage: "هش تراکنش باید حداقل 10 کاراکتر باشد",
             },
             {
               rule: "maxLength",
               value: 100,
-              errorMessage: "حداکثر 100 کاراکتر مجاز است",
+              errorMessage: "هش تراکنش حداکثر می‌تواند 100 کاراکتر باشد",
             },
             {
               rule: "customRegexp",
@@ -872,12 +936,12 @@
           ],
           {
             errorsContainer: document
-              .querySelector("#wallet_address")
+              .querySelector("#transaction_hash")
               .closest(".input__with-error-wrapper"),
           }
         )
         .onSuccess(function () {
-          document.getElementById("form-withdraw").submit();
+          document.getElementById("form-deposite").submit();
         });
 
       // ====== Validation End ======
