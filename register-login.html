@@ -171,8 +171,8 @@
         </div>
       </form>
       <form
-        method="post"
-        action=""
+        method="get"
+        action="otp.html"
         class="form__body-footer-wrapper"
         id="form-login"
       >
@@ -451,6 +451,7 @@
             }
           )
           .onSuccess(function () {
+            document.querySelector("#form-register .button").disabled = true;
             document.getElementById("form-register").submit();
           });
 
@@ -492,6 +493,7 @@
             }
           )
           .onSuccess(function () {
+            document.querySelector("#form-login .button").disabled = true;
             document.getElementById("form-login").submit();
           });
         // ====== Validation End ======
