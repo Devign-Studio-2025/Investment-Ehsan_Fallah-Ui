@@ -40,7 +40,7 @@
           >
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="">
+          <a class="nav__link" href="user-dashboard-referal.html">
             <i class="nav__link-icon fa-solid fa-users"></i>
             زیرمجموعه</a
           >
@@ -585,8 +585,8 @@
       <!-- * Bottom nav btns End -->
     </main>
 
-    <div class="d-flex p-2 opacity-50">
-      <small class="mx-auto">تمامی حقوق محفوظ است - 1404 ©</small>
+    <div class="footer--dashboard">
+      <small>تمامی حقوق محفوظ است - 1404 ©</small>
     </div>
 
     <!-- * Moblie nav Start -->
@@ -623,18 +623,18 @@
         </div>
         <span class="nav-label">خانه</span>
       </a>
-      <a href="#" class="nav-item" onclick="activateNavItem(this)">
+      <a
+        href="user-dashboard-referal.html"
+        class="nav-item"
+        onclick="activateNavItem(this)"
+      >
         <span class="active-line"></span>
         <div class="nav-icon">
           <i class="fa-solid fa-users"></i>
         </div>
         <span class="nav-label">زیرمجموعه</span>
       </a>
-      <a
-        href="profile-setting.html"
-        class="nav-item"
-        onclick="activateNavItem(this)"
-      >
+      <a href="index.html" class="nav-item" onclick="activateNavItem(this)">
         <span class="active-line"></span>
         <div class="nav-icon">
           <i class="fa-solid fa-up-right-from-square"></i>
@@ -749,7 +749,6 @@
       // ================== mobile menu ends =================== //
     </script>
     <!-- ! Page Scripts -->
-    <script src="assets/libs/toastr/toastr.min.js"></script>
     <script src="assets/libs/validate.min.js/just-validate.production.min.js"></script>
     <script>
       // ====== Custom select Start ======
@@ -810,7 +809,7 @@
             .closest(".input__with-error-wrapper"),
           successMessage: "Everything looks good",
         })
-        .addRequiredGroup("#network-radioes", "لطفاً شبکه راانتخاب کنید", {
+        .addRequiredGroup("#network-radioes", "لطفاً شبکه را انتخاب کنید", {
           errorsContainer: document
             .querySelector("#network-radioes")
             .closest(".input__with-error-wrapper"),

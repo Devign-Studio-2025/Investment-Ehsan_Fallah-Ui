@@ -81,6 +81,7 @@
   padding: 1.5rem;
   transition: var(--transition-fast);
   border-radius: var(--radius-md);
+  text-wrap: nowrap;
 }
 
 .nav--dashboard .nav__item a:hover {
@@ -89,6 +90,10 @@
 
 .nav--dashboard .nav__link-icon {
   font-size: var(--font-size-lg);
+}
+
+.nav--dashboard .nav__item {
+  width: 150px;
 }
 
 .nav--dashboard .nav__item--active a {
@@ -304,9 +309,11 @@
 /* ======================== mobile menu starts ====================== */
 
 .nav--dashboard-bottom {
-  position: sticky;
-  bottom: 1rem;
+  position: fixed;
+  bottom: 0.5rem;
   margin-inline: auto;
+  left: 0;
+  right: 0;
   height: 5rem;
   background: var(--prussian-blue-2);
   border: 1px solid var(--border-color);
@@ -318,7 +325,7 @@
   align-items: center;
   padding: 0 0.625rem;
   max-width: 28.125rem;
-  width: 100%;
+  width: 95%;
 }
 
 /* Navigation items */
@@ -558,7 +565,6 @@
   box-shadow: 0px 0px 30px rgba(166, 187, 255, 0.23);
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-color);
-  margin-bottom: 1rem;
 }
 
 .main--website-page {
@@ -583,8 +589,9 @@
   max-width: 28.125rem;
 }
 
-.section--dashboard ol{
+.section--dashboard ol {
   padding-right: 1rem;
+  text-shadow: 0rem 0rem 1.25rem rgba(244, 244, 244, 0.2);
   margin: 0;
 }
 
@@ -904,6 +911,16 @@
 
 /* * Footer Start */
 
+.footer--dashboard {
+  display: flex;
+  opacity: 0.5;
+  padding: 0.8rem;
+}
+
+.footer--dashboard small {
+  margin-inline: auto;
+}
+
 .footer--website {
   margin-top: 12rem;
   margin-inline: auto;
@@ -1024,6 +1041,10 @@
 }
 
 @media screen and (max-width: 992px) {
+  .footer--dashboard {
+    margin-bottom: 7rem;
+  }
+
   .footer--website .footer__columns {
     gap: 2rem;
     flex-wrap: wrap;
