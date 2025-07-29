@@ -28,7 +28,7 @@
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="user-dashboard-deposite.html">
+          <a class="nav__link" href="user-dashboard-deposit.html">
             <i class="nav__link-icon fa-solid fa-money-simple-from-bracket"></i>
             واریز به حساب</a
           >
@@ -592,7 +592,7 @@
     <!-- * Moblie nav Start -->
     <nav class="nav nav--dashboard-bottom d-flex d-lg-none">
       <a
-        href="user-dashboard-deposite.html"
+        href="user-dashboard-deposit.html"
         class="nav-item"
         onclick="activateNavItem(this)"
       >
@@ -872,6 +872,7 @@
           }
         )
         .onSuccess(function () {
+          document.querySelector("#form-withdraw .button").disabled = true;
           document.getElementById("form-withdraw").submit();
         });
 

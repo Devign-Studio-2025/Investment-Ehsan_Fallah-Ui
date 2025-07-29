@@ -28,7 +28,7 @@
           </a>
         </li>
         <li class="nav__item nav__item--active">
-          <a class="nav__link" href="user-dashboard-deposite.html">
+          <a class="nav__link" href="user-dashboard-deposit.html">
             <i class="nav__link-icon fa-solid fa-money-simple-from-bracket"></i>
             واریز به حساب</a
           >
@@ -158,7 +158,7 @@
             <button
               class="button w-100 button--hover-shine button--primary"
               data-bs-toggle="offcanvas"
-              data-bs-target="#deposite-offcanvas"
+              data-bs-target="#deposit-offcanvas"
             >
               <i class="fa-solid fa-money-simple-from-bracket"></i>
               واریز به حساب
@@ -502,20 +502,20 @@
       </div>
       <!-- * Notif offcanvas End -->
 
-      <!-- * Deposite form offcanvas Start -->
+      <!-- * deposit form offcanvas Start -->
       <div
         class="offcanvas offcanvas-bottom"
         tabindex="-1"
-        id="deposite-offcanvas"
-        aria-labelledby="deposite-offcanvasLabel"
+        id="deposit-offcanvas"
+        aria-labelledby="deposit-offcanvasLabel"
       >
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="deposite-offcanvasLabel">
+          <h5 class="offcanvas-title" id="deposit-offcanvasLabel">
             فرم واریز به حساب
           </h5>
         </div>
         <div class="offcanvas-body">
-          <form action="" id="form-deposite" class="row">
+          <form action="" id="form-deposit" class="row">
             <div class="col-12 col-md-6 input__with-error-wrapper mb-4">
               <div class="input__wrapper">
                 <i class="input__icon fa-solid fa-coins"></i>
@@ -570,7 +570,7 @@
           </button>
         </div>
       </div>
-      <!-- * Deposite form offcanvas End -->
+      <!-- * deposit form offcanvas End -->
 
       <!-- * Bottom nav btns Start -->
       <div class="nav__action-btns d-none d-lg-flex">
@@ -600,7 +600,7 @@
     <!-- * Moblie nav Start -->
     <nav class="nav nav--dashboard-bottom d-flex d-lg-none">
       <a
-        href="user-dashboard-deposite.html"
+        href="user-dashboard-deposit.html"
         class="nav-item active"
         onclick="activateNavItem(this)"
       >
@@ -642,11 +642,7 @@
         </div>
         <span class="nav-label">زیرمجموعه</span>
       </a>
-      <a
-        href="index.html"
-        class="nav-item"
-        onclick="activateNavItem(this)"
-      >
+      <a href="index.html" class="nav-item" onclick="activateNavItem(this)">
         <span class="active-line"></span>
         <div class="nav-icon">
           <i class="fa-solid fa-up-right-from-square"></i>
@@ -843,13 +839,13 @@
         successFieldCssClass: "is-valid",
       };
 
-      // Validation for deposite
-      const depositeValidator = new JustValidate(
-        "#form-deposite",
+      // Validation for deposit
+      const depositValidator = new JustValidate(
+        "#form-deposit",
         validateOptions
       );
 
-      depositeValidator
+      depositValidator
         .addField(
           "#amount",
           [
@@ -903,7 +899,8 @@
           }
         )
         .onSuccess(function () {
-          document.getElementById("form-deposite").submit();
+          document.querySelector("#form-deposit .button").disabled = true;
+          document.getElementById("form-deposit").submit();
         });
 
       // ====== Validation End ======

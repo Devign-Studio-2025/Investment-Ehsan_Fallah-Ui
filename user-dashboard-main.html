@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <!-- ! Page Styles -->
+    <link rel="stylesheet" href="assets/libs/toastr/toastr.min.css" />
     <style></style>
   </head>
   <body class="body body--website">
@@ -28,7 +29,7 @@
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="user-dashboard-deposite.html">
+          <a class="nav__link" href="user-dashboard-deposit.html">
             <i class="nav__link-icon fa-solid fa-money-simple-from-bracket"></i>
             واریز به حساب</a
           >
@@ -513,11 +514,19 @@
             </div>
           </section>
           <section class="section section--dashboard d-flex gap-4">
-            <button class="button w-50 button--hover-shine button--primary">
+            <button
+              data-bs-toggle="offcanvas"
+              data-bs-target="#deposit-offcanvas"
+              class="button w-50 button--hover-shine button--primary"
+            >
               <i class="fa-solid fa-money-simple-from-bracket"></i>
               واریز
             </button>
-            <button class="button w-50 button--hover-shine button--tertiary">
+            <button
+              data-bs-toggle="offcanvas"
+              data-bs-target="#withdraw-offcanvas"
+              class="button w-50 button--hover-shine button--tertiary"
+            >
               <i class="fa-solid fa-money-from-bracket"></i>
               برداشت
             </button>
@@ -1167,6 +1176,274 @@
       </div>
       <!-- * Notif offcanvas End -->
 
+      <!-- * Deposit offcanvas Start -->
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="deposit-offcanvas"
+        aria-labelledby="deposit-offcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="deposit-offcanvasLabel">
+            واریز به حساب
+          </h5>
+        </div>
+        <form class="offcanvas-body" id="form-deposit">
+          <div class="d-flex flex-column mb-5 gap-3">
+            <div class="input__with-error-wrapper">
+              <div class="select__wrapper">
+                <button type="button" class="select__item">
+                  <div class="select__item-title">نوع ارز</div>
+                  <i class="select__item-icon fa-solid fa-coin"></i>
+                </button>
+                <ul class="select__item-dropdown">
+                  <li>
+                    <label for="td1">
+                      <div class="select__item-li-title">
+                        <img src="assets/imgs/crypto/bitcoin.png" alt="" />
+                        <span> بیت کوین </span>
+                      </div>
+                      <input type="radio" id="td1" name="crypto" value="" " />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="td2">
+                      <div class="select__item-li-title">
+                        <img src="assets/imgs/crypto/ethereum.png" alt="" />
+                        <span> اتریوم </span>
+                      </div>
+                      <input type="radio" id="td2" name="crypto" value="" />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="td3">
+                      <div class="select__item-li-title">
+                        <img src="assets/imgs/crypto/dogecoin.png" alt="" />
+                        <span> دوج کوین </span>
+                      </div>
+                      <input type="radio" id="td3" name="crypto" value="" />
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="input__with-error-wrapper">
+              <div class="input__wrapper">
+                <i class="input__icon fa-solid fa-wallet"></i>
+                <input
+                  style="cursor: pointer"
+                  class="input__item"
+                  type="text"
+                  name=""
+                  readonly
+                  placeholder="ابتدا نوع ارز را انتخاب نمایید"
+                  id="wallet-address"
+                />
+              </div>
+              <div class="mt-2 glow-white-text-4">
+                <small>* برای کپی روی آدرس کلیک کنید.</small>
+              </div>
+            </div>
+            <div class="input__with-error-wrapper">
+              <div class="input__wrapper">
+                <i class="input__icon fa-solid fa-coins"></i>
+                <input
+                  class="input__item"
+                  type="number"
+                  name="amount"
+                  placeholder=" "
+                  id="deposit_amount"
+                />
+                <label class="input__label-holder" for="">* مقدار ارز</label>
+              </div>
+            </div>
+            <div class="input__with-error-wrapper">
+              <div class="input__wrapper">
+                <i class="input__icon fa-solid fa-hashtag"></i>
+                <input
+                  class="input__item"
+                  type="text"
+                  name="transaction_hash"
+                  placeholder=" "
+                  id="transaction_hash"
+                />
+                <label class="input__label-holder" for="">* هش تراکنش</label>
+              </div>
+            </div>
+          </div>
+          <button
+            class="button mt-auto w-100 mt-auto button--hover-shine button--tertiary fw-medium"
+          >
+            تایید واریز
+          </button>
+        </form>
+        <div class="offcanvas-footer">
+          <button
+            type="button"
+            class="button button--secondary w-100"
+            data-bs-dismiss="offcanvas"
+          >
+            بستن
+          </button>
+        </div>
+      </div>
+      <!-- * Deposit offcanvas End -->
+
+      <!-- * Withdraw offcanvas Start -->
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="withdraw-offcanvas"
+        aria-labelledby="withdraw-offcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="withdraw-offcanvasLabel">
+            برداشت از حساب
+          </h5>
+        </div>
+        <form class="offcanvas-body" id="form-withdraw">
+          <div class="d-flex flex-column mb-5 gap-3">
+            <div class="input__with-error-wrapper">
+              <div class="select__wrapper">
+                <button type="button" class="select__item">
+                  <div class="select__item-title">نوع ارز</div>
+                  <i class="select__item-icon fa-solid fa-coin"></i>
+                </button>
+                <ul class="select__item-dropdown" id="crypto-radioes">
+                  <li>
+                    <label for="tw1">
+                      <div class="select__item-li-title">
+                        <img src="assets/imgs/crypto/bitcoin.png" alt="" />
+                        <span> بیت کوین </span>
+                      </div>
+                      <input type="radio" id="tw1" name="crypto" value="" />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="tw2">
+                      <div class="select__item-li-title">
+                        <img src="assets/imgs/crypto/ethereum.png" alt="" />
+                        <span> اتریوم </span>
+                      </div>
+                      <input type="radio" id="tw2" name="crypto" value="" />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="tw3">
+                      <div class="select__item-li-title">
+                        <img src="assets/imgs/crypto/dogecoin.png" alt="" />
+                        <span> دوج کوین </span>
+                      </div>
+                      <input type="radio" id="tw3" name="crypto" value="" />
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="input__with-error-wrapper">
+              <div class="select__wrapper">
+                <button type="button" class="select__item">
+                  <div class="select__item-title">نوع شبکه</div>
+                  <i class="select__item-icon fa-solid fa-chart-network"></i>
+                </button>
+                <ul class="select__item-dropdown" id="network-radioes">
+                  <li>
+                    <label for="n1">
+                      <div class="select__item-li-title">
+                        <span> Lightning </span>
+                      </div>
+                      <input type="radio" id="n1" name="network" value="" " />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="n2">
+                      <div class="select__item-li-title">
+                        <span> ERC-20 </span>
+                      </div>
+                      <input type="radio" id="n2" name="network" value="" />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="n3">
+                      <div class="select__item-li-title">
+                        <span> TRC-20 </span>
+                      </div>
+                      <input type="radio" id="n3" name="network" value="" />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="n4">
+                      <div class="select__item-li-title">
+                        <span> Solana </span>
+                      </div>
+                      <input type="radio" id="n4" name="network" value="" />
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="d-flex align-items-center gap-2 mt-2">
+                <small class="d-flex align-items-center gap-2">
+                  <i
+                    class="fa-solid fa-coin-front clr-green glow-green-text-9"
+                  ></i>
+                  <div class="glow-white-text-9">کارمزد شبکه:</div>
+                </small>
+                <div dir="ltr" class="glow-white-text-9">1 USDT</div>
+              </div>
+            </div>
+            <div class="input__with-error-wrapper">
+              <div class="input__wrapper">
+                <i class="input__icon fa-solid fa-wallet"></i>
+                <input
+                  class="input__item"
+                  type="text"
+                  name="wallet_address"
+                  placeholder=" "
+                  id="wallet_address"
+                />
+                <label class="input__label-holder" for="">آدرس کیف پول</label>
+              </div>
+            </div>
+            <div class="input__with-error-wrapper">
+              <div class="input__wrapper">
+                <i class="input__icon fa-solid fa-coins"></i>
+                <input
+                  class="input__item"
+                  type="number"
+                  name="amount"
+                  data-max="66"
+                  placeholder=" "
+                  id="withdraw_amount"
+                />
+                <label class="input__label-holder" for="">مبلغ</label>
+              </div>
+              <div class="d-flex align-items-center gap-2 mt-2">
+                <small class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-coins clr-green glow-green-text-9"></i>
+                  <div class="glow-white-text-9">موجودی شما:</div>
+                </small>
+                <div dir="ltr" class="glow-white-text-9">66 USDT</div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="button mt-auto w-100 mt-auto button--hover-shine button--tertiary fw-medium"
+          >
+            درخواست برداشت
+          </button>
+        </form>
+        <div class="offcanvas-footer">
+          <button
+            type="button"
+            class="button button--secondary w-100"
+            data-bs-dismiss="offcanvas"
+          >
+            بستن
+          </button>
+        </div>
+      </div>
+      <!-- * Withdraw offcanvas End -->
+
       <!-- * Bottom nav btns Start -->
       <div class="nav__action-btns d-none d-lg-flex">
         <button
@@ -1195,7 +1472,7 @@
     <!-- * Moblie nav Start -->
     <nav class="nav nav--dashboard-bottom d-flex d-lg-none">
       <a
-        href="user-dashboard-deposite.html"
+        href="user-dashboard-deposit.html"
         class="nav-item"
         onclick="activateNavItem(this)"
       >
@@ -1352,6 +1629,8 @@
       // ================== mobile menu ends =================== //
     </script>
     <!-- ! Page Scripts -->
+    <script src="assets/libs/validate.min.js/just-validate.production.min.js"></script>
+    <script src="assets/libs/toastr/toastr.min.js"></script>
 
     <script>
       // ====== Countdown Start ======
@@ -1390,6 +1669,231 @@
       startCountdown(hour, minute, second, countDownElement);
 
       // ====== Countdown End ======
+
+      // ====== Custom select Start ======
+
+      function customSelectInit() {
+        const dropdowns = document.querySelectorAll(
+          ".select__wrapper > .select__item-dropdown"
+        );
+
+        dropdowns.forEach((dropdown) => {
+          const selectTitle = dropdown.parentElement.querySelector(
+            ".select__item-title"
+          );
+          const inputs = dropdown.querySelectorAll("input");
+          inputs.forEach((input) => {
+            input.addEventListener("change", (e) => {
+              if (e.currentTarget.checked) {
+                // AJAX FUNCTION PLACEMENT IS HERE =====
+                selectTitle.innerText =
+                  e.currentTarget.parentElement.querySelector(
+                    ".select__item-li-title span"
+                  ).innerText;
+
+                selectTitle.classList.add("select__item-title-selected");
+              }
+            });
+          });
+        });
+      }
+
+      customSelectInit();
+      // ====== Custom select End ======
+
+      // ====== Toast notif Start ======
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "5000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "slideDown",
+        hideMethod: "slideUp",
+        rtl: "true",
+      };
+
+      const walletAddress = document.querySelector("#wallet-address");
+
+      walletAddress.onclick = () => {
+        if (walletAddress.value !== "") {
+          navigator.clipboard.writeText(walletAddress.value);
+          toastr.success("آدرس کیف پول کپی شد.", "کپی شد!");
+        } else {
+          toastr.warning("ابتدا نوع ارز را مشخص کنید.", "توجه!");
+        }
+      };
+
+      // ====== Toast notif End ======
+
+      // ====== Validation Start ======
+
+      // Validation options
+      const validateOptions = {
+        errorFieldCssClass: "is-invalid",
+        errorLabelStyle: {
+          color: "var(--red)",
+          fontSize: ".8rem",
+          fontWeight: "bold",
+          marginTop: "5px",
+          display: "block",
+        },
+        successFieldCssClass: "is-valid",
+      };
+
+      // Validation for deposit
+      const depositValidator = new JustValidate(
+        "#form-deposit",
+        validateOptions
+      );
+
+      depositValidator
+        .addField(
+          "#deposit_amount",
+          [
+            {
+              rule: "required",
+              errorMessage: "لطفاً مقدار ارز را وارد کنید",
+            },
+            {
+              rule: "number",
+              errorMessage: "مقدار باید عددی باشد",
+            },
+            {
+              rule: "minNumber",
+              value: 1,
+              errorMessage: "مقدار باید بیشتر از 0 باشد",
+            },
+          ],
+          {
+            errorsContainer: document
+              .querySelector("#deposit_amount")
+              .closest(".input__with-error-wrapper"),
+          }
+        )
+        .addField(
+          "#transaction_hash",
+          [
+            {
+              rule: "required",
+              errorMessage: "لطفاً هش تراکنش را وارد کنید",
+            },
+            {
+              rule: "minLength",
+              value: 10,
+              errorMessage: "هش تراکنش باید حداقل 10 کاراکتر باشد",
+            },
+            {
+              rule: "maxLength",
+              value: 100,
+              errorMessage: "هش تراکنش حداکثر می‌تواند 100 کاراکتر باشد",
+            },
+            {
+              rule: "customRegexp",
+              value: /^[a-zA-Z0-9]+$/,
+              errorMessage: "هش تراکنش باید شامل حروف و اعداد باشد",
+            },
+          ],
+          {
+            errorsContainer: document
+              .querySelector("#transaction_hash")
+              .closest(".input__with-error-wrapper"),
+          }
+        )
+        .onSuccess(function () {
+          document.querySelector("#form-deposit .button").disabled = true;
+          document.getElementById("form-deposit").submit();
+        });
+
+      // Validation for withdraw
+      const withdrawValidator = new JustValidate(
+        "#form-withdraw",
+        validateOptions
+      );
+
+      withdrawValidator
+        .addRequiredGroup("#crypto-radioes", "لطفاً نوع ارز را انتخاب کنید", {
+          errorsContainer: document
+            .querySelector("#crypto-radioes")
+            .closest(".input__with-error-wrapper"),
+          successMessage: "Everything looks good",
+        })
+        .addRequiredGroup("#network-radioes", "لطفاً شبکه را انتخاب کنید", {
+          errorsContainer: document
+            .querySelector("#network-radioes")
+            .closest(".input__with-error-wrapper"),
+        })
+        .addField(
+          "#withdraw_amount",
+          [
+            {
+              rule: "required",
+              errorMessage: "لطفاً مبلغ را وارد کنید",
+            },
+            {
+              rule: "number",
+              errorMessage: "مبلغ باید عددی باشد",
+            },
+            {
+              rule: "minNumber",
+              value: 1,
+              errorMessage: "مبلغ باید بیشتر از 0 باشد",
+            },
+            {
+              rule: "maxNumber",
+              value: parseInt(withdraw_amount.dataset.max),
+              errorMessage: "مبلغ از موجودی شما بیشتر است",
+            },
+          ],
+          {
+            errorsContainer: document
+              .querySelector("#withdraw_amount")
+              .closest(".input__with-error-wrapper"),
+          }
+        )
+        .addField(
+          "#wallet_address",
+          [
+            {
+              rule: "required",
+              errorMessage: "لطفاً آدرس کیف پول را وارد کنید",
+            },
+            {
+              rule: "minLength",
+              value: 10,
+              errorMessage: "حداقل 10 کاراکتر مجاز است",
+            },
+            {
+              rule: "maxLength",
+              value: 100,
+              errorMessage: "حداکثر 100 کاراکتر مجاز است",
+            },
+            {
+              rule: "customRegexp",
+              value: /^[a-zA-Z0-9]+$/,
+              errorMessage: "هش تراکنش باید شامل حروف و اعداد باشد",
+            },
+          ],
+          {
+            errorsContainer: document
+              .querySelector("#wallet_address")
+              .closest(".input__with-error-wrapper"),
+          }
+        )
+        .onSuccess(function () {
+          document.querySelector("#form-withdraw .button").disabled = true;
+          document.getElementById("form-withdraw").submit();
+        });
+
+      // ====== Validation End ======
     </script>
   </body>
 </html>
