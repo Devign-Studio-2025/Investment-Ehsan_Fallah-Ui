@@ -380,13 +380,12 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   /* pointer-events: none; */
   visibility: hidden;
   opacity: 0;
-  transition: opacity var(--transition-fast);
+  transition: var(--transition-fast);
   border-radius: var(--radius-md);
   background-color: #000f2b;
   max-height: 12.5rem;
   overflow-x: hidden;
   overflow-y: auto;
-  position: absolute;
   top: 110%;
   left: 50%;
   transform: translateX(-50%);
@@ -398,6 +397,7 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   display: flex;
   text-align: start;
   flex-direction: column;
+  z-index: 1;
 }
 
 .select__wrapper:has(.select__item:focus) .select__item-dropdown {
@@ -406,6 +406,14 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   top: 120%;
   opacity: 1;
   border: 0.0625rem solid var(--lime-green);
+}
+
+.select__wrapper:has(.select__item:not(:focus)) .select__item-dropdown label {
+  visibility: hidden;
+}
+
+.input__with-error-wrapper:has(.just-validate-error-label) .select__item {
+  border-color: var(--red);
 }
 
 .select__wrapper .select__item-li-title {
