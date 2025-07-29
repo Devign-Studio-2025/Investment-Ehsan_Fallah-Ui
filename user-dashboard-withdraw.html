@@ -585,8 +585,8 @@
       <!-- * Bottom nav btns End -->
     </main>
 
-    <div class="d-flex p-2 opacity-50">
-      <small class="mx-auto">تمامی حقوق محفوظ است - 1404 ©</small>
+    <div class="footer--dashboard">
+      <small>تمامی حقوق محفوظ است - 1404 ©</small>
     </div>
 
     <!-- * Moblie nav Start -->
@@ -634,11 +634,7 @@
         </div>
         <span class="nav-label">زیرمجموعه</span>
       </a>
-      <a
-        href="profile-setting.html"
-        class="nav-item"
-        onclick="activateNavItem(this)"
-      >
+      <a href="index.html" class="nav-item" onclick="activateNavItem(this)">
         <span class="active-line"></span>
         <div class="nav-icon">
           <i class="fa-solid fa-up-right-from-square"></i>
@@ -753,7 +749,6 @@
       // ================== mobile menu ends =================== //
     </script>
     <!-- ! Page Scripts -->
-    <script src="assets/libs/toastr/toastr.min.js"></script>
     <script src="assets/libs/validate.min.js/just-validate.production.min.js"></script>
     <script>
       // ====== Custom select Start ======
@@ -814,7 +809,7 @@
             .closest(".input__with-error-wrapper"),
           successMessage: "Everything looks good",
         })
-        .addRequiredGroup("#network-radioes", "لطفاً شبکه راانتخاب کنید", {
+        .addRequiredGroup("#network-radioes", "لطفاً شبکه را انتخاب کنید", {
           errorsContainer: document
             .querySelector("#network-radioes")
             .closest(".input__with-error-wrapper"),

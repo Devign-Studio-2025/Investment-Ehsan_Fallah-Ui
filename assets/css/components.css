@@ -633,6 +633,7 @@ div:has(.card__item:hover) .card__item:not(:hover) {
   flex-wrap: wrap;
   justify-content: space-between;
   flex-grow: 1;
+  gap: 0.5rem;
   padding: 1rem 0.8rem;
 }
 
